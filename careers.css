@@ -1,0 +1,1108 @@
+/* ==========================================
+   CAREERS PAGE SPECIFIC STYLES
+   ========================================== */
+
+.careers-hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 6% 60px;
+    background: #ffffff;
+}
+
+.careers-hero-left {
+    width: 45%;
+    transform: translateY(10px);
+}
+
+/* Badge matches the 'small-heading' style from index */
+.careers-badge {
+    display: inline-block;
+    background-color: #FFF7F0;
+    color: #FA6F04;
+    border: 1px solid #f5dfce;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+}
+
+.careers-hero-left h1 {
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+.careers-hero-left h1 span {
+    color: #FA6F04;
+}
+
+.careers-hero-left p {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 40px;
+}
+
+.careers-hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.careers-hero-right {
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.careers-hero-right img {
+    width: 100%;
+    max-width: 850px;
+    object-fit: contain;
+    transform: scale(1.15) translateX(3%);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 900px) {
+    .careers-hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .careers-hero-left,
+    .careers-hero-right {
+        width: 100%;
+    }
+
+    .careers-hero-left p {
+        margin: 0 auto 35px;
+    }
+
+    .careers-hero-buttons {
+        justify-content: center;
+    }
+}
+/* ==========================================
+   WHY WORK WITH US (CAREERS PAGE)
+   ========================================== */
+
+.careers-why-section {
+    width: 100%;
+    padding: 70px 6% 90px;
+    background: #ffffff;
+}
+
+/* Header Layout */
+.careers-why-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.why-label {
+    display: block;
+    color: #FA6F04;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.header-left h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-right p {
+    max-width: 480px;
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Cards Grid */
+.careers-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 32px 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.why-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+/* Container se background aur border-radius hata diya */
+.why-card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image ka size barha kar full 52px kar diya */
+.why-card-icon img {
+    width: 52px; 
+    height: 52px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Light watermark numbers */
+.why-card-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f3f4f6;
+    line-height: 1;
+    margin-top: -5px;
+}
+
+.why-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.55;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN FOR WHY SECTION
+   ========================================== */
+@media (max-width: 1024px) {
+    .careers-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-why-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header-right {
+        justify-content: flex-start;
+    }
+
+    .header-right p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .careers-why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================
+   LIFE AT ANAS SECTION
+   ========================================== */
+
+.life-section {
+    width: 100%;
+    padding: 80px 6%;
+    background-color: #fafafa; /* Light gray background matching the design */
+}
+
+.life-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left Side Text */
+.life-left {
+    width: 32%;
+    min-width: 300px;
+}
+
+.life-badge {
+    color: #FA6F04;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.life-left h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.life-left p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    border-color: #FA6F04;
+    color: #FA6F04;
+    box-shadow: 0 4px 15px rgba(250, 111, 4, 0.1);
+}
+
+/* Right Side Cards */
+.life-right {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+}
+
+.life-cards-wrapper {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto; /* Allows scrolling on small screens */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    padding-bottom: 20px;
+}
+
+.life-cards-wrapper::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+.life-card {
+    flex: 1;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.life-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.life-card-img {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    background: #fdfdfd;
+    margin-bottom: 22px; /* Space for overlapping icon */
+}
+
+.life-card-img .main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Small overlapping icon */
+.life-card-icon {
+    position: absolute;
+    bottom: -15px;
+    left: 12px;
+    width: 38px;
+    height: 38px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.life-card-icon img {
+    width: 20px; /* Small icon size */
+    height: 20px;
+    object-fit: contain;
+}
+
+.life-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 5px;
+    padding: 0 6px;
+}
+
+/* Slider Dots */
+.life-slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.life-slider-dots .dot {
+    height: 4px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    width: 16px;
+    transition: all 0.3s ease;
+}
+
+.life-slider-dots .dot.active {
+    background: #FA6F04;
+    width: 24px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (LIFE SECTION)
+   ========================================== */
+@media (max-width: 1024px) {
+    .life-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .life-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .life-right {
+        width: 100%;
+    }
+}
+/* ==========================================
+   OPEN POSITIONS SECTION
+   ========================================== */
+
+.open-positions-section {
+    width: 100%;
+    padding: 80px 6% 100px;
+    background: #ffffff;
+}
+
+.open-positions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* Left Side */
+.open-positions-left {
+    width: 35%;
+    position: sticky;
+    top: 100px; /* Makes the left side stick while scrolling the right side */
+}
+
+.positions-label {
+    color: #FA6F04;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.open-positions-left h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.open-positions-left p {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* CSS Dotted Pattern */
+.dotted-pattern {
+    width: 130px;
+    height: 45px;
+    background-image: radial-gradient(#FA6F04 2.5px, transparent 2.5px);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    opacity: 0.4;
+    margin-bottom: 45px;
+}
+
+.view-all-btn {
+    display: inline-block;
+    background: transparent;
+    color: #FA6F04;
+    border: 1.5px solid #FA6F04;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background: #FFF7F0;
+    box-shadow: 0 4px 15px rgba(250, 111, 4, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Right Side - Job List */
+.open-positions-right {
+    width: 65%;
+}
+
+.positions-list {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.job-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px;
+    border-bottom: 1px solid #eeeeee;
+    transition: background 0.2s ease;
+}
+
+.job-item:last-child {
+    border-bottom: none;
+}
+
+.job-item:hover {
+    background: #fdfbf7;
+}
+
+.job-item-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+/* Container se background aur border-radius hata diya taake double background na bane */
+.job-icon {
+    width: 60px; /* Size bara kar diya */
+    height: 60px; /* Size bara kar diya */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Yeh icon ko chota hone se rokay ga agar screen choti ho */
+}
+
+/* Image ka size full 60px kar diya */
+.job-icon img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.job-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.job-details p {
+    font-size: 13px;
+    color: #8b919c;
+}
+
+.view-position {
+    color: #FA6F04;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.view-position:hover {
+    transform: translateX(3px); /* Subtle arrow movement on hover */
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (OPEN POSITIONS)
+   ========================================== */
+@media (max-width: 900px) {
+    .open-positions-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .open-positions-left,
+    .open-positions-right {
+        width: 100%;
+        position: static; /* Removes sticky behavior on mobile */
+    }
+
+    .dotted-pattern {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .job-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .view-position {
+        align-self: flex-start;
+        margin-left: 66px; /* Aligns with text */
+    }
+}
+/* ==========================================
+   CAREERS BOTTOM CTA BANNERS
+   ========================================== */
+
+.careers-cta-section {
+    width: 100%;
+    padding: 20px 6% 80px;
+    background: #ffffff;
+}
+
+.careers-cta-container {
+    max-width: 1200px; /* Matching the 1200px width from your image */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cta-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 40px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.cta-banner:hover {
+    transform: translateY(-3px);
+}
+
+/* Background Colors */
+.dark-banner {
+    background: #18181b; /* Dark charcoal matching the design */
+}
+
+.orange-banner {
+    background: linear-gradient(135deg, #ff8c42, #FA6F04); /* Smooth orange gradient */
+}
+
+/* Left Side Layout */
+.cta-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 75%;
+}
+
+.cta-banner-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-banner-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Typography */
+.cta-banner-text h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.dark-banner .cta-banner-text p {
+    color: #a1a1aa;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.orange-banner .cta-banner-text p {
+    color: #fff3eb;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.cta-banner-btn {
+    padding: 13px 26px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.btn-orange {
+    background: #FA6F04;
+    color: #ffffff;
+}
+
+.btn-orange:hover {
+    background: #e06000;
+    transform: translateY(-2px);
+}
+
+.btn-dark {
+    background: #111827;
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background: #000000;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE BANNERS
+   ========================================== */
+@media (max-width: 900px) {
+    .cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        padding: 30px;
+    }
+    .cta-banner-left {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cta-banner-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+/* ==========================================
+   JOB APPLICATION / DETAIL VIEW
+   ========================================== */
+
+.job-application-section {
+    width: 100%;
+    padding: 60px 5% 100px;
+    background: #ffffff;
+}
+
+.job-application-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 320px 1fr 280px; /* 3 Columns: Left, Middle, Right */
+    gap: 45px;
+    align-items: start;
+}
+
+/* ================= LEFT COLUMN: FORM ================= */
+.app-form-column {
+    background: #ffffff;
+    padding-right: 20px;
+    border-right: 1px solid #eeeeee;
+}
+
+.app-label {
+    color: #FA6F04;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.app-form-column h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.app-subtext {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.apply-form .input-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.apply-form label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+    border-color: #FA6F04;
+}
+
+/* Upload Box */
+.upload-box {
+    position: relative;
+    border: 1.5px dashed #d9d9d9;
+    border-radius: 10px;
+    padding: 25px 15px;
+    text-align: center;
+    background: #fdfdfd;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: #FA6F04;
+    background: #fffaf6;
+}
+
+.upload-box input[type="file"] {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 20px;
+    color: #8b919c;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.upload-box h4 {
+    font-size: 12px;
+    color: #111827;
+    margin-bottom: 2px;
+}
+
+.upload-box p, .upload-box span {
+    font-size: 11px;
+    color: #8b919c;
+}
+
+.submit-app-btn {
+    width: 100%;
+    background: #FA6F04;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.submit-app-btn:hover {
+    background: #e06000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(250, 111, 4, 0.4);
+}
+
+
+/* ================= MIDDLE COLUMN: DETAILS ================= */
+.back-link {
+    color: #6b7280;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #FA6F04;
+}
+
+.job-title-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.job-title-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.job-meta {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8b919c;
+}
+
+.apply-now-btn {
+    background: #FA6F04;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apply-now-btn:hover {
+    background: #e06000;
+    transform: translateY(-2px);
+}
+
+.job-desc-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 25px 0 12px;
+}
+
+.job-desc-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Custom Orange Checkmark */
+.check-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #FA6F04;
+    border-radius: 50%;
+    color: #FA6F04;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ================= RIGHT COLUMN: SIDEBAR ================= */
+.sidebar-box {
+    background: #fdfbf7;
+    border: 1px solid #f0ece1;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar-box h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item span {
+    font-size: 11px;
+    color: #8b919c;
+}
+
+.detail-item strong {
+    font-size: 13px;
+    color: #111827;
+}
+
+.social-share {
+    display: flex;
+    gap: 10px;
+}
+
+.social-share a {
+    width: 35px;
+    height: 35px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FA6F04;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.social-share a:hover {
+    background: #FA6F04;
+    color: #ffffff;
+    border-color: #FA6F04;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .job-application-container {
+        grid-template-columns: 1fr; /* Stacks everything on smaller screens */
+        gap: 40px;
+    }
+    
+    .app-form-column {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 40px;
+    }
+    
+    /* Change order on mobile: Description first, then sidebar, then form */
+    .app-form-column { order: 3; border-bottom: none; border-top: 1px solid #eee; padding-top: 40px; }
+    .app-desc-column { order: 1; }
+    .app-sidebar-column { order: 2; display: flex; gap: 20px; }
+    .sidebar-box { flex: 1; }
+}
+
+@media (max-width: 600px) {
+    .app-sidebar-column { flex-direction: column; }
+}
+.upload-btn-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    display: block;
+}

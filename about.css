@@ -1,0 +1,570 @@
+/* ==========================================
+   ABOUT US PAGE SPECIFIC STYLES
+   ========================================== */
+
+
+   body {
+    font-family: 'Poppins', sans-serif;
+    color: #111827;
+}
+
+/* Hero Section */
+.about-hero {
+    width: 100%;
+    text-align: center;
+    padding: 65px 20px 60px;
+    background: #fafafa;
+}
+
+.about-breadcrumb {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.about-breadcrumb span {
+    color: #FA6F04;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.about-hero h1 span {
+    color: #FA6F04;
+}
+
+.about-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.center-buttons {
+    justify-content: center;
+}
+
+/* Story Section */
+.story-section {
+    width: 100%;
+    padding: 80px 6%;
+    background: #ffffff;
+}
+
+.story-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.story-left {
+    flex: 1;
+}
+
+.story-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #FA6F04;
+    background: #FFF7F0;
+    border: 1px solid #e6d6ca;
+    border-radius: 30px;
+    padding: 8px 17px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.story-badge span {
+    width: 14px;
+    height: 14px;
+    background: #FA6F04;
+    border-radius: 50%;
+}
+
+.story-left h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.story-left h2 span {
+    color: #FA6F04;
+}
+
+.story-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.story-highlights {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+}
+
+.highlight-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #FFF0E5;
+    color: #FA6F04;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.story-right {
+    flex: 1;
+    animation: floatImage 3s ease-in-out infinite;
+    
+}
+
+.story-right img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Stats Wrapper */
+.about-stats-wrapper {
+    width: 100%;
+    padding: 20px 6% 60px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Core Values Section */
+.values-section {
+    width: 100%;
+    padding: 70px 6% 80px;
+    background: #fdfbf7;
+    text-align: center;
+}
+
+.values-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #FA6F04;
+    background: #FFF7F0;
+    border: 1px solid #e6d6ca;
+    border-radius: 30px;
+    padding: 8px 17px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.values-badge span {
+    width: 14px;
+    height: 14px;
+    background: #FA6F04;
+    border-radius: 50%;
+}
+
+.values-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.values-title span {
+    color: #FA6F04;
+}
+
+.values-description {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 45px;
+}
+
+.values-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.value-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(250, 111, 4, 0.12);
+}
+
+.value-number {
+    width: 40px;
+    height: 40px;
+    background: #FA6F04;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Why Work With Us */
+.why-about-section {
+    width: 100%;
+    padding: 80px 6%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.why-about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.why-about-container h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.why-about-container h2 span {
+    color: #FA6F04;
+}
+
+.why-about-container > p {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 45px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-box {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 30px 22px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.feature-box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.feature-box p {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .story-container {
+        flex-direction: column;
+    }
+    .values-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero h1 {
+        font-size: 32px;
+    }
+    .values-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================
+   OUR TEAM SECTION STYLES
+   ========================================== */
+.team-section {
+    width: 100%;
+    padding: 80px 6%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.team-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #FA6F04;
+    background: #FFF7F0;
+    border: 1px solid #e6d6ca;
+    border-radius: 30px;
+    padding: 8px 17px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.team-badge span {
+    width: 14px;
+    height: 14px;
+    background: #FA6F04;
+    border-radius: 50%;
+}
+
+.team-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.team-title span {
+    color: #FA6F04;
+}
+
+.team-description {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 45px;
+}
+
+.team-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.team-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(250, 111, 4, 0.15);
+}
+
+.team-image {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Social links overlay on image hover */
+.team-socials {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(17, 24, 39, 0.85);
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    transition: bottom 0.3s ease;
+}
+
+.team-card:hover .team-socials {
+    bottom: 0;
+}
+
+.team-socials a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FA6F04;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.team-socials a:hover {
+    background: #ffffff;
+    color: #FA6F04;
+}
+
+.team-info {
+    padding: 22px 20px;
+}
+
+.team-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.team-role {
+    font-size: 12px;
+    font-weight: 700;
+    color: #FA6F04;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Responsive Grid for Mobile/Tablets */
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================
+   FOUNDER SPOTLIGHT STYLES
+   ========================================== */
+.founder-spotlight {
+    max-width: 1180px;
+    margin: 0 auto 50px;
+    background: #ffffff;
+    border: 1.5px solid rgba(250, 111, 4, 0.4);
+    border-radius: 20px;
+    padding: 40px 45px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    text-align: left;
+    box-shadow: 0 12px 35px rgba(250, 111, 4, 0.12);
+}
+
+.founder-image {
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.founder-info {
+    flex: 1;
+}
+
+.founder-badge {
+    display: inline-block;
+    background: #FFF0E5;
+    color: #FA6F04;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.founder-info h3 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.founder-bio {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #555;
+}
+
+/* Responsive adjustment for Founder Banner */
+@media (max-width: 768px) {
+    .founder-spotlight {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+    }
+
+    .founder-image {
+        width: 180px;
+        height: 180px;
+    }
+}

@@ -1,0 +1,352 @@
+/* ==========================================
+   TYPOGRAPHY & GLOBAL BASICS (Matches style.css)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #111827;
+}
+
+/* Base Headings & Accent Text */
+h1, h2, h3, h4 {
+    color: #111827;
+    font-family: Arial, sans-serif;
+}
+
+span.orange-text,
+.sidebar-header h2 span,
+.section-title span {
+    color: #FA6F04;
+}
+
+/* ==========================================
+   PAGE WRAPPER & CONTAINER SPACING
+   ========================================== */
+.quote-wrapper {
+    width: 100%;
+    padding: 60px 6% 80px;
+}
+
+.quote-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ==========================================
+   SIDEBAR TYPOGRAPHY & CARDS
+   ========================================== */
+.quote-sidebar {
+    width: 35%;
+    background: #1f1f1f;
+    color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 18px;
+    height: fit-content;
+}
+
+/* Matches .small-heading / .services-label from style.css */
+.badge {
+    display: inline-block;
+    background-color: #fff7f0;
+    color: #d96500;
+    border: 1px solid #f5dfce;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+/* Matches h1/h2 section headers from index/portfolio */
+.sidebar-header h2 {
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.sidebar-header p {
+    color: #8b919c;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.guarantee-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.guarantee-card {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid #333333;
+    border-radius: 12px;
+}
+
+.guarantee-icon {
+    font-size: 18px;
+}
+
+.guarantee-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 3px;
+}
+
+.guarantee-card p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #8b919c;
+    margin: 0;
+}
+
+/* ==========================================
+   FORM CONTAINER TYPOGRAPHY & INPUTS
+   ========================================== */
+.quote-form-card {
+    width: 65%;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    padding: 35px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #f3f4f6;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 20%;
+    background: #FA6F04;
+    transition: width 0.3s ease;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+    margin-bottom: 18px;
+}
+.form-section {
+    margin-bottom: 40px; 
+    padding-bottom: 40px; 
+    border-bottom: 1px solid #eeeeee; 
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+}
+
+/* Service Tiles Typography */
+.service-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.tile-option input {
+    display: none;
+}
+
+.tile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 10px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.tile-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.tile-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+.tile-option input:checked + .tile-box {
+    border-color: #FA6F04;
+    background: #FFF7F0;
+    box-shadow: 0 4px 15px rgba(250, 111, 4, 0.25);
+}
+
+.tile-option input:checked + .tile-box .tile-title {
+    color: #FA6F04;
+}
+
+/* Input Fields & Labels */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #111827;
+    outline: none;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Light styling for unselected dropdowns */
+.input-group select:invalid {
+    color: #a1a1aa;
+}
+
+/* Ensures selected options inside dropdown menus display dark */
+.input-group select option {
+    color: #111827;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #FA6F04;
+    box-shadow: 0 0 10px rgba(250, 111, 4, 0.25);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #a1a1aa; /* Soft light gray */
+    font-weight: 400; /* Regular weight */
+    font-size: 13px;
+    opacity: 1; /* Fixes Firefox placeholder opacity */
+}
+
+.input-group input:focus::placeholder,
+.input-group textarea:focus::placeholder {
+    color: #d4d4d8; /* Fades out slightly when typing */
+}
+
+/* ==========================================
+   SUBMIT BUTTON (Exact match to style.css .consult-btn)
+   ========================================== */
+.submit-btn {
+    width: 100%;
+    background-color: #FA6F04;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(250, 111, 4, 0.4);
+}
+
+.submit-btn:hover {
+    background-color: #e06000;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(250, 111, 4, 0.65);
+}
+
+.trust-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+    font-size: 11px;
+    color: #7f8693;
+    font-weight: 600;
+}
+
+/* Responsive Scaling */
+@media (max-width: 900px) {
+    .quote-container {
+        flex-direction: column;
+    }
+    .quote-sidebar,
+    .quote-form-card {
+        width: 100%;
+    }
+    .service-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .form-row {
+        flex-direction: column;
+    }
+}
+/* Footer Contact Info Spacing */
+.footer-contact {
+    margin-bottom: 25px; /* Adds space before the social icons */
+}
+
+.footer-contact p {
+    margin-bottom: 8px; /* Reduces the gap between the phone and email */
+    color: #7f8693; 
+    font-size: 13px;
+}
+.section-title + .form-row {
+    margin-top: 16px; 
+}

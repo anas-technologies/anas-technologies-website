@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote - ANAS Technologies</title>
+ <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quote.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="ANAS Technologies">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Solutions</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="#">Contact</a>
+            </div>
+            <button class="quote-btn">
+                Get a Quote →
+            </button>
+        </nav>
+    </header>
+
+    <main class="quote-wrapper">
+        <div class="quote-container">
+
+            <!-- Sidebar -->
+            <aside class="quote-sidebar">
+                <div class="sidebar-header">
+                    <span class="badge">ESTIMATE YOUR PROJECT</span>
+                    <h2>Let's build something <span>Extraordinary.</span></h2>
+                    <p>Share your vision and requirements. Our engineering team will review your project and return an itemized quote within 24 hours.</p>
+                </div>
+
+                <div class="guarantee-list">
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon">⚡</div>
+                        <div>
+                            <h4>Fast SLA Response</h4>
+                            <p>Detailed response within 1 business day.</p>
+                        </div>
+                    </div>
+
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon">🔒</div>
+                        <div>
+                            <h4>Strict Privacy & NDA</h4>
+                            <p>Your ideas and specifications remain 100% confidential.</p>
+                        </div>
+                    </div>
+
+                    <div class="guarantee-card">
+                        <div class="guarantee-icon">🎯</div>
+                        <div>
+                            <h4>Transparent Scope</h4>
+                            <p>No hidden costs, flexible milestones, and zero obligation.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Form Container -->
+            <section class="quote-form-card">
+                
+                <div class="form-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <form id="quoteForm" novalidate>
+                    
+                    <!-- Section 1 -->
+                    <div class="form-section">
+                        <h3 class="section-title">1. What services do you need?</h3>
+                        <p class="section-subtitle">Select all that apply to your current project goals.</p>
+
+                        <div class="service-tiles">
+                            <label class="tile-option">
+                                <input type="checkbox" name="services" value="web-dev">
+                                <span class="tile-box">
+                                    <span class="tile-icon">🌐</span>
+                                    <span class="tile-title">Web Development</span>
+                                </span>
+                            </label>
+
+                            <label class="tile-option">
+                                <input type="checkbox" name="services" value="mobile-app">
+                                <span class="tile-box">
+                                    <span class="tile-icon">📱</span>
+                                    <span class="tile-title">Mobile Apps</span>
+                                </span>
+                            </label>
+
+                            <label class="tile-option">
+                                <input type="checkbox" name="services" value="ecommerce">
+                                <span class="tile-box">
+                                    <span class="tile-icon">🛍️</span>
+                                    <span class="tile-title">E-Commerce</span>
+                                </span>
+                            </label>
+
+                            <label class="tile-option">
+                                <input type="checkbox" name="services" value="uiux">
+                                <span class="tile-box">
+                                    <span class="tile-icon">🎨</span>
+                                    <span class="tile-title">UI/UX Design</span>
+                                </span>
+                            </label>
+
+                            <label class="tile-option">
+                                <input type="checkbox" name="services" value="custom-software">
+                                <span class="tile-box">
+                                    <span class="tile-icon">⚙️</span>
+                                    <span class="tile-title">Custom Software</span>
+                                </span>
+                            </label>
+
+                            <label class="tile-option">
+                                <input type="checkbox" name="services" value="cloud">
+                                <span class="tile-box">
+                                    <span class="tile-icon">☁️</span>
+                                    <span class="tile-title">Cloud Infrastructure</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="form-section">
+                        <h3 class="section-title">2. Budget & Scope</h3>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="budget">Estimated Budget ($)</label>
+                                <select id="budget" required>
+                                    <option value="" disabled selected>Select estimated budget...</option>
+                                    <option value="under-2.5k">&lt; $2,500</option>
+                                    <option value="2.5k-10k">$2,500 – $10,000</option>
+                                    <option value="10k-25k">$10,000 – $25,000</option>
+                                    <option value="25k-plus">$25,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="timeline">Expected Timeline</label>
+                                <select id="timeline" required>
+                                    <option value="" disabled selected>Select target timeline...</option>
+                                    <option value="urgent">Urgent (&lt; 1 month)</option>
+                                    <option value="1-3-months">1 – 3 months</option>
+                                    <option value="3-6-months">3 – 6 months</option>
+                                    <option value="flexible">Flexible schedule</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label for="details">Project Requirements & Description *</label>
+                            <textarea id="details" rows="5" required placeholder="Describe your objectives, technical requirements, key feature sets, or target audience..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="form-section">
+                        <h3 class="section-title">3. Contact Details</h3>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="fullname">Full Name *</label>
+                                <input type="text" id="fullname" placeholder="Alex Morgan" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Work Email *</label>
+                                <input type="email" id="email" placeholder="alex@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 000-0000">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="company">Company / Organization</label>
+                                <input type="text" id="company" placeholder="Company Name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Submit Quote Request
+                        <span class="btn-arrow">→</span>
+                    </button>
+
+                    <div class="trust-footer">
+                        <span>🔒 256-bit Encrypted</span>
+                        <span>•</span>
+                        <span>📄 NDA Protection Available</span>
+                        <span>•</span>
+                        <span>⚡ Zero Obligation</span>
+                    </div>
+
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta">
+
+        <div class="cta-left">
+            <div class="cta-icon">➤</div>
+
+            <div class="cta-text">
+                <h3>Have a project in mind?</h3>
+                <p>Let's work together to turn your ideas into powerful digital solutions.</p>
+            </div>
+        </div>
+
+        <button class="cta-button">
+            <img src="images/consultation-icon.png" alt="">
+            Get a Free Consultation
+        </button>
+
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-about">
+            <img src="images/footer-logo.jpeg" alt="ANAS Technologies" class="footer-logo">
+
+            <p>
+                We build innovative digital solutions that help<br>
+                businesses grow, connect, and succeed in the<br>
+                digital world.
+            </p>
+            <!-- CONTACT INFO -->
+        <div class="footer-contact">
+            <p>📞 03299406401</p>
+            <p>✉ anastecnologies32@gmail.com</p>
+        </div>
+
+            <div class="social-icons">
+                <span><img src="images/whatsapp.png" alt="WhatsApp"></span>
+                <span><img src="images/facebook.png" alt="Facebook"></span>
+                <span><img src="images/instagram.png" alt="Instagram"></span>
+                <span><img src="images/twitter.png" alt="Twitter"></span>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <span class="footer-line"></span>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>Courses</li>
+                <li>Internships</li>
+                <li>Mentors</li>
+                <li>Pricing</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Resources</h3>
+            <span class="footer-line"></span>
+
+            <ul>
+                <li>Blog</li>
+                <li>Career Guide</li>
+                <li>Help Center</li>
+                <li>FAQs</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <span class="footer-line"></span>
+
+            <ul>
+                <li>About Us</li>
+                <li>Our Team</li>
+                <li>Careers</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <div class="footer-bottom">
+        <p>© 2026 ANAS Technologies. All Rights Reserved.</p>
+        <p>Policy | Terms & Conditions | Cookies</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
