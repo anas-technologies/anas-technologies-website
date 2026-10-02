@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,811 @@
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           ANAS TECHNOLOGIES
+           FULL RESPONSIVE STYLE
+           Mobile + Tablet + Laptop + Desktop
+        ========================================================= */
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            width: 100%;
+            min-width: 320px;
+            overflow-x: hidden;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           COMMON CONTAINER
+        ========================= */
+
+        section,
+        header,
+        footer {
+            width: 100%;
+        }
+
+        .hero,
+        .work-section,
+        .services-section,
+        .our-process-section,
+        .why-choose-section,
+        .bottom-cta,
+        .subscribe-section,
+        .footer {
+            width: 100%;
+            max-width: 1440px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        header {
+            width: 100%;
+            background: #ffffff;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 1440px;
+            min-height: 90px;
+            margin: 0 auto;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            flex-shrink: 0;
+        }
+
+        .logo a {
+            display: block;
+        }
+
+        .logo img {
+            width: 145px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(18px, 2vw, 35px);
+            flex: 1;
+        }
+
+        .nav-links a {
+            position: relative;
+            font-size: 14px;
+            font-weight: 500;
+            color: #202020;
+            white-space: nowrap;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f47b20;
+        }
+
+        .nav-links a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 100%;
+            height: 2px;
+            background: #f47b20;
+            border-radius: 10px;
+        }
+
+        .quote-btn {
+            border: none;
+            background: #f47b20;
+            color: #ffffff;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .quote-btn:hover {
+            background: #d9630c;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           SERVICES
+        ========================================================= */
+
+        .services-section {
+            padding: 100px 6%;
+            background: #fafafa;
+        }
+
+        .services-label,
+        .process-badge,
+        .why-choose-badge {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #f47b20;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+        }
+
+        .services-label span,
+        .process-badge span,
+        .why-choose-badge span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #f47b20;
+        }
+
+        .services-title {
+            max-width: 850px;
+            font-size: clamp(34px, 4vw, 58px);
+            line-height: 1.15;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .services-title span {
+            color: #f47b20;
+        }
+
+        .services-description {
+            color: #777777;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .services-btn {
+            border: none;
+            background: #f47b20;
+            color: #ffffff;
+            padding: 14px 22px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 55px;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .services-btn:hover {
+            background: #d9630c;
+            transform: translateY(-2px);
+        }
+
+        .services-btn span {
+            margin-right: 8px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            min-width: 0;
+            position: relative;
+            padding: 30px;
+            min-height: 245px;
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            border-radius: 15px;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #f47b20;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
+        }
+
+        .service-card-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            background: #fff3e9;
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        /* Updated h2 styling for service cards */
+        .service-card h2 {
+            font-size: 17px;
+            line-height: 1.35;
+            font-weight: 600;
+        }
+
+        .service-card > p {
+            color: #777777;
+            font-size: 13px;
+            line-height: 1.7;
+            padding-right: 10px;
+        }
+
+        .service-arrow {
+            position: absolute;
+            right: 25px;
+            bottom: 22px;
+            color: #f47b20;
+            font-size: 22px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+            padding: 70px 6% 55px;
+            background: #111111;
+            color: #ffffff;
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-about {
+            min-width: 0;
+        }
+
+        .footer-logo {
+            width: 150px;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .footer-about > p {
+            color: #aaaaaa;
+            font-size: 12px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+
+        .footer-contact p {
+            color: #cccccc;
+            font-size: 12px;
+            line-height: 2;
+            word-break: break-word;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-icons span {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #222222;
+        }
+
+        .social-icons img {
+            width: 17px;
+            height: 17px;
+            object-fit: contain;
+        }
+
+        .footer-column {
+            min-width: 0;
+        }
+
+        .footer-column h3 {
+            font-size: 15px;
+            margin-bottom: 9px;
+        }
+
+        .footer-line {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: #f47b20;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            color: #aaaaaa;
+            font-size: 12px;
+            line-height: 2.4;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .footer-column li:hover {
+            color: #f47b20;
+        }
+
+        .footer-column li a {
+            color: inherit;
+            transition: 0.3s ease;
+        }
+
+        .footer-column li a:hover {
+            color: #f47b20;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            padding: 18px 6%;
+            background: #0a0a0a;
+            color: #777777;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            font-size: 11px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        /* =========================================================
+           LARGE DESKTOP
+           1440px+
+        ========================================================= */
+
+        @media (min-width: 1441px) {
+
+            .navbar,
+            .services-section,
+            .footer {
+                max-width: 1600px;
+            }
+
+            .navbar {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+        }
+
+        /* =========================================================
+           LAPTOP
+           1025px - 1199px
+        ========================================================= */
+
+        @media (min-width: 1025px) and (max-width: 1199px) {
+
+            .navbar {
+                padding-left: 4%;
+                padding-right: 4%;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 17px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .quote-btn {
+                padding: 11px 16px;
+                font-size: 12px;
+            }
+        }
+
+        /* =========================================================
+           TABLET
+           768px - 1024px
+        ========================================================= */
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            .navbar {
+                min-height: 80px;
+                padding: 12px 4%;
+                gap: 15px;
+            }
+
+            .logo img {
+                width: 120px;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .quote-btn {
+                padding: 10px 14px;
+                font-size: 11px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer {
+                grid-template-columns: repeat(2, 1fr);
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .footer-about {
+                grid-column: span 2;
+            }
+
+            .footer-bottom {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+        /* =========================================================
+           MOBILE
+           767px AND BELOW
+        ========================================================= */
+
+        @media (max-width: 767px) {
+
+            /* =========================
+               NAVBAR
+            ========================= */
+
+            .navbar {
+                min-height: 70px;
+                padding: 12px 18px;
+                position: relative;
+                flex-wrap: wrap;
+            }
+
+            .logo img {
+                width: 115px;
+            }
+
+            .nav-links {
+                order: 3;
+                width: 100%;
+                flex: 0 0 100%;
+                justify-content: flex-start;
+                gap: 20px;
+                overflow-x: auto;
+                padding: 8px 0 4px;
+                scrollbar-width: none;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+                flex-shrink: 0;
+                white-space: nowrap;
+            }
+
+            .nav-links a.active::after {
+                bottom: -5px;
+            }
+
+            .quote-btn {
+                padding: 9px 13px;
+                font-size: 10px;
+                border-radius: 6px;
+            }
+
+            /* =========================
+               SERVICES
+            ========================= */
+
+            .services-section {
+                padding: 65px 20px;
+            }
+
+            .services-label {
+                font-size: 10px;
+            }
+
+            .services-title {
+                font-size: clamp(28px, 8vw, 38px);
+                line-height: 1.2;
+                margin-top: 18px;
+            }
+
+            .services-description {
+                font-size: 12px;
+            }
+
+            .services-description br {
+                display: none;
+            }
+
+            .services-btn {
+                width: 100%;
+                margin-bottom: 40px;
+                padding: 14px;
+                font-size: 12px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .service-card {
+                min-height: 210px;
+                padding: 22px;
+            }
+
+            .service-card-top {
+                gap: 12px;
+                margin-bottom: 15px;
+            }
+
+            .service-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .service-icon img {
+                width: 24px;
+                height: 24px;
+            }
+
+            /* Updated h2 styling for mobile */
+            .service-card h2 {
+                font-size: 15px;
+                line-height: 1.3;
+            }
+
+            .service-card > p {
+                font-size: 11px;
+                line-height: 1.7;
+            }
+
+            .service-arrow {
+                right: 20px;
+                bottom: 17px;
+                font-size: 18px;
+            }
+
+            /* =========================
+               FOOTER
+            ========================= */
+
+            .footer {
+                padding: 55px 20px 35px;
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-about {
+                grid-column: auto;
+            }
+
+            .footer-logo {
+                width: 130px;
+            }
+
+            .footer-about > p {
+                font-size: 11px;
+            }
+
+            .footer-about > p br {
+                display: none;
+            }
+
+            .footer-contact p {
+                font-size: 11px;
+            }
+
+            .footer-column h3 {
+                font-size: 14px;
+            }
+
+            .footer-column li {
+                font-size: 11px;
+                line-height: 2.2;
+            }
+
+            .footer-bottom {
+                padding: 16px 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 7px;
+                font-size: 9px;
+            }
+        }
+
+        /* =========================================================
+           EXTRA SMALL MOBILE
+           320px - 374px
+        ========================================================= */
+
+        @media (max-width: 374px) {
+
+            .navbar {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .logo img {
+                width: 100px;
+            }
+
+            .quote-btn {
+                padding: 8px 10px;
+                font-size: 9px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+
+            .services-section,
+            .footer {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            /* Updated h2 styling for extra small mobile */
+            .service-card h2 {
+                font-size: 14px;
+            }
+        }
+
+        /* =========================================================
+           TOUCH DEVICES
+        ========================================================= */
+
+        @media (hover: none) {
+
+            .service-card:hover,
+            .quote-btn:hover,
+            .services-btn:hover {
+                transform: none;
+            }
+        }
+
+        /* =========================================================
+           ACCESSIBILITY
+        ========================================================= */
+
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible {
+            outline: 2px solid #f47b20;
+            outline-offset: 3px;
+        }
+
+        /* =========================================================
+           PREVENT LONG TEXT BREAKING LAYOUT
+        ========================================================= */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        a,
+        span {
+            overflow-wrap: break-word;
+        }
+
+        /* =========================================================
+           FINAL OVERFLOW PROTECTION
+        ========================================================= */
+
+        section,
+        div,
+        header,
+        footer {
+            max-width: 100%;
+        }
+
+        table,
+        iframe,
+        video {
+            max-width: 100%;
+        }
+    </style>
 </head>
-</head>
+
 <body>
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
     <nav class="navbar">
@@ -36,23 +835,39 @@
             <a href="contact.html">Contact</a>
         </div>
 
-        <a href="quote.html" class="quote-btn">Get a Quote →</a>
+        <a href="quote.html" class="quote-btn">
+            Get a Quote →
+        </a>
+
     </nav>
 </header>
 
+
+<!-- =========================
+     MAIN
+========================= -->
+
 <main>
+
 <section class="services-section" id="services">
 
+    <!-- Section Label -->
     <div class="services-label">
         <span></span>
         OUR SERVICES
     </div>
 
-    <h2 class="services-title">
-        Digital Solutions That <br>
-        Drive Real <span>Business Growth</span>
-    </h2>
 
+    <!-- Main Heading -->
+    <h1 class="services-title">
+        Digital Solutions That
+        <br>
+        Drive Real
+        <span>Business Growth</span>
+    </h1>
+
+
+    <!-- Description -->
     <p class="services-description">
         From custom web apps to intelligent automation —
         <br>
@@ -61,183 +876,398 @@
         solutions.
     </p>
 
-    <button class="services-btn">
+
+    <!-- CTA -->
+    <a href="quote.html" class="services-btn">
         <span>➤</span>
         Let's Work Together
-    </button>
+    </a>
+
+
+    <!-- =========================
+         SERVICES GRID
+    ========================= -->
+
     <div class="services-grid">
 
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/web-development.png" alt="Web Development">
-</div>
-            <h3>Web Development</h3>
+
+        <!-- WEB DEVELOPMENT -->
+
+        <div class="service-card">
+
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    <img
+                        src="images/web-development.png"
+                        alt="Web Development">
+                </div>
+
+                <h2>Web Development</h2>
+
+            </div>
+
+            <p>
+                From custom web apps to intelligent automation —
+                we build scalable, secure, and future-ready
+                digital solutions.
+            </p>
+
+            <span class="service-arrow">
+                →
+            </span>
+
         </div>
 
-        <p>
-            From custom web apps to intelligent automation —
-            we build scalable, secure, and future-ready
-            digital solutions.
-        </p>
 
-        <span class="service-arrow">→</span>
-    </div>
+        <!-- MOBILE APP -->
 
+        <div class="service-card">
 
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/mobile-app.png" alt="Mobile App Development">
-</div>
-            <h3>Mobile App Development</h3>
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    <img
+                        src="images/mobile-app.png"
+                        alt="Mobile App Development">
+                </div>
+
+                <h2>Mobile App Development</h2>
+
+            </div>
+
+            <p>
+                Native and cross-platform mobile apps that deliver
+                smooth performance and exceptional user
+                experience.
+            </p>
+
+            <span class="service-arrow">
+                →
+            </span>
+
         </div>
 
-        <p>
-            Native and cross-platform mobile apps that deliver
-            smooth performance and exceptional user experience.
-        </p>
 
-        <span class="service-arrow">→</span>
-    </div>
+        <!-- CUSTOM SOFTWARE -->
 
+        <div class="service-card">
 
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/custom-software.png" alt="Custom Software Development">
-</div>
-            <h3>Custom Software Development</h3>
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    <img
+                        src="images/custom-software.png"
+                        alt="Custom Software Development">
+                </div>
+
+                <h2>Custom Software Development</h2>
+
+            </div>
+
+            <p>
+                Powerful custom software solutions to automate
+                processes, improve efficiency and scale your
+                business.
+            </p>
+
+            <span class="service-arrow">
+                →
+            </span>
+
         </div>
 
-        <p>
-            Powerful custom software solutions to automate
-            processes, improve efficiency and scale your business.
-        </p>
 
-        <span class="service-arrow">→</span>
-    </div>
+        <!-- CLOUD -->
 
+        <div class="service-card">
 
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/cloud.png" alt="Cloud Solutions">
-</div>
-            <h3>Cloud Solutions</h3>
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    <img
+                        src="images/cloud.png"
+                        alt="Cloud Solutions">
+                </div>
+
+                <h2>Cloud Solutions</h2>
+
+            </div>
+
+            <p>
+                Secure, reliable and scalable cloud infrastructure
+                to support your business growth and digital
+                transformation.
+            </p>
+
+            <span class="service-arrow">
+                →
+            </span>
+
         </div>
 
-        <p>
-            Secure, reliable and scalable cloud infrastructure
-            to support your business growth and digital transformation.
-        </p>
 
-        <span class="service-arrow">→</span>
-    </div>
+        <!-- UI UX -->
 
+        <div class="service-card">
 
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/uiux.png" alt="UI/UX Design">
-</div>
-            <h3>UI/UX Design</h3>
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    <img
+                        src="images/uiux.png"
+                        alt="UI/UX Design">
+                </div>
+
+                <h2>UI/UX Design</h2>
+
+            </div>
+
+            <p>
+                Beautiful, intuitive and user-centered designs that
+                create meaningful digital experiences.
+            </p>
+
+            <span class="service-arrow">
+                →
+            </span>
+
         </div>
 
-        <p>
-            Beautiful, intuitive and user-centered designs that
-            create meaningful digital experiences.
-        </p>
 
-        <span class="service-arrow">→</span>
-    </div>
+        <!-- IT CONSULTING -->
 
+        <div class="service-card">
 
-    <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-icon">
-    <img src="images/it-consulting.png" alt="IT Consulting">
-</div>
-            <h3>IT Consulting</h3>
+            <div class="service-card-top">
+
+                <div class="service-icon">
+                    <img
+                        src="images/it-consulting.png"
+                        alt="IT Consulting">
+                </div>
+
+                <h2>IT Consulting</h2>
+
+            </div>
+
+            <p>
+                Strategic IT consulting to help you make the right
+                technology decisions and stay ahead of the
+                competition.
+            </p>
+
+            <span class="service-arrow">
+                →
+            </span>
+
         </div>
 
-        <p>
-            Strategic IT consulting to help you make the right
-            technology decisions and stay ahead of the competition.
-        </p>
 
-        <span class="service-arrow">→</span>
     </div>
-
-</div>
 
 </section>
+
 </main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
 
+
+    <!-- COMPANY -->
+
     <div class="footer-about">
-        <img src="images/footer-logo.jpeg" alt="ANAS Technologies" class="footer-logo">
+
+        <img
+            src="images/footer-logo.jpeg"
+            alt="ANAS Technologies"
+            class="footer-logo">
 
         <p>
-            We build innovative digital solutions that help<br>
-            businesses grow, connect, and succeed in the<br>
+            We build innovative digital solutions that help
+            businesses grow, connect, and succeed in the
             digital world.
         </p>
-        <!-- CONTACT INFO -->
+
+
+        <!-- CONTACT -->
+
         <div class="footer-contact">
-            <p>📞 03299406401</p>
-            <p>✉ anastecnologies32@gmail.com</p>
+
+            <p>
+                📞 03299406401
+            </p>
+
+            <p>
+                ✉ anastecnologies32@gmail.com
+            </p>
+
         </div>
+
+
+        <!-- SOCIAL -->
 
         <div class="social-icons">
-            <span><img src="images/whatsapp.png" alt="WhatsApp"></span>
-            <span><img src="images/facebook.png" alt="Facebook"></span>
-            <span><img src="images/instagram.png" alt="Instagram"></span>
-            <span><img src="images/twitter.png" alt="Twitter"></span>
+
+            <span>
+                <img
+                    src="images/whatsapp.png"
+                    alt="WhatsApp">
+            </span>
+
+            <span>
+                <img
+                    src="images/facebook.png"
+                    alt="Facebook">
+            </span>
+
+            <span>
+                <img
+                    src="images/instagram.png"
+                    alt="Instagram">
+            </span>
+
+            <span>
+                <img
+                    src="images/twitter.png"
+                    alt="Twitter">
+            </span>
+
         </div>
+
     </div>
 
+
+    <!-- QUICK LINKS -->
+
     <div class="footer-column">
+
         <h3>Quick Links</h3>
+
         <span class="footer-line"></span>
 
         <ul>
-            <li>Home</li>
-            <li>Courses</li>
-            <li>Internships</li>
-            <li>Mentors</li>
-            <li>Pricing</li>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="careers.html">Careers</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
         </ul>
+
     </div>
 
+
+    <!-- RESOURCES -->
+
     <div class="footer-column">
+
         <h3>Resources</h3>
+
         <span class="footer-line"></span>
 
         <ul>
-            <li>Blog</li>
-            <li>Career Guide</li>
-            <li>Help Center</li>
-            <li>FAQs</li>
-            <li>Contact</li>
+
+            <li>
+                <a href="#">Blog</a>
+            </li>
+
+            <li>
+                <a href="#">Career Guide</a>
+            </li>
+
+            <li>
+                <a href="#">Help Center</a>
+            </li>
+
+            <li>
+                <a href="#">FAQs</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
         </ul>
+
     </div>
+
+
+    <!-- COMPANY LINKS -->
 
     <div class="footer-column">
+
         <h3>Company</h3>
+
         <span class="footer-line"></span>
 
         <ul>
-            <li>About Us</li>
-            <li>Our Team</li>
-            <li>Careers</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+                <a href="#">Our Team</a>
+            </li>
+
+            <li>
+                <a href="careers.html">Careers</a>
+            </li>
+
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+
+            <li>
+                <a href="#">Terms & Conditions</a>
+            </li>
+
         </ul>
+
     </div>
+
 
 </footer>
+
+
+<!-- =========================
+     FOOTER BOTTOM
+========================= -->
+
+<div class="footer-bottom">
+
+    <p>
+        © 2026 ANAS Technologies. All Rights Reserved.
+    </p>
+
+    <p>
+        Policy | Terms & Conditions | Cookies
+    </p>
+
+</div>
+
+
 <script src="script.js"></script>
+
 </body>
 </html>
