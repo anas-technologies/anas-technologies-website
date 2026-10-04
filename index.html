@@ -5,2183 +5,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anas Technologies</title>
-
-    <!-- Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-
-    <style>
-        /* =========================================================
-           ANAS TECHNOLOGIES
-           FULL RESPONSIVE STYLE
-           Mobile + Tablet + Laptop + Desktop
-        ========================================================= */
-
-        /* =========================
-           RESET
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-        body {
-            font-family: "Poppins", sans-serif;
-            width: 100%;
-            min-width: 320px;
-            overflow-x: hidden;
-            background: #ffffff;
-            color: #111111;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        button,
-        input {
-            font-family: inherit;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* =========================
-           COMMON CONTAINER
-        ========================= */
-
-        section,
-        header,
-        footer {
-            width: 100%;
-        }
-
-        .hero,
-        .work-section,
-        .services-section,
-        .our-process-section,
-        .why-choose-section,
-        .bottom-cta,
-        .subscribe-section,
-        .footer {
-            width: 100%;
-            max-width: 1440px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* =========================================================
-           NAVBAR
-        ========================================================= */
-
-        header {
-            width: 100%;
-            background: #ffffff;
-        }
-
-        .navbar {
-            width: 100%;
-            max-width: 1440px;
-            min-height: 90px;
-            margin: 0 auto;
-            padding: 15px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .logo {
-            flex-shrink: 0;
-        }
-
-        .logo a {
-            display: block;
-        }
-
-        .logo img {
-            width: 145px;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: clamp(18px, 2vw, 35px);
-            flex: 1;
-        }
-
-        .nav-links a {
-            position: relative;
-            font-size: 14px;
-            font-weight: 500;
-            color: #202020;
-            white-space: nowrap;
-            transition: 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #f47b20;
-        }
-
-        .nav-links a.active::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -7px;
-            width: 100%;
-            height: 2px;
-            background: #f47b20;
-            border-radius: 10px;
-        }
-
-        .quote-btn {
-            border: none;
-            background: #f47b20;
-            color: #ffffff;
-            padding: 13px 22px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            white-space: nowrap;
-            transition: 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        .quote-btn:hover {
-            background: #d9630c;
-            transform: translateY(-2px);
-        }
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-
-        .hero {
-            min-height: 650px;
-            padding: 70px 6%;
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-            align-items: center;
-            gap: 60px;
-        }
-
-        .hero-left {
-            min-width: 0;
-        }
-
-        .small-heading {
-            display: inline-block;
-            margin-bottom: 22px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #f47b20;
-        }
-
-        .hero h1 {
-            font-size: clamp(42px, 4.2vw, 68px);
-            line-height: 1.1;
-            font-weight: 700;
-            color: #111111;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: #f47b20;
-        }
-
-        .hero-left > p {
-            max-width: 600px;
-            font-size: clamp(14px, 1.2vw, 17px);
-            line-height: 1.8;
-            color: #666666;
-            margin-bottom: 32px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .consult-btn,
-        .work-btn {
-            min-height: 52px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 22px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
-
-        .consult-btn {
-            border: none;
-            background: #f47b20;
-            color: #ffffff;
-        }
-
-        .consult-btn:hover {
-            background: #d9630c;
-            transform: translateY(-2px);
-        }
-
-        .rocket-img {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-        }
-
-        .work-btn {
-            border: 1px solid #dddddd;
-            background: #ffffff;
-            color: #222222;
-        }
-
-        .work-btn:hover {
-            border-color: #f47b20;
-            color: #f47b20;
-        }
-
-        .play-icon {
-            font-size: 12px;
-            color: #f47b20;
-        }
-
-        .hero-right {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-right img {
-            width: 100%;
-            max-width: 650px;
-            max-height: 550px;
-            object-fit: contain;
-            margin: auto;
-        }
-
-        /* =========================================================
-           OUR WORK
-        ========================================================= */
-
-        .work-section {
-            padding: 100px 6%;
-            background: #ffffff;
-        }
-
-        .work-top {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 25px;
-        }
-
-        .side-arrow {
-            color: #f47b20;
-            font-size: 24px;
-        }
-
-        .work-label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #f47b20;
-        }
-
-        .work-dot {
-            width: 7px;
-            height: 7px;
-            background: #f47b20;
-            border-radius: 50%;
-        }
-
-        .work-section > h1 {
-            text-align: center;
-            font-size: clamp(32px, 4vw, 55px);
-            line-height: 1.15;
-            font-weight: 700;
-            margin-bottom: 22px;
-        }
-
-        .work-section > h1 span {
-            color: #f47b20;
-        }
-
-        .work-description {
-            text-align: center;
-            color: #777777;
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 55px;
-        }
-
-        /* =========================
-           STATS
-        ========================= */
-
-        .stats {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 80px;
-        }
-
-        .stat-box {
-            min-width: 0;
-            padding: 25px;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            border: 1px solid #eeeeee;
-            border-radius: 14px;
-            background: #ffffff;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-        }
-
-        .stat-icon {
-            width: 55px;
-            height: 55px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff3e9;
-            border-radius: 12px;
-        }
-
-        .stat-icon img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
-        }
-
-        .stat-text {
-            min-width: 0;
-        }
-
-        .stat-text h2 {
-            font-size: clamp(22px, 2vw, 30px);
-            line-height: 1.1;
-            color: #111111;
-        }
-
-        .stat-text p {
-            font-size: 12px;
-            color: #777777;
-            margin-top: 5px;
-        }
-
-        /* =========================
-           WORK CONTENT
-        ========================= */
-
-        .work-content {
-            display: grid;
-            grid-template-columns: 0.75fr 1.25fr;
-            gap: 60px;
-            align-items: center;
-            margin-bottom: 70px;
-        }
-
-        .process-section {
-            min-width: 0;
-        }
-
-        .process-label {
-            color: #f47b20;
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-
-        .process-item {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 25px;
-        }
-
-        .process-icon {
-            width: 58px;
-            height: 58px;
-            flex-shrink: 0;
-            border-radius: 12px;
-            background: #fff3e9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .process-icon img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
-        }
-
-        .process-text {
-            min-width: 0;
-        }
-
-        .process-text h3 {
-            font-size: 17px;
-            margin-bottom: 4px;
-        }
-
-        .process-text p {
-            font-size: 13px;
-            line-height: 1.6;
-            color: #777777;
-        }
-
-        .shoehub-image {
-            width: 100%;
-        }
-
-        .shoehub-image img {
-            width: 100%;
-            max-width: 700px;
-            margin: auto;
-            object-fit: contain;
-        }
-
-        /* =========================================================
-           PROJECT CARDS
-        ========================================================= */
-
-        .bottom-projects {
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-        }
-
-        .fittrack-card,
-        .bizflow-card {
-            width: 100%;
-            min-width: 0;
-            border-radius: 20px;
-            padding: 45px;
-            display: grid;
-            align-items: center;
-            gap: 30px;
-            overflow: hidden;
-        }
-
-        .fittrack-card {
-            grid-template-columns: minmax(240px, 0.8fr) minmax(250px, 1fr) minmax(150px, 0.5fr);
-            background: #fafafa;
-        }
-
-        .bizflow-card {
-            grid-template-columns: minmax(250px, 0.9fr) minmax(300px, 1.1fr);
-            background: #111111;
-            color: #ffffff;
-        }
-
-        .fittrack-left,
-        .bizflow-left {
-            min-width: 0;
-        }
-
-        .project-number,
-        .bizflow-number {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .project-number span,
-        .bizflow-number span {
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .number-line,
-        .bizflow-line {
-            width: 45px;
-            height: 1px;
-            background: #f47b20;
-        }
-
-        .project-type,
-        .bizflow-type {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: #f47b20;
-            margin-bottom: 12px;
-        }
-
-        .fittrack-left h2,
-        .bizflow-left h2 {
-            font-size: clamp(30px, 3vw, 45px);
-            line-height: 1.1;
-            margin-bottom: 5px;
-        }
-
-        .fittrack-left h3,
-        .bizflow-left h3 {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 18px;
-        }
-
-        .fittrack-description,
-        .bizflow-description {
-            max-width: 450px;
-            font-size: 13px;
-            line-height: 1.7;
-            color: #777777;
-            margin-bottom: 20px;
-        }
-
-        .bizflow-description {
-            color: #bdbdbd;
-        }
-
-        .fit-tags,
-        .bizflow-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-
-        .fit-tags span,
-        .bizflow-tags span {
-            font-size: 10px;
-            font-weight: 600;
-        }
-
-        .orange-dot {
-            color: #f47b20;
-            font-style: normal;
-        }
-
-        .case-study-btn {
-            border: none;
-            background: transparent;
-            color: #f47b20;
-            padding: 0;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .case-study-btn span {
-            margin-left: 8px;
-        }
-
-        .fittrack-center,
-        .bizflow-image {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .fittrack-center img,
-        .bizflow-image img {
-            width: 100%;
-            max-width: 600px;
-            max-height: 450px;
-            object-fit: contain;
-            margin: auto;
-        }
-
-        .fittrack-result {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .fittrack-result img {
-            width: 100%;
-            max-width: 170px;
-            object-fit: contain;
-        }
-
-        /* =========================================================
-           SERVICES
-        ========================================================= */
-
-        .services-section {
-            padding: 100px 6%;
-            background: #fafafa;
-        }
-
-        .services-label,
-        .process-badge,
-        .why-choose-badge {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            color: #f47b20;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.8px;
-        }
-
-        .services-label span,
-        .process-badge span,
-        .why-choose-badge span {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #f47b20;
-        }
-
-        .services-title {
-            max-width: 850px;
-            font-size: clamp(34px, 4vw, 58px);
-            line-height: 1.15;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .services-title span {
-            color: #f47b20;
-        }
-
-        .services-description {
-            color: #777777;
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
-        .services-btn {
-            border: none;
-            background: #f47b20;
-            color: #ffffff;
-            padding: 14px 22px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 55px;
-            transition: 0.3s ease;
-        }
-
-        .services-btn:hover {
-            background: #d9630c;
-            transform: translateY(-2px);
-        }
-
-        .services-btn span {
-            margin-right: 8px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .service-card {
-            min-width: 0;
-            position: relative;
-            padding: 30px;
-            min-height: 245px;
-            background: #ffffff;
-            border: 1px solid #eeeeee;
-            border-radius: 15px;
-            transition: 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #f47b20;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
-        }
-
-        .service-card-top {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .service-icon {
-            width: 52px;
-            height: 52px;
-            flex-shrink: 0;
-            background: #fff3e9;
-            border-radius: 11px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .service-icon img {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-        }
-
-        .service-card h3 {
-            font-size: 17px;
-            line-height: 1.3;
-        }
-
-        .service-card > p {
-            color: #777777;
-            font-size: 13px;
-            line-height: 1.7;
-            padding-right: 10px;
-        }
-
-        .service-arrow {
-            position: absolute;
-            right: 25px;
-            bottom: 22px;
-            color: #f47b20;
-            font-size: 22px;
-        }
-
-        /* =========================================================
-           OUR PROCESS
-        ========================================================= */
-
-        .our-process-section {
-            padding: 100px 6%;
-            background: #ffffff;
-        }
-
-        .process-main-title {
-            max-width: 900px;
-            font-size: clamp(32px, 4vw, 55px);
-            line-height: 1.2;
-            margin: 20px 0 65px;
-        }
-
-        .process-main-title span {
-            color: #f47b20;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-        }
-
-        .process-step {
-            min-width: 0;
-            text-align: center;
-            padding: 20px 10px;
-        }
-
-        .process-step-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff3e9;
-            border-radius: 50%;
-        }
-
-        .process-step-icon img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .process-step h4 {
-            font-size: 12px;
-            color: #f47b20;
-            margin-bottom: 7px;
-        }
-
-        .process-step h3 {
-            font-size: 17px;
-            margin-bottom: 10px;
-        }
-
-        .process-step p {
-            color: #777777;
-            font-size: 12px;
-            line-height: 1.7;
-        }
-
-        /* =========================================================
-           WHY CHOOSE US
-        ========================================================= */
-
-        .why-choose-section {
-            padding: 100px 6%;
-            background: #fafafa;
-        }
-
-        .why-choose-box {
-            margin-top: 45px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border: 1px solid #eeeeee;
-            border-radius: 18px;
-            background: #ffffff;
-            overflow: hidden;
-        }
-
-        .why-item {
-            min-width: 0;
-            text-align: center;
-            padding: 40px 25px;
-            border-right: 1px solid #eeeeee;
-        }
-
-        .why-item:last-child {
-            border-right: none;
-        }
-
-        .why-icon {
-            width: 65px;
-            height: 65px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff3e9;
-            border-radius: 14px;
-        }
-
-        .why-icon img {
-            width: 35px;
-            height: 35px;
-            object-fit: contain;
-        }
-
-        .why-item h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .why-item p {
-            color: #777777;
-            font-size: 12px;
-            line-height: 1.7;
-        }
-
-        /* =========================================================
-           BOTTOM CTA
-        ========================================================= */
-
-        .bottom-cta {
-            margin-top: 0;
-            padding: 45px 6%;
-            background: #111111;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .cta-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            min-width: 0;
-        }
-
-        .cta-icon {
-            width: 55px;
-            height: 55px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f47b20;
-            border-radius: 12px;
-            font-size: 22px;
-        }
-
-        .cta-text {
-            min-width: 0;
-        }
-
-        .cta-text h3 {
-            font-size: clamp(18px, 2vw, 25px);
-            margin-bottom: 6px;
-        }
-
-        .cta-text p {
-            color: #aaaaaa;
-            font-size: 12px;
-            line-height: 1.6;
-        }
-
-        .cta-button {
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            border: none;
-            background: #f47b20;
-            color: #ffffff;
-            padding: 14px 22px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .cta-button img {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-        }
-
-        /* =========================================================
-           SUBSCRIBE
-        ========================================================= */
-
-        .subscribe-section {
-            padding: 70px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-            background: #ffffff;
-        }
-
-        .subscribe-left {
-            min-width: 0;
-        }
-
-        .subscribe-left h2 {
-            font-size: clamp(28px, 3vw, 42px);
-            line-height: 1.2;
-            margin-bottom: 15px;
-        }
-
-        .subscribe-left h2 span {
-            color: #f47b20;
-        }
-
-        .subscribe-left p {
-            color: #777777;
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-        .subscribe-right {
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .subscribe-box {
-            width: 100%;
-            min-height: 55px;
-            display: flex;
-            align-items: center;
-            padding: 5px;
-            border: 1px solid #dddddd;
-            border-radius: 9px;
-            overflow: hidden;
-        }
-
-        .email-icon {
-            padding: 0 12px;
-            color: #f47b20;
-            font-size: 18px;
-        }
-
-        .subscribe-box input {
-            min-width: 0;
-            flex: 1;
-            height: 45px;
-            border: none;
-            outline: none;
-            font-size: 13px;
-            padding: 0 5px;
-        }
-
-        .subscribe-box button {
-            height: 45px;
-            flex-shrink: 0;
-            border: none;
-            border-radius: 7px;
-            background: #f47b20;
-            color: #ffffff;
-            padding: 0 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        .footer {
-            padding: 70px 6% 55px;
-            background: #111111;
-            color: #ffffff;
-            display: grid;
-            grid-template-columns: 1.8fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
-
-        .footer-about {
-            min-width: 0;
-        }
-
-        .footer-logo {
-            width: 150px;
-            max-width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .footer-about > p {
-            color: #aaaaaa;
-            font-size: 12px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .footer-contact {
-            margin-bottom: 20px;
-        }
-
-        .footer-contact p {
-            color: #cccccc;
-            font-size: 12px;
-            line-height: 2;
-            word-break: break-word;
-        }
-
-        .social-icons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .social-icons span {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #222222;
-        }
-
-        .social-icons img {
-            width: 17px;
-            height: 17px;
-            object-fit: contain;
-        }
-
-        .footer-column {
-            min-width: 0;
-        }
-
-        .footer-column h3 {
-            font-size: 15px;
-            margin-bottom: 9px;
-        }
-
-        .footer-line {
-            display: block;
-            width: 30px;
-            height: 2px;
-            background: #f47b20;
-            margin-bottom: 20px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            color: #aaaaaa;
-            font-size: 12px;
-            line-height: 2.4;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-
-        .footer-column li:hover {
-            color: #f47b20;
-        }
-
-        .footer-bottom {
-            width: 100%;
-            padding: 18px 6%;
-            background: #0a0a0a;
-            color: #777777;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            font-size: 11px;
-        }
-
-        .footer-bottom p {
-            margin: 0;
-        }
-
-        /* =========================================================
-           LARGE DESKTOP
-           1440px+
-        ========================================================= */
-
-        @media (min-width: 1441px) {
-
-            .navbar,
-            .hero,
-            .work-section,
-            .services-section,
-            .our-process-section,
-            .why-choose-section,
-            .bottom-cta,
-            .subscribe-section,
-            .footer {
-                max-width: 1600px;
-            }
-
-            .navbar {
-                padding-left: 4%;
-                padding-right: 4%;
-            }
-
-            .hero {
-                padding-top: 100px;
-                padding-bottom: 100px;
-            }
-        }
-
-        /* =========================================================
-           LAPTOP
-           1025px - 1199px
-        ========================================================= */
-
-        @media (min-width: 1025px) and (max-width: 1199px) {
-
-            .navbar {
-                padding-left: 4%;
-                padding-right: 4%;
-                gap: 15px;
-            }
-
-            .nav-links {
-                gap: 17px;
-            }
-
-            .nav-links a {
-                font-size: 12px;
-            }
-
-            .quote-btn {
-                padding: 11px 16px;
-                font-size: 12px;
-            }
-
-            .hero {
-                gap: 35px;
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .stats {
-                gap: 12px;
-            }
-
-            .stat-box {
-                padding: 18px;
-                gap: 12px;
-            }
-
-            .fittrack-card,
-            .bizflow-card {
-                padding: 30px;
-            }
-        }
-
-        /* =========================================================
-           TABLET
-           768px - 1024px
-        ========================================================= */
-
-        @media (min-width: 768px) and (max-width: 1024px) {
-
-            .navbar {
-                min-height: 80px;
-                padding: 12px 4%;
-                gap: 15px;
-            }
-
-            .logo img {
-                width: 120px;
-            }
-
-            .nav-links {
-                gap: 14px;
-            }
-
-            .nav-links a {
-                font-size: 11px;
-            }
-
-            .quote-btn {
-                padding: 10px 14px;
-                font-size: 11px;
-            }
-
-            .hero {
-                grid-template-columns: 1fr 1fr;
-                gap: 35px;
-                min-height: auto;
-                padding: 65px 5%;
-            }
-
-            .hero h1 {
-                font-size: clamp(34px, 5vw, 48px);
-            }
-
-            .hero-left > p {
-                font-size: 13px;
-            }
-
-            .consult-btn,
-            .work-btn {
-                padding: 10px 16px;
-                font-size: 12px;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .work-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 35px;
-            }
-
-            .fittrack-card {
-                grid-template-columns: 1fr 1fr;
-                padding: 30px;
-            }
-
-            .fittrack-result {
-                display: none;
-            }
-
-            .bizflow-card {
-                grid-template-columns: 1fr 1fr;
-                padding: 30px;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(3, 1fr);
-                row-gap: 30px;
-            }
-
-            .why-choose-box {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .why-item:nth-child(2) {
-                border-right: none;
-            }
-
-            .why-item:nth-child(-n + 2) {
-                border-bottom: 1px solid #eeeeee;
-            }
-
-            .bottom-cta {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .subscribe-section {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .footer {
-                grid-template-columns: repeat(2, 1fr);
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .footer-about {
-                grid-column: span 2;
-            }
-
-            .footer-bottom {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-        }
-
-        /* =========================================================
-           MOBILE
-           767px AND BELOW
-        ========================================================= */
-
-        @media (max-width: 767px) {
-
-            /* =========================
-               NAVBAR
-            ========================= */
-
-            .navbar {
-                min-height: 70px;
-                padding: 12px 18px;
-                position: relative;
-                flex-wrap: wrap;
-            }
-
-            .logo img {
-                width: 115px;
-            }
-
-            /*
-               Existing HTML has no hamburger button.
-               On mobile the links become a horizontal scroll row.
-            */
-
-            .nav-links {
-                order: 3;
-                width: 100%;
-                flex: 0 0 100%;
-                justify-content: flex-start;
-                gap: 20px;
-                overflow-x: auto;
-                padding: 8px 0 4px;
-                scrollbar-width: none;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .nav-links::-webkit-scrollbar {
-                display: none;
-            }
-
-            .nav-links a {
-                font-size: 11px;
-                flex-shrink: 0;
-                white-space: nowrap;
-            }
-
-            .nav-links a.active::after {
-                bottom: -5px;
-            }
-
-            .quote-btn {
-                padding: 9px 13px;
-                font-size: 10px;
-                border-radius: 6px;
-            }
-
-            /* =========================
-               HERO
-            ========================= */
-
-            .hero {
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 35px;
-                min-height: auto;
-                padding: 50px 20px 55px;
-            }
-
-            .hero-left {
-                width: 100%;
-            }
-
-            .small-heading {
-                font-size: 10px;
-                letter-spacing: 1.5px;
-                margin-bottom: 16px;
-            }
-
-            .hero h1 {
-                font-size: clamp(32px, 9vw, 46px);
-                line-height: 1.12;
-                margin-bottom: 18px;
-            }
-
-            .hero-left > p {
-                font-size: 13px;
-                line-height: 1.7;
-                margin-bottom: 25px;
-            }
-
-            .hero-buttons {
-                width: 100%;
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .consult-btn,
-            .work-btn {
-                width: 100%;
-                min-height: 50px;
-                font-size: 12px;
-            }
-
-            .hero-right {
-                width: 100%;
-            }
-
-            .hero-right img {
-                width: 100%;
-                max-width: 100%;
-                max-height: none;
-            }
-
-            /* =========================
-               WORK
-            ========================= */
-
-            .work-section {
-                padding: 65px 20px;
-            }
-
-            .work-top {
-                gap: 15px;
-                margin-bottom: 18px;
-            }
-
-            .side-arrow {
-                font-size: 18px;
-            }
-
-            .work-label {
-                font-size: 10px;
-                letter-spacing: 1.5px;
-            }
-
-            .work-section > h1 {
-                font-size: clamp(28px, 8vw, 38px);
-                line-height: 1.2;
-                margin-bottom: 18px;
-            }
-
-            .work-description {
-                font-size: 12px;
-                line-height: 1.7;
-                margin-bottom: 40px;
-            }
-
-            .work-description br {
-                display: none;
-            }
-
-            /* =========================
-               STATS
-            ========================= */
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-                margin-bottom: 50px;
-            }
-
-            .stat-box {
-                padding: 15px 10px;
-                gap: 9px;
-                border-radius: 10px;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .stat-icon {
-                width: 45px;
-                height: 45px;
-            }
-
-            .stat-icon img {
-                width: 24px;
-                height: 24px;
-            }
-
-            .stat-text h2 {
-                font-size: 22px;
-            }
-
-            .stat-text p {
-                font-size: 9px;
-            }
-
-            /* =========================
-               WORK PROCESS
-            ========================= */
-
-            .work-content {
-                display: flex;
-                flex-direction: column;
-                gap: 35px;
-                margin-bottom: 50px;
-            }
-
-            .process-label {
-                font-size: 13px;
-                margin-bottom: 20px;
-            }
-
-            .process-item {
-                gap: 13px;
-                margin-bottom: 18px;
-            }
-
-            .process-icon {
-                width: 48px;
-                height: 48px;
-            }
-
-            .process-icon img {
-                width: 25px;
-                height: 25px;
-            }
-
-            .process-text h3 {
-                font-size: 15px;
-            }
-
-            .process-text p {
-                font-size: 11px;
-            }
-
-            .shoehub-image img {
-                width: 100%;
-            }
-
-            /* =========================
-               PROJECTS
-            ========================= */
-
-            .bottom-projects {
-                gap: 20px;
-            }
-
-            .fittrack-card,
-            .bizflow-card {
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 25px;
-                padding: 25px 20px;
-                border-radius: 15px;
-            }
-
-            .fittrack-center,
-            .bizflow-image {
-                order: 2;
-            }
-
-            .fittrack-left,
-            .bizflow-left {
-                order: 1;
-            }
-
-            .fittrack-result {
-                display: none;
-            }
-
-            .fittrack-center img,
-            .bizflow-image img {
-                width: 100%;
-                max-width: 100%;
-                max-height: none;
-            }
-
-            .project-number,
-            .bizflow-number {
-                margin-bottom: 15px;
-            }
-
-            .project-type,
-            .bizflow-type {
-                font-size: 9px;
-            }
-
-            .fittrack-left h2,
-            .bizflow-left h2 {
-                font-size: 32px;
-            }
-
-            .fittrack-left h3,
-            .bizflow-left h3 {
-                font-size: 14px;
-            }
-
-            .fittrack-description,
-            .bizflow-description {
-                font-size: 11px;
-            }
-
-            .fit-tags,
-            .bizflow-tags {
-                gap: 8px;
-            }
-
-            .fit-tags span,
-            .bizflow-tags span {
-                font-size: 8px;
-            }
-
-            .case-study-btn {
-                font-size: 11px;
-            }
-
-            /* =========================
-               SERVICES
-            ========================= */
-
-            .services-section {
-                padding: 65px 20px;
-            }
-
-            .services-label {
-                font-size: 10px;
-            }
-
-            .services-title {
-                font-size: clamp(28px, 8vw, 38px);
-                line-height: 1.2;
-                margin-top: 18px;
-            }
-
-            .services-description {
-                font-size: 12px;
-            }
-
-            .services-description br {
-                display: none;
-            }
-
-            .services-btn {
-                width: 100%;
-                margin-bottom: 40px;
-                padding: 14px;
-                font-size: 12px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-
-            .service-card {
-                min-height: 210px;
-                padding: 22px;
-            }
-
-            .service-card-top {
-                gap: 12px;
-                margin-bottom: 15px;
-            }
-
-            .service-icon {
-                width: 45px;
-                height: 45px;
-            }
-
-            .service-icon img {
-                width: 24px;
-                height: 24px;
-            }
-
-            .service-card h3 {
-                font-size: 15px;
-            }
-
-            .service-card > p {
-                font-size: 11px;
-                line-height: 1.7;
-            }
-
-            .service-arrow {
-                right: 20px;
-                bottom: 17px;
-                font-size: 18px;
-            }
-
-            /* =========================
-               PROCESS
-            ========================= */
-
-            .our-process-section {
-                padding: 65px 20px;
-            }
-
-            .process-badge {
-                font-size: 10px;
-            }
-
-            .process-main-title {
-                font-size: clamp(28px, 8vw, 38px);
-                line-height: 1.2;
-                margin: 18px 0 40px;
-            }
-
-            .process-steps {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .process-step {
-                padding: 0 15px;
-            }
-
-            .process-step-icon {
-                width: 70px;
-                height: 70px;
-            }
-
-            .process-step-icon img {
-                width: 35px;
-                height: 35px;
-            }
-
-            .process-step h3 {
-                font-size: 16px;
-            }
-
-            .process-step p {
-                max-width: 300px;
-                margin: auto;
-                font-size: 11px;
-            }
-
-            /* =========================
-               WHY CHOOSE
-            ========================= */
-
-            .why-choose-section {
-                padding: 65px 20px;
-            }
-
-            .why-choose-badge {
-                font-size: 10px;
-            }
-
-            .why-choose-box {
-                grid-template-columns: 1fr;
-                margin-top: 30px;
-                border-radius: 14px;
-            }
-
-            .why-item {
-                border-right: none;
-                border-bottom: 1px solid #eeeeee;
-                padding: 30px 20px;
-            }
-
-            .why-item:last-child {
-                border-bottom: none;
-            }
-
-            .why-icon {
-                width: 58px;
-                height: 58px;
-                margin-bottom: 15px;
-            }
-
-            .why-icon img {
-                width: 30px;
-                height: 30px;
-            }
-
-            .why-item h3 {
-                font-size: 15px;
-            }
-
-            .why-item p {
-                font-size: 11px;
-            }
-
-            /* =========================
-               CTA
-            ========================= */
-
-            .bottom-cta {
-                padding: 35px 20px;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 25px;
-            }
-
-            .cta-left {
-                gap: 13px;
-            }
-
-            .cta-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 18px;
-            }
-
-            .cta-text h3 {
-                font-size: 18px;
-            }
-
-            .cta-text p {
-                font-size: 11px;
-            }
-
-            .cta-button {
-                width: 100%;
-                min-height: 50px;
-                font-size: 12px;
-            }
-
-            /* =========================
-               SUBSCRIBE
-            ========================= */
-
-            .subscribe-section {
-                padding: 55px 20px;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 30px;
-            }
-
-            .subscribe-left h2 {
-                font-size: 28px;
-            }
-
-            .subscribe-left p {
-                font-size: 11px;
-            }
-
-            .subscribe-left p br {
-                display: none;
-            }
-
-            .subscribe-right {
-                max-width: none;
-            }
-
-            .subscribe-box {
-                min-height: 52px;
-            }
-
-            .email-icon {
-                padding: 0 8px;
-                font-size: 15px;
-            }
-
-            .subscribe-box input {
-                font-size: 11px;
-            }
-
-            .subscribe-box button {
-                padding: 0 13px;
-                font-size: 10px;
-            }
-
-            /* =========================
-               FOOTER
-            ========================= */
-
-            .footer {
-                padding: 55px 20px 35px;
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-            .footer-about {
-                grid-column: auto;
-            }
-
-            .footer-logo {
-                width: 130px;
-            }
-
-            .footer-about > p {
-                font-size: 11px;
-            }
-
-            .footer-about > p br {
-                display: none;
-            }
-
-            .footer-contact p {
-                font-size: 11px;
-            }
-
-            .footer-column h3 {
-                font-size: 14px;
-            }
-
-            .footer-column li {
-                font-size: 11px;
-                line-height: 2.2;
-            }
-
-            .footer-bottom {
-                padding: 16px 20px;
-                flex-direction: column;
-                text-align: center;
-                gap: 7px;
-                font-size: 9px;
-            }
-        }
-
-        /* =========================================================
-           EXTRA SMALL MOBILE
-           320px - 374px
-        ========================================================= */
-
-        @media (max-width: 374px) {
-
-            .navbar {
-                padding-left: 14px;
-                padding-right: 14px;
-            }
-
-            .logo img {
-                width: 100px;
-            }
-
-            .quote-btn {
-                padding: 8px 10px;
-                font-size: 9px;
-            }
-
-            .nav-links {
-                gap: 16px;
-            }
-
-            .nav-links a {
-                font-size: 10px;
-            }
-
-            .hero,
-            .work-section,
-            .services-section,
-            .our-process-section,
-            .why-choose-section,
-            .subscribe-section,
-            .footer {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
-            .hero h1 {
-                font-size: 31px;
-            }
-
-            .stats {
-                gap: 7px;
-            }
-
-            .stat-box {
-                padding: 12px 6px;
-            }
-
-            .stat-text h2 {
-                font-size: 19px;
-            }
-
-            .stat-text p {
-                font-size: 8px;
-            }
-
-            .fittrack-card,
-            .bizflow-card {
-                padding: 20px 15px;
-            }
-
-            .subscribe-box button {
-                padding: 0 10px;
-            }
-        }
-
-        /* =========================================================
-           LANDSCAPE MOBILE
-        ========================================================= */
-
-        @media (max-width: 767px) and (orientation: landscape) {
-
-            .hero {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-                gap: 25px;
-            }
-
-            .hero-right {
-                order: 2;
-            }
-
-            .hero-left {
-                order: 1;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .hero-buttons {
-                flex-direction: row;
-            }
-
-            .consult-btn,
-            .work-btn {
-                width: auto;
-                flex: 1;
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .why-choose-box {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .why-item:nth-child(2) {
-                border-right: none;
-            }
-
-            .why-item:nth-child(-n + 2) {
-                border-bottom: 1px solid #eeeeee;
-            }
-
-            .why-item:nth-child(3) {
-                border-right: 1px solid #eeeeee;
-            }
-        }
-
-        /* =========================================================
-           TOUCH DEVICES
-        ========================================================= */
-
-        @media (hover: none) {
-
-            .service-card:hover,
-            .quote-btn:hover,
-            .consult-btn:hover,
-            .services-btn:hover {
-                transform: none;
-            }
-        }
-
-        /* =========================================================
-           ACCESSIBILITY
-        ========================================================= */
-
-        button:focus-visible,
-        a:focus-visible,
-        input:focus-visible {
-            outline: 2px solid #f47b20;
-            outline-offset: 3px;
-        }
-
-        /* =========================================================
-           PREVENT LONG TEXT BREAKING LAYOUT
-        ========================================================= */
-
-        h1,
-        h2,
-        h3,
-        h4,
-        p,
-        a,
-        span {
-            overflow-wrap: break-word;
-        }
-
-        /* =========================================================
-           FINAL OVERFLOW PROTECTION
-        ========================================================= */
-
-        section,
-        div,
-        header,
-        footer {
-            max-width: 100%;
-        }
-
-        table,
-        iframe,
-        video {
-            max-width: 100%;
-        }
-    </style>
+    <title>ANAS Technologies | Websites, Apps & Custom Software</title>
+
+    <meta
+        name="description"
+        content="ANAS Technologies designs and develops websites, mobile apps and custom software. Explore our services, projects and development process."
+    >
+<!-- Google Fonts: Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet"
+>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="anas-homepage">
+
+    <!-- Skip Link -->
+    <a class="an-skip" href="#services">
+        Skip to homepage content
+    </a>
+
+
+    <!-- ========================================
+         HEADER / NAVBAR
+    ========================================= -->
 
     <header>
-    <nav class="navbar">
 
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.jpeg" alt="ANAS Technologies">
-            </a>
-        </div>
+        <nav class="navbar">
 
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="solutions.html">Solutions</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About Us</a>
-            <a href="careers.html">Careers</a>
-            <a href="contact.html">Contact</a>
-        </div>
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="Anas Technologies">
+            </div>
 
-        <button class="quote-btn" type="button">
-            Get a Quote →
-        </button>
 
-    </nav>
-</header>
+            <!-- Mobile Menu Button -->
+            <button
+                class="an-nav-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-controls="main-nav"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="main-nav">
+
+                <a
+                    href="index.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Home
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="solutions.html">
+                    Solutions
+                </a>
+
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="careers.html">
+                    Careers
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Quote Button -->
+            <button class="quote-btn">
+                Get a Quote →
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
 
     <main>
 
+
+        <!-- ========================================
+             HERO SECTION
+        ========================================= -->
+
         <section class="hero">
 
+            <!-- Hero Left -->
             <div class="hero-left">
 
                 <div class="small-heading">
                     INNOVATE . GROW . BUILD
                 </div>
+
 
                 <h1>
                     We Build Digital <br>
@@ -2189,556 +139,2632 @@
                     <span>Business Forward.</span>
                 </h1>
 
+
                 <p>
                     We design and develop high-performance websites,
                     mobile apps, and digital experiences that help
                     businesses grow.
                 </p>
 
+
+                <!-- Hero Buttons -->
                 <div class="hero-buttons">
 
-                   <button class="consult-btn">
-    <img src="images/rocket-icon.png" alt="Rocket" class="rocket-img">
-    <span>Get a Free Consultation</span>
-</button>
+                    <button class="consult-btn">
 
-                   <a href="ourwork.html" class="work-btn">
-    <span class="play-icon">▶</span>
-    <span>View Our Work</span>
-</a>
+                        <img
+                            src="images/rocket-icon.png"
+                            alt="Rocket"
+                            class="rocket-img"
+                        >
+
+                        <span>
+                            Get a Free Consultation
+                        </span>
+
+                    </button>
+
+
+                    <a
+                        href="portfolio.html"
+                        class="work-btn"
+                    >
+                        <span class="play-icon">
+                            ▶
+                        </span>
+
+                        <span>
+                            View Our Work
+                        </span>
+                    </a>
 
                 </div>
 
             </div>
 
 
+            <!-- Hero Right -->
             <div class="hero-right">
-    <img src="images/hero.jpeg" alt="Digital ecommerce website">
-</div>
+
+                <img
+                    src="images/hero.jpeg"
+                    alt="Digital ecommerce website"
+                >
+
+            </div>
 
         </section>
-        <!-- OUR WORK SECTION -->
 
-<section class="work-section">
 
-    <div class="work-top">
-        <span class="side-arrow">→</span>
+        <!-- ========================================
+             HOMEPAGE CONTENT
+        ========================================= -->
 
-        <p class="work-label">
-            <span class="work-dot"></span>
-            OUR WORK
-        </p>
+        <div class="an-home">
 
-        <span class="side-arrow">←</span>
-    </div>
 
-    <h1>
-        We Build Digital Experiences <br>
-        <span>That Drive Results.</span>
-    </h1>
+            <!-- ========================================
+                 HIGHLIGHTS SECTION
+            ========================================= -->
 
-    <p class="work-description">
-        A showcase of our selected projects where creativity, technology,<br>
-        and strategy come together to create real impact.
-    </p>
-    <div class="stats">
+            <section
+                class="an-highlights"
+                aria-label="ANAS Technologies at a glance"
+            >
 
-    <div class="stat-box">
-        <div class="stat-icon">
-            <img src="images/projects-icon.png" alt="Projects">
-        </div>
-        <div class="stat-text">
-            <h2>50+</h2>
-            <p>Projects Completed</p>
-        </div>
-    </div>
+                <div class="an-container an-highlight-grid">
 
-    <div class="stat-box">
-        <div class="stat-icon">
-            <img src="images/success-icon.png" alt="Success Rate">
-        </div>
-        <div class="stat-text">
-            <h2>98%</h2>
-            <p>Successful rate</p>
-        </div>
-    </div>
 
-    <div class="stat-box">
-        <div class="stat-icon">
-            <img src="images/experience-icon.png" alt="Experience">
-        </div>
-        <div class="stat-text">
-            <h2>5+</h2>
-            <p>Years Experience</p>
-        </div>
-    </div>
+                    <!-- Highlight Intro -->
+                    <div class="an-highlight-intro">
 
-    <div class="stat-box">
-        <div class="stat-icon">
-            <img src="images/clients-icon.png" alt="Clients">
-        </div>
-        <div class="stat-text">
-            <h2>3+</h2>
-            <p>Happy Clients</p>
-        </div>
-    </div>
+                        <span class="an-eyebrow">
+                            Your digital partner
+                        </span>
 
-</div>
-<div class="work-content">
+                        <p>
+                            Ideas to products. <br>
+                            <strong>
+                                All under one roof.
+                            </strong>
+                        </p>
 
-    <div class="process-section">
+                    </div>
 
-        <p class="process-label">Our Process</p>
 
-        <!-- Design -->
-        <div class="process-item">
-            <div class="process-icon">
-                <img src="images/design.png" alt="Design">
-            </div>
+                    <!-- Highlight 01 -->
+                    <div class="an-highlight">
 
-            <div class="process-text">
-                <h3>Design</h3>
-                <p>Crafting intuitive UI/UX that engages users.</p>
-            </div>
-        </div>
+                        <strong>
+                            50<span>+</span>
+                        </strong>
 
-        <!-- Discover -->
-        <div class="process-item">
-            <div class="process-icon">
-                <img src="images/discover.png" alt="Discover">
-            </div>
+                        <p>
+                            Projects completed
+                        </p>
 
-            <div class="process-text">
-                <h3>Discover</h3>
-                <p>Understanding your goals, audience and challenges.</p>
-            </div>
-        </div>
+                    </div>
 
-        <!-- Develop -->
-        <div class="process-item">
-            <div class="process-icon">
-                <img src="images/develop.png" alt="Develop">
-            </div>
 
-            <div class="process-text">
-                <h3>Develop</h3>
-                <p>Building robust, scalable solutions with clean code.</p>
-            </div>
-        </div>
+                    <!-- Highlight 02 -->
+                    <div class="an-highlight">
 
-        <!-- Deliver -->
-        <div class="process-item">
-            <div class="process-icon">
-                <img src="images/deliver.png" alt="Deliver">
-            </div>
+                        <strong>
+                            5<span>+</span>
+                        </strong>
 
-            <div class="process-text">
-                <h3>Deliver</h3>
-                <p>Testing, launching and supporting for success.</p>
-            </div>
-        </div>
+                        <p>
+                            Years of experience
+                        </p>
 
-    </div>
+                    </div>
 
-    <div class="shoehub-image">
-        <img src="images/shoehub.png" alt="ShoeHub Project">
-    </div>
 
-</div>
-<div class="bottom-projects">
+                    <!-- Highlight 03 -->
+                    <div class="an-highlight">
 
-    <!-- FITTRACK -->
-    <div class="fittrack-card">
+                        <strong>
+                            6
+                        </strong>
 
-        <div class="fittrack-left">
+                        <p>
+                            Connected services
+                        </p>
 
-            <div class="project-number">
-                <span>02</span>
-                <div class="number-line"></div>
-            </div>
+                    </div>
 
-            <p class="project-type">MOBILE APPLICATION</p>
+                </div>
 
-            <h2>FitTrack</h2>
-            <h3>Fitness Tracking App</h3>
+            </section>
 
-            <p class="fittrack-description">
-                A fitness app that helps users track
-                workouts, monitor progress, and achieve
-                their health goals.
+
+            <!-- ========================================
+                 SERVICES SECTION
+            ========================================= -->
+
+            <section
+                class="an-section an-services"
+                id="services"
+                aria-labelledby="services-title"
+            >
+
+                <div class="an-container">
+
+
+                    <!-- Services Heading -->
+                    <div class="an-section-heading">
+
+                        <span class="an-eyebrow">
+                            What we do
+                        </span>
+
+                        <h2 id="services-title">
+                            Everything your next <br>
+                            <span>digital chapter needs.</span>
+                        </h2>
+
+                        <p>
+                            From the first sketch to a product your customers love.
+                            <br class="an-desktop-br">
+                            One team for design, development and everything in between.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Services Grid -->
+                    <div class="an-services-grid">
+
+
+                        <!-- Service 01 -->
+                        <article class="an-service">
+
+                            <div class="an-service-top">
+
+                                <span class="an-icon-box">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="3"
+                                            y="4"
+                                            width="26"
+                                            height="23"
+                                            rx="3"
+                                        />
+
+                                        <path
+                                            d="M3 11h26M9 7.5h.01M13 7.5h.01m-2 9-3 3 3 3m10-6 3 3-3 3m-3-8-3 12"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span class="an-service-no">
+                                    01
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Web Development
+                            </h3>
+
+                            <p>
+                                Responsive websites and web applications that make
+                                your business easy to find and simple to use.
+                            </p>
+
+
+                            <ul
+                                class="an-tags"
+                                aria-label="Web Development capabilities"
+                            >
+                                <li>Websites</li>
+                                <li>Web apps</li>
+                                <li>E-commerce</li>
+                            </ul>
+
+
+                            <a
+                                class="an-card-link"
+                                href="quote.html"
+                                aria-label="Discuss web development"
+                            >
+                                Let’s talk
+
+                                <svg
+                                    class="an-icon"
+                                    viewBox="0 0 32 32"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 16h22m-8-8 8 8-8 8" />
+                                </svg>
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Service 02 -->
+                        <article class="an-service">
+
+                            <div class="an-service-top">
+
+                                <span class="an-icon-box">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="8"
+                                            y="2"
+                                            width="16"
+                                            height="28"
+                                            rx="4"
+                                        />
+
+                                        <path
+                                            d="M13 6h6m-4 20h2M12 17l3 3 6-7"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span class="an-service-no">
+                                    02
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Mobile App Development
+                            </h3>
+
+                            <p>
+                                Thoughtful mobile experiences that connect your
+                                customers to your business, wherever they are.
+                            </p>
+
+
+                            <ul
+                                class="an-tags"
+                                aria-label="Mobile App Development capabilities"
+                            >
+                                <li>Flutter</li>
+                                <li>Android</li>
+                                <li>iOS</li>
+                            </ul>
+
+
+                            <a
+                                class="an-card-link"
+                                href="quote.html"
+                                aria-label="Discuss mobile app development"
+                            >
+                                Let’s talk
+
+                                <svg
+                                    class="an-icon"
+                                    viewBox="0 0 32 32"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 16h22m-8-8 8 8-8 8" />
+                                </svg>
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Service 03 -->
+                        <article class="an-service">
+
+                            <div class="an-service-top">
+
+                                <span class="an-icon-box">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="m10 8-7 8 7 8m12-16 7 8-7 8M19 4l-6 24"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span class="an-service-no">
+                                    03
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Custom Software
+                            </h3>
+
+                            <p>
+                                Software built around your workflows, helping your
+                                team spend less time on repetitive tasks.
+                            </p>
+
+
+                            <ul
+                                class="an-tags"
+                                aria-label="Custom Software capabilities"
+                            >
+                                <li>Business systems</li>
+                                <li>Automation</li>
+                            </ul>
+
+
+                            <a
+                                class="an-card-link"
+                                href="quote.html"
+                                aria-label="Discuss custom software"
+                            >
+                                Let’s talk
+
+                                <svg
+                                    class="an-icon"
+                                    viewBox="0 0 32 32"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 16h22m-8-8 8 8-8 8" />
+                                </svg>
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Service 04 -->
+                        <article class="an-service">
+
+                            <div class="an-service-top">
+
+                                <span class="an-icon-box">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="4"
+                                            y="5"
+                                            width="24"
+                                            height="22"
+                                            rx="3"
+                                        />
+
+                                        <path
+                                            d="M4 12h24M12 12v15M8 8.5h.01M12 8.5h.01m4 10h8m-8 4h5"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span class="an-service-no">
+                                    04
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                UI/UX Design
+                            </h3>
+
+                            <p>
+                                Clear user journeys and intuitive interfaces that
+                                make every interaction feel effortless.
+                            </p>
+
+
+                            <ul
+                                class="an-tags"
+                                aria-label="UI/UX Design capabilities"
+                            >
+                                <li>User flows</li>
+                                <li>Prototypes</li>
+                                <li>Interfaces</li>
+                            </ul>
+
+
+                            <a
+                                class="an-card-link"
+                                href="quote.html"
+                                aria-label="Discuss ui/ux design"
+                            >
+                                Let’s talk
+
+                                <svg
+                                    class="an-icon"
+                                    viewBox="0 0 32 32"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 16h22m-8-8 8 8-8 8" />
+                                </svg>
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Service 05 -->
+                        <article class="an-service">
+
+                            <div class="an-service-top">
+
+                                <span class="an-icon-box">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M9 24H7a6 6 0 0 1-.4-12A10 10 0 0 1 26 11a6.5 6.5 0 0 1-1 13h-2M16 29V16m-4 4 4-4 4 4"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span class="an-service-no">
+                                    05
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Cloud Solutions
+                            </h3>
+
+                            <p>
+                                Flexible infrastructure that keeps your applications
+                                connected and ready for the next stage of growth.
+                            </p>
+
+
+                            <ul
+                                class="an-tags"
+                                aria-label="Cloud Solutions capabilities"
+                            >
+                                <li>Infrastructure</li>
+                                <li>Deployment</li>
+                            </ul>
+
+
+                            <a
+                                class="an-card-link"
+                                href="quote.html"
+                                aria-label="Discuss cloud solutions"
+                            >
+                                Let’s talk
+
+                                <svg
+                                    class="an-icon"
+                                    viewBox="0 0 32 32"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 16h22m-8-8 8 8-8 8" />
+                                </svg>
+
+                            </a>
+
+                        </article>
+
+
+                        <!-- Service 06 -->
+                        <article class="an-service">
+
+                            <div class="an-service-top">
+
+                                <span class="an-icon-box">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <circle
+                                            cx="16"
+                                            cy="16"
+                                            r="13"
+                                        />
+
+                                        <path
+                                            d="m21 11-3 7-7 3 3-7 7-3Z"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span class="an-service-no">
+                                    06
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                IT Consulting
+                            </h3>
+
+                            <p>
+                                A practical technology roadmap that connects the
+                                right tools with your business priorities.
+                            </p>
+
+
+                            <ul
+                                class="an-tags"
+                                aria-label="IT Consulting capabilities"
+                            >
+                                <li>Strategy</li>
+                                <li>Planning</li>
+                                <li>Architecture</li>
+                            </ul>
+
+
+                            <a
+                                class="an-card-link"
+                                href="quote.html"
+                                aria-label="Discuss it consulting"
+                            >
+                                Let’s talk
+
+                                <svg
+                                    class="an-icon"
+                                    viewBox="0 0 32 32"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M5 16h22m-8-8 8 8-8 8" />
+                                </svg>
+
+                            </a>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Services Bottom -->
+                    <div class="an-section-bottom">
+
+                        <p>
+                            Not sure where to begin? Let’s find the right starting point.
+                        </p>
+
+                        <a
+                            class="an-text-link"
+                            href="solutions.html"
+                        >
+                            Find your solution
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M5 16h22m-8-8 8 8-8 8" />
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 PROCESS SECTION
+            ========================================= -->
+
+            <section
+                class="an-section an-process"
+                id="process"
+                aria-labelledby="process-title"
+            >
+
+                <div class="an-container">
+
+
+                    <!-- Process Heading -->
+                    <div class="an-section-heading">
+
+                        <span class="an-eyebrow">
+                            How we work
+                        </span>
+
+                        <h2 id="process-title">
+                            A clear path from <br>
+                            <span>idea to impact.</span>
+                        </h2>
+
+                        <p>
+                            You bring the vision. We bring a practical process
+                            <br class="an-desktop-br">
+                            to turn it into a working digital product.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Process Path -->
+                    <div class="an-process-path">
+
+                        <svg
+                            class="an-path-line"
+                            viewBox="0 0 1000 700"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M500 64 C650 111 650 159 500 207 S350 301 500 350 S650 444 500 493 S350 587 500 636"
+                                fill="none"
+                                stroke="#eedfd4"
+                                stroke-width="2"
+                                stroke-dasharray="6 6"
+                            />
+                        </svg>
+
+
+                        <ol class="an-process-list">
+
+
+                            <!-- Step 01 -->
+                            <li class="an-process-step">
+
+                                <div class="an-step-copy">
+
+                                    <span class="an-step-label">
+                                        STEP 01
+                                    </span>
+
+                                    <h3>
+                                        Discover & understand
+                                    </h3>
+
+                                    <p>
+                                        We listen to your ideas, explore your users’
+                                        needs and define what success looks like.
+                                    </p>
+
+                                    <span class="an-step-output">
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        A shared project brief
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="an-step-marker">
+                                    01
+                                </span>
+
+
+                                <span class="an-step-drawing">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <circle
+                                            cx="16"
+                                            cy="16"
+                                            r="13"
+                                        />
+
+                                        <path
+                                            d="m21 11-3 7-7 3 3-7 7-3Z"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                            </li>
+
+
+                            <!-- Step 02 -->
+                            <li class="an-process-step">
+
+                                <div class="an-step-copy">
+
+                                    <span class="an-step-label">
+                                        STEP 02
+                                    </span>
+
+                                    <h3>
+                                        Plan & design
+                                    </h3>
+
+                                    <p>
+                                        We map the user journey and create a visual
+                                        direction before development begins.
+                                    </p>
+
+                                    <span class="an-step-output">
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        A clear plan and prototype
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="an-step-marker">
+                                    02
+                                </span>
+
+
+                                <span class="an-step-drawing">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="4"
+                                            y="5"
+                                            width="24"
+                                            height="22"
+                                            rx="3"
+                                        />
+
+                                        <path
+                                            d="M4 12h24M12 12v15M8 8.5h.01M12 8.5h.01m4 10h8m-8 4h5"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                            </li>
+
+
+                            <!-- Step 03 -->
+                            <li class="an-process-step">
+
+                                <div class="an-step-copy">
+
+                                    <span class="an-step-label">
+                                        STEP 03
+                                    </span>
+
+                                    <h3>
+                                        Develop & collaborate
+                                    </h3>
+
+                                    <p>
+                                        We bring the design to life, with regular
+                                        reviews so you can see the product taking shape.
+                                    </p>
+
+                                    <span class="an-step-output">
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        A working product
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="an-step-marker">
+                                    03
+                                </span>
+
+
+                                <span class="an-step-drawing">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="m10 8-7 8 7 8m12-16 7 8-7 8M19 4l-6 24"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                            </li>
+
+
+                            <!-- Step 04 -->
+                            <li class="an-process-step">
+
+                                <div class="an-step-copy">
+
+                                    <span class="an-step-label">
+                                        STEP 04
+                                    </span>
+
+                                    <h3>
+                                        Test & refine
+                                    </h3>
+
+                                    <p>
+                                        We check key journeys, responsiveness and
+                                        performance, then refine the details.
+                                    </p>
+
+                                    <span class="an-step-output">
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        A product ready for launch
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="an-step-marker">
+                                    04
+                                </span>
+
+
+                                <span class="an-step-drawing">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="m16 3 11 4v8c0 7-7 12-11 14C12 27 5 22 5 15V7l11-4Z"
+                                        />
+
+                                        <path
+                                            d="m11 16 3 3 7-7"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                            </li>
+
+
+                            <!-- Step 05 -->
+                            <li class="an-process-step">
+
+                                <div class="an-step-copy">
+
+                                    <span class="an-step-label">
+                                        STEP 05
+                                    </span>
+
+                                    <h3>
+                                        Launch & support
+                                    </h3>
+
+                                    <p>
+                                        We help you go live and plan the maintenance
+                                        and improvements your product needs next.
+                                    </p>
+
+                                    <span class="an-step-output">
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Your next chapter, supported
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="an-step-marker">
+                                    05
+                                </span>
+
+
+                                <span class="an-step-drawing">
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M15 21 11 17C13 9 19 3 29 3c0 10-6 16-14 18Z"
+                                        />
+
+                                        <circle
+                                            cx="22"
+                                            cy="10"
+                                            r="2"
+                                        />
+
+                                        <path
+                                            d="m12 14-7-1-3 6 8 1m8-1 1 8-6 3-1-7m-4 1-4 4"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 SELECTED PROJECTS SECTION
+            ========================================= -->
+
+            <section
+                class="an-section an-work"
+                id="work"
+                aria-labelledby="work-title"
+            >
+
+                <div class="an-container">
+
+
+                    <!-- Projects Heading -->
+                    <div class="an-section-heading an-heading-split">
+
+                        <div>
+
+                            <span class="an-eyebrow">
+                                Selected projects
+                            </span>
+
+                            <h2 id="work-title">
+                                Thoughtful design. <br>
+                                <span>Purposeful development.</span>
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            class="an-outline-button"
+                            href="portfolio.html"
+                        >
+                            View all projects
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M5 16h22m-8-8 8 8-8 8" />
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Project Tabs -->
+                    <div
+                        class="an-project-tabs"
+                        role="tablist"
+                        aria-label="Featured projects"
+                    >
+
+                        <button
+                            type="button"
+                            role="tab"
+                            id="tab-shoehub"
+                            aria-selected="true"
+                            aria-controls="panel-shoehub"
+                            tabindex="0"
+                        >
+                            <span>01</span>
+                            ShoeHub
+                        </button>
+
+
+                        <button
+                            type="button"
+                            role="tab"
+                            id="tab-fittrack"
+                            aria-selected="false"
+                            aria-controls="panel-fittrack"
+                            tabindex="-1"
+                        >
+                            <span>02</span>
+                            FitTrack
+                        </button>
+
+
+                        <button
+                            type="button"
+                            role="tab"
+                            id="tab-bizflow"
+                            aria-selected="false"
+                            aria-controls="panel-bizflow"
+                            tabindex="-1"
+                        >
+                            <span>03</span>
+                            BizFlow
+                        </button>
+
+                    </div>
+
+
+                    <!-- Project Panels -->
+                    <div class="an-projects">
+
+
+                        <!-- ShoeHub -->
+                        <article
+                            class="an-project-panel"
+                            id="panel-shoehub"
+                            role="tabpanel"
+                            aria-labelledby="tab-shoehub"
+                            tabindex="0"
+                        >
+
+                            <figure class="an-project-art an-project-art-shoehub">
+
+                                <img
+                                    src="images/shoehub.png"
+                                    data-original="images/shoehub-portfolio.jpeg"
+                                    alt="ShoeHub interface illustration"
+                                    width="1100"
+                                    height="750"
+                                    loading="lazy"
+                                >
+
+                                <figcaption data-art-caption>
+                                    Interface illustration
+                                </figcaption>
+
+                            </figure>
+
+
+                            <div class="an-project-copy">
+
+                                <span class="an-eyebrow">
+                                    E-commerce platform
+                                </span>
+
+                                <h3>
+                                    ShoeHub
+                                </h3>
+
+                                <h4>
+                                    A better way to find your next favourite pair.
+                                </h4>
+
+                                <p>
+                                    A shopping experience that brings product discovery,
+                                    clear product pages and a straightforward checkout together.
+                                </p>
+
+
+                                <ul class="an-project-points">
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Product discovery
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Responsive shopping
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Simple checkout
+
+                                    </li>
+
+                                </ul>
+
+
+                                <ul class="an-tags">
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                    <li>Stripe</li>
+                                </ul>
+
+
+                                <a
+                                    class="an-text-link"
+                                    href="portfolio.html"
+                                >
+                                    Explore our portfolio
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M5 16h22m-8-8 8 8-8 8" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- FitTrack -->
+                        <article
+                            class="an-project-panel"
+                            id="panel-fittrack"
+                            role="tabpanel"
+                            aria-labelledby="tab-fittrack"
+                            tabindex="0"
+                            hidden
+                        >
+
+                            <figure class="an-project-art an-project-art-fittrack">
+
+                                <img
+                                    src="images/fittrack-phones.png"
+                                    data-original="images/fittrack-portfolio.jpeg"
+                                    alt="FitTrack interface illustration"
+                                    width="1100"
+                                    height="750"
+                                    loading="lazy"
+                                >
+
+                                <figcaption data-art-caption>
+                                    Interface illustration
+                                </figcaption>
+
+                            </figure>
+
+
+                            <div class="an-project-copy">
+
+                                <span class="an-eyebrow">
+                                    Fitness tracking app
+                                </span>
+
+                                <h3>
+                                    FitTrack
+                                </h3>
+
+                                <h4>
+                                    Every small step. All in one place.
+                                </h4>
+
+                                <p>
+                                    A mobile companion that helps users log workouts,
+                                    track meals and see their progress through a focused,
+                                    motivating interface.
+                                </p>
+
+
+                                <ul class="an-project-points">
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Workout logging
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Meal tracking
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Progress overview
+
+                                    </li>
+
+                                </ul>
+
+
+                                <ul class="an-tags">
+                                    <li>Flutter</li>
+                                    <li>Firebase</li>
+                                </ul>
+
+
+                                <a
+                                    class="an-text-link"
+                                    href="portfolio.html"
+                                >
+                                    Explore our portfolio
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M5 16h22m-8-8 8 8-8 8" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- BizFlow -->
+                        <article
+                            class="an-project-panel"
+                            id="panel-bizflow"
+                            role="tabpanel"
+                            aria-labelledby="tab-bizflow"
+                            tabindex="0"
+                            hidden
+                        >
+
+                            <figure class="an-project-art an-project-art-bizflow">
+
+                                <img
+                                    src="images/bizflow.png"
+                                    data-original="images/bizflow-portfolio.jpeg"
+                                    alt="BizFlow interface illustration"
+                                    width="1100"
+                                    height="750"
+                                    loading="lazy"
+                                >
+
+                                <figcaption data-art-caption>
+                                    Interface illustration
+                                </figcaption>
+
+                            </figure>
+
+
+                            <div class="an-project-copy">
+
+                                <span class="an-eyebrow">
+                                    Business management
+                                </span>
+
+                                <h3>
+                                    BizFlow
+                                </h3>
+
+                                <h4>
+                                    Less switching. More getting things done.
+                                </h4>
+
+                                <p>
+                                    A connected operations dashboard that gives teams
+                                    a clearer view of their tasks, workflows and
+                                    day-to-day business.
+                                </p>
+
+
+                                <ul class="an-project-points">
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Shared dashboard
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Task management
+
+                                    </li>
+
+
+                                    <li>
+
+                                        <svg
+                                            class="an-icon"
+                                            viewBox="0 0 32 32"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="1.7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="m7 16 6 6L26 9" />
+                                        </svg>
+
+                                        Connected workflows
+
+                                    </li>
+
+                                </ul>
+
+
+                                <ul class="an-tags">
+                                    <li>Vue</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+
+
+                                <a
+                                    class="an-text-link"
+                                    href="portfolio.html"
+                                >
+                                    Explore our portfolio
+
+                                    <svg
+                                        class="an-icon"
+                                        viewBox="0 0 32 32"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.7"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M5 16h22m-8-8 8 8-8 8" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Projects Bottom -->
+                    <div class="an-project-bottom">
+
+                        <span>
+                            Built around different ideas. Driven by the same attention to detail.
+                        </span>
+
+                        <span
+                            class="an-project-count"
+                            aria-live="polite"
+                        >
+                            01 / 03
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 WHY ANAS TECHNOLOGIES
+            ========================================= -->
+
+            <section
+                class="an-section an-why"
+                id="why-anas"
+                aria-labelledby="why-title"
+            >
+
+                <div class="an-container an-why-layout">
+
+
+                    <!-- Why Intro -->
+                    <div class="an-why-intro">
+
+                        <span class="an-eyebrow">
+                            Why ANAS Technologies
+                        </span>
+
+                        <h2 id="why-title">
+                            Good software starts <br>
+                            with a <span>better partnership.</span>
+                        </h2>
+
+                        <p>
+                            Building a digital product is a team effort.
+                            We bring your business context, your users’ needs
+                            and the technical details into the same conversation.
+                        </p>
+
+
+                        <a
+                            href="about.html"
+                            class="an-text-link"
+                        >
+                            Get to know us
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M5 16h22m-8-8 8 8-8 8" />
+                            </svg>
+
+                        </a>
+
+
+                        <div class="an-why-note">
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m16 2 4 10 10 4-10 4-4 10-4-10-10-4 10-4 4-10Z"
+                                />
+                            </svg>
+
+
+                            <span>
+                                Strategy, design and development. <br>
+                                <strong>
+                                    Connected from day one.
+                                </strong>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Why Cards -->
+                    <div class="an-why-grid">
+
+
+                        <!-- Why Card 01 -->
+                        <article class="an-why-card">
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <circle
+                                    cx="16"
+                                    cy="16"
+                                    r="13"
+                                />
+
+                                <path
+                                    d="m21 11-3 7-7 3 3-7 7-3Z"
+                                />
+                            </svg>
+
+
+                            <h3>
+                                Your goals come first
+                            </h3>
+
+                            <p>
+                                We begin with the problem you need to solve
+                                and shape the product around it.
+                            </p>
+
+                        </article>
+
+
+                        <!-- Why Card 02 -->
+                        <article class="an-why-card">
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M27 21a4 4 0 0 1-4 4H12l-7 5V9a5 5 0 0 1 5-5h13a4 4 0 0 1 4 4v13Z"
+                                />
+
+                                <path
+                                    d="M11 11h10m-10 5h8"
+                                />
+                            </svg>
+
+
+                            <h3>
+                                Clarity at every step
+                            </h3>
+
+                            <p>
+                                A clear scope, agreed milestones and regular
+                                conversations keep the work aligned.
+                            </p>
+
+                        </article>
+
+
+                        <!-- Why Card 03 -->
+                        <article class="an-why-card">
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M5 27V17h5v10m3 0V12h5v15m3 0V6h5v21M4 11l8-6 6 3 9-6"
+                                />
+                            </svg>
+
+
+                            <h3>
+                                Room to grow
+                            </h3>
+
+                            <p>
+                                Flexible design and maintainable code help your
+                                product evolve as your business does.
+                            </p>
+
+                        </article>
+
+
+                        <!-- Why Card 04 -->
+                        <article class="an-why-card">
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <circle
+                                    cx="12"
+                                    cy="10"
+                                    r="5"
+                                />
+
+                                <path
+                                    d="M2 29v-4a10 10 0 0 1 20 0v4M23 5a5 5 0 0 1 0 10m2 5a8 8 0 0 1 5 9"
+                                />
+                            </svg>
+
+
+                            <h3>
+                                A long-term partnership
+                            </h3>
+
+                            <p>
+                                From launch questions to future improvements,
+                                we plan support around your needs.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 TECHNOLOGIES SECTION
+            ========================================= -->
+<!-- ========================================
+     TECHNOLOGIES SECTION
+========================================= -->
+
+<section
+    class="an-technology"
+    aria-labelledby="technology-title"
+>
+    <div class="an-container">
+
+        <!-- Technology Heading -->
+        <div class="an-tech-heading">
+
+            <span class="an-eyebrow">
+                Our technology stack
+            </span>
+
+            <h2 id="technology-title">
+                Technologies We <span>Build With</span>
+            </h2>
+
+            <p>
+                Modern tools and technologies chosen to build
+                fast, reliable and scalable digital products.
             </p>
 
-            <div class="fit-tags">
-                <span><i class="orange-dot">●</i> UI/UX</span>
-                <span><i class="orange-dot">●</i> FLUTTER</span>
-                <span><i class="orange-dot">●</i> MOBILE APP</span>
+        </div>
+
+
+        <!-- Technology Cards -->
+        <ul class="an-tech-list">
+
+
+            <!-- React -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon react-icon">
+                    Re
+                </div>
+
+                <span>
+                    React
+                </span>
+
+            </li>
+
+
+            <!-- Flutter -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon flutter-icon">
+                    Fl
+                </div>
+
+                <span>
+                    Flutter
+                </span>
+
+            </li>
+
+
+            <!-- Node.js -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon node-icon">
+                    No
+                </div>
+
+                <span>
+                    Node.js
+                </span>
+
+            </li>
+
+
+            <!-- Laravel -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon laravel-icon">
+                    La
+                </div>
+
+                <span>
+                    Laravel
+                </span>
+
+            </li>
+
+
+            <!-- Python -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon python-icon">
+                    Py
+                </div>
+
+                <span>
+                    Python
+                </span>
+
+            </li>
+
+
+            <!-- Firebase -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon firebase-icon">
+                    Fi
+                </div>
+
+                <span>
+                    Firebase
+                </span>
+
+            </li>
+
+
+            <!-- AWS -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon aws-icon">
+                    AWS
+                </div>
+
+                <span>
+                    AWS
+                </span>
+
+            </li>
+
+
+            <!-- Figma -->
+            <li class="an-tech-card">
+
+                <div class="an-tech-icon figma-icon">
+                    Fg
+                </div>
+
+                <span>
+                    Figma
+                </span>
+
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+
+            <!-- ========================================
+                 INDUSTRIES SECTION
+            ========================================= -->
+
+            <section
+                class="an-section an-industries"
+                aria-labelledby="industries-title"
+            >
+
+                <div class="an-container">
+
+
+                    <!-- Industries Heading -->
+                    <div class="an-section-heading">
+
+                        <span class="an-eyebrow">
+                            Solutions for your world
+                        </span>
+
+                        <h2 id="industries-title">
+                            Different industries. <br>
+                            <span>Shared digital ambition.</span>
+                        </h2>
+
+                        <p>
+                            We shape the experience around the way your business works.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Industries Grid -->
+                    <div class="an-industries-grid">
+
+
+                        <!-- E-commerce -->
+                        <a
+                            href="solutions.html"
+                            class="an-industry"
+                        >
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M2 5h4l4 17h15l4-12H8M13 28h.01M24 28h.01"
+                                />
+
+                                <circle
+                                    cx="13"
+                                    cy="28"
+                                    r="1"
+                                />
+
+                                <circle
+                                    cx="24"
+                                    cy="28"
+                                    r="1"
+                                />
+                            </svg>
+
+
+                            <span>
+                                E-commerce
+                            </span>
+
+                            <span
+                                class="an-industry-arrow"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <!-- Healthcare -->
+                        <a
+                            href="solutions.html"
+                            class="an-industry"
+                        >
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M13 3h6v9h9v7h-9v10h-6V19H3v-7h10V3Z"
+                                />
+                            </svg>
+
+
+                            <span>
+                                Healthcare
+                            </span>
+
+                            <span
+                                class="an-industry-arrow"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <!-- Education -->
+                        <a
+                            href="solutions.html"
+                            class="an-industry"
+                        >
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m2 12 14-8 14 8-14 8-14-8Zm5 3v9c6 5 12 5 18 0v-9m5-3v12"
+                                />
+                            </svg>
+
+
+                            <span>
+                                Education
+                            </span>
+
+                            <span
+                                class="an-industry-arrow"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <!-- Real Estate -->
+                        <a
+                            href="solutions.html"
+                            class="an-industry"
+                        >
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M7 29V3h18v26M3 29h26M12 8h2m5 0h2m-9 6h2m5 0h2m-9 6h2m5 0h2m-5 3v6"
+                                />
+                            </svg>
+
+
+                            <span>
+                                Real estate
+                            </span>
+
+                            <span
+                                class="an-industry-arrow"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <!-- Technology -->
+                        <a
+                            href="solutions.html"
+                            class="an-industry"
+                        >
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m10 8-7 8 7 8m12-16 7 8-7 8M19 4l-6 24"
+                                />
+                            </svg>
+
+
+                            <span>
+                                Technology
+                            </span>
+
+                            <span
+                                class="an-industry-arrow"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <!-- Professional Services -->
+                        <a
+                            href="solutions.html"
+                            class="an-industry"
+                        >
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <circle
+                                    cx="12"
+                                    cy="10"
+                                    r="5"
+                                />
+
+                                <path
+                                    d="M2 29v-4a10 10 0 0 1 20 0v4M23 5a5 5 0 0 1 0 10m2 5a8 8 0 0 1 5 9"
+                                />
+                            </svg>
+
+
+                            <span>
+                                Professional services
+                            </span>
+
+                            <span
+                                class="an-industry-arrow"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 FAQ SECTION
+            ========================================= -->
+
+            <section
+                class="an-section an-faq-section"
+                id="faqs"
+                aria-labelledby="faq-title"
+            >
+
+                <div class="an-container an-faq-layout">
+
+
+                    <!-- FAQ Intro -->
+                    <div class="an-faq-intro">
+
+                        <span class="an-eyebrow">
+                            A little more clarity
+                        </span>
+
+                        <h2 id="faq-title">
+                            Good questions. <br>
+                            <span>Clear answers.</span>
+                        </h2>
+
+                        <p>
+                            Thinking about your next project? <br>
+                            Here are a few things you may be wondering.
+                        </p>
+
+
+                        <a
+                            class="an-text-link"
+                            href="contact.html"
+                        >
+                            Ask us something else
+
+                            <svg
+                                class="an-icon"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="M5 16h22m-8-8 8 8-8 8" />
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- FAQ List -->
+                    <div class="an-faq-list">
+
+
+                        <!-- FAQ 01 -->
+                        <details class="an-faq">
+
+                            <summary>
+                                Can you work with an existing website or app?
+                                <span aria-hidden="true"></span>
+                            </summary>
+
+                            <p>
+                                Yes. Share your current product and what you would
+                                like to improve. We can discuss a focused redesign,
+                                new features or a broader rebuild after reviewing
+                                the existing setup.
+                            </p>
+
+                        </details>
+
+
+                        <!-- FAQ 02 -->
+                        <details class="an-faq">
+
+                            <summary>
+                                What do you need to get started?
+                                <span aria-hidden="true"></span>
+                            </summary>
+
+                            <p>
+                                A short description of your idea, your audience,
+                                the main features you need and any timeline or
+                                budget you have in mind. Existing designs, brand
+                                assets and reference websites are useful too.
+                            </p>
+
+                        </details>
+
+
+                        <!-- FAQ 03 -->
+                        <details class="an-faq">
+
+                            <summary>
+                                How much will my project cost?
+                                <span aria-hidden="true"></span>
+                            </summary>
+
+                            <p>
+                                The cost depends on the scope, integrations and level
+                                of design and development required. We review your brief
+                                and agree on the deliverables before providing a project
+                                estimate.
+                            </p>
+
+                        </details>
+
+
+                        <!-- FAQ 04 -->
+                        <details class="an-faq">
+
+                            <summary>
+                                Will my website work on mobile devices?
+                                <span aria-hidden="true"></span>
+                            </summary>
+
+                            <p>
+                                Responsive layouts are part of our website design
+                                approach. The experience is adapted for desktop,
+                                tablet and mobile screens, with key user journeys
+                                checked across screen sizes.
+                            </p>
+
+                        </details>
+
+
+                        <!-- FAQ 05 -->
+                        <details class="an-faq">
+
+                            <summary>
+                                Can you help after launch?
+                                <span aria-hidden="true"></span>
+                            </summary>
+
+                            <p>
+                                We can discuss maintenance, fixes and future
+                                improvements as part of your project. The support
+                                scope and terms are agreed with you so that
+                                expectations are clear.
+                            </p>
+
+                        </details>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 PROJECT ENQUIRY SECTION
+            ========================================= -->
+<!-- ========================================
+     COMPACT CTA SECTION
+========================================= -->
+
+<section
+    class="an-cta-strip"
+    id="start-project"
+    aria-labelledby="cta-strip-title"
+>
+    <div class="an-container">
+
+        <div class="an-cta-strip-box">
+
+            <!-- Left Content -->
+            <div class="an-cta-strip-left">
+
+                <div class="an-cta-strip-icon">
+                    ➜
+                </div>
+
+                <div class="an-cta-strip-copy">
+
+                    <h2 id="cta-strip-title">
+                        Have a project in mind?
+                    </h2>
+
+                    <p>
+                        Let’s work together to turn your ideas into powerful digital solutions.
+                    </p>
+
+                </div>
+
             </div>
-<button class="case-study-btn">
-    View Case Study <span>→</span>
-</button>
 
-        </div>
 
-        <div class="fittrack-center">
-            <img src="images/fittrack-phones.png" alt="FitTrack Mobile App">
-        </div>
+            <!-- CTA Button -->
+            <a
+                href="quote.html"
+                class="an-cta-strip-button"
+            >
+                Get a Free Consultation
+                <span>→</span>
+            </a>
 
-        <div class="fittrack-result">
-            <img src="images/growth24.png" alt="24% Growth in User Retention">
         </div>
 
     </div>
-
-
-    <!-- BIZFLOW -->
-    <div class="bizflow-card">
-
-        <div class="bizflow-left">
-
-            <div class="bizflow-number">
-                <span>03</span>
-                <div class="bizflow-line"></div>
-            </div>
-
-            <p class="bizflow-type">WEB APPLICATION</p>
-
-            <h2>BizFlow</h2>
-            <h3>Business Management Platform</h3>
-
-            <p class="bizflow-description">
-                A complete business management
-                solution to streamline tasks, teams
-                and workflows in one place.
-            </p>
-
-            <div class="bizflow-tags">
-                <span><i class="orange-dot">●</i> UI/UX</span>
-                <span><i class="orange-dot">●</i> WEB APP</span>
-                <span><i class="orange-dot">●</i> FULL STACK</span>
-            </div>
-
-           <button class="case-study-btn">
-    View Case Study <span>→</span>
-</button>
-        </div>
-
-        <div class="bizflow-image">
-            <img src="images/bizflow.png" alt="BizFlow Project">
-        </div>
-
-    </div>
-
-</div>
-
 </section>
-<!-- SERVICES SECTION -->
-<section class="services-section" id="services">
 
-    <div class="services-label">
-        <span></span>
-        OUR SERVICES
-    </div>
-
-    <h2 class="services-title">
-        Digital Solutions That <br>
-        Drive Real <span>Business Growth</span>
-    </h2>
-
-    <p class="services-description">
-        From custom web apps to intelligent automation —
-        <br>
-        we build scalable, secure, and future-ready digital
-        <br>
-        solutions.
-    </p>
-
-    <button class="services-btn">
-        <span>➤</span>
-        Let's Work Together
-    </button>
-    <div class="services-grid">
-
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/web-development.png" alt="Web Development">
-</div>
-            <h3>Web Development</h3>
         </div>
 
-        <p>
-            From custom web apps to intelligent automation —
-            we build scalable, secure, and future-ready
-            digital solutions.
-        </p>
+    </main>
 
-        <span class="service-arrow">→</span>
-    </div>
+    <!-- ========================================
+     SUBSCRIBE SECTION
+========================================= -->
 
-
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/mobile-app.png" alt="Mobile App Development">
-</div>
-            <h3>Mobile App Development</h3>
-        </div>
-
-        <p>
-            Native and cross-platform mobile apps that deliver
-            smooth performance and exceptional user experience.
-        </p>
-
-        <span class="service-arrow">→</span>
-    </div>
-
-
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/custom-software.png" alt="Custom Software Development">
-</div>
-            <h3>Custom Software Development</h3>
-        </div>
-
-        <p>
-            Powerful custom software solutions to automate
-            processes, improve efficiency and scale your business.
-        </p>
-
-        <span class="service-arrow">→</span>
-    </div>
-
-
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/cloud.png" alt="Cloud Solutions">
-</div>
-            <h3>Cloud Solutions</h3>
-        </div>
-
-        <p>
-            Secure, reliable and scalable cloud infrastructure
-            to support your business growth and digital transformation.
-        </p>
-
-        <span class="service-arrow">→</span>
-    </div>
-
-
-    <div class="service-card">
-        <div class="service-card-top">
-           <div class="service-icon">
-    <img src="images/uiux.png" alt="UI/UX Design">
-</div>
-            <h3>UI/UX Design</h3>
-        </div>
-
-        <p>
-            Beautiful, intuitive and user-centered designs that
-            create meaningful digital experiences.
-        </p>
-
-        <span class="service-arrow">→</span>
-    </div>
-
-
-    <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-icon">
-    <img src="images/it-consulting.png" alt="IT Consulting">
-</div>
-            <h3>IT Consulting</h3>
-        </div>
-
-        <p>
-            Strategic IT consulting to help you make the right
-            technology decisions and stay ahead of the competition.
-        </p>
-
-        <span class="service-arrow">→</span>
-    </div>
-
-</div>
-
-</section>
-<!-- OUR PROCESS SECTION -->
-<section class="our-process-section">
-
-    <div class="process-badge">
-        <span></span>
-        OUR PROCESS
-    </div>
-
-    <h2 class="process-main-title">
-        From Idea to Impact – <span>Our Proven Process</span>
-    </h2>
-<div class="process-steps">
-
-    <div class="process-step">
-       <div class="process-step-icon">
-    <img src="images/discover-process.png" alt="Discover">
-</div>
-        <h4>01</h4>
-        <h3>Discover</h3>
-        <p>We understand your business, goals and challenges.</p>
-    </div>
-
-    <div class="process-step">
-      <div class="process-step-icon">
-    <img src="images/plan-process.png" alt="Plan">
-</div>
-        <h4>02</h4>
-        <h3>Plan</h3>
-        <p>We analyze and plan the best strategy to achieve your goals.</p>
-    </div>
-
-    <div class="process-step">
-     <div class="process-step-icon">
-    <img src="images/develop-process.png" alt="Develop">
-</div>
-        <h4>03</h4>
-        <h3>Develop</h3>
-        <p>We build with clean code, agile process and latest technologies.</p>
-    </div>
-
-    <div class="process-step">
-       <div class="process-step-icon">
-    <img src="images/launch-process.png" alt="Launch">
-</div>
-        <h4>04</h4>
-        <h3>Launch</h3>
-        <p>We test thoroughly and deploy solutions that deliver results.</p>
-    </div>
-
-    <div class="process-step">
-       <div class="process-step-icon">
-    <img src="images/support-process.png" alt="Support">
-</div>
-        <h4>05</h4>
-        <h3>Support</h3>
-        <p>We provide continuous support and improvement to help you grow.</p>
-    </div>
-
-</div>
-
-</section>
-<!-- WHY CHOOSE US SECTION -->
-<section class="why-choose-section">
-
-    <div class="why-choose-badge">
-        <span></span>
-        WHY CHOOSE US
-    </div>
-    <div class="why-choose-box">
-
-    <div class="why-item">
-      <div class="why-icon">
-    <img src="images/secure-reliable.png" alt="Secure & Reliable">
-</div>
-        <h3>Secure & Reliable</h3>
-        <p>
-            We build solutions that are secure, reliable
-            and dependable.
-        </p>
-    </div>
-
-    <div class="why-item">
-       <div class="why-icon">
-    <img src="images/scalable-flexible.png" alt="Scalable & Flexible">
-</div>
-        <h3>Scalable & Flexible</h3>
-        <p>
-            Our solutions grow with your business and
-            adapt to your needs.
-        </p>
-    </div>
-
-    <div class="why-item">
-<div class="why-icon">
-    <img src="images/dedicated-support.png" alt="Dedicated Support">
-</div>
-        <h3>Dedicated Support</h3>
-        <p>
-            We are with you at every step of
-            your journey.
-        </p>
-    </div>
-
-    <div class="why-item">
-      <div class="why-icon">
-    <img src="images/innovation-driven.png" alt="Innovation Driven">
-</div>
-        <h3>Innovation Driven</h3>
-        <p>
-            We use the latest technologies to
-            deliver real results.
-        </p>
-    </div>
-
-</div>
-
-</section>
-<!-- BOTTOM CTA -->
-<section class="bottom-cta">
-
-    <div class="cta-left">
-
-        <div class="cta-icon">
-            ➤
-        </div>
-
-        <div class="cta-text">
-            <h3>Have a project in mind?</h3>
-            <p>Let's work together to turn your ideas into powerful digital solutions.</p>
-        </div>
-
-    </div>
-
-   <button class="cta-button">
-    <img src="images/consultation-icon.png" alt="">
-    Get a Free Consultation
-</button>
-
-</section>
-<!-- SUBSCRIBE SECTION -->
 <section class="subscribe-section">
 
     <div class="subscribe-left">
+
         <h2>
-            Stay Ahead with <span>ANAS Technologies</span>
+            Stay Ahead with
+            <span>ANAS Technologies</span>
         </h2>
 
         <p>
             Get the latest updates, digital insights, and<br>
             technology solutions delivered to your inbox.
         </p>
+
     </div>
 
+
     <div class="subscribe-right">
+
         <div class="subscribe-box">
-            <span class="email-icon">✉</span>
 
-            <input type="email" placeholder="Enter Your Email">
+            <span class="email-icon">
+                ✉
+            </span>
 
-            <button>Subscribe</button>
+            <input
+                type="email"
+                placeholder="Enter Your Email"
+            >
+
+            <button type="button">
+                Subscribe
+            </button>
+
         </div>
+
     </div>
 
 </section>
-<!-- FOOTER -->
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
 <!-- FOOTER -->
 <footer class="footer">
 
     <div class="footer-about">
-        <img src="images/footer-logo.jpeg" alt="ANAS Technologies" class="footer-logo">
+
+        <img
+            src="images/footer-logo.jpeg"
+            alt="ANAS Technologies"
+            class="footer-logo"
+        >
 
         <p>
             We build innovative digital solutions that help<br>
             businesses grow, connect, and succeed in the<br>
             digital world.
         </p>
+
         <!-- CONTACT INFO -->
         <div class="footer-contact">
             <p>📞 03299406401</p>
@@ -2746,15 +2772,30 @@
         </div>
 
         <div class="social-icons">
-            <span><img src="images/whatsapp.png" alt="WhatsApp"></span>
-            <span><img src="images/facebook.png" alt="Facebook"></span>
-            <span><img src="images/instagram.png" alt="Instagram"></span>
-            <span><img src="images/twitter.png" alt="Twitter"></span>
+            <span>
+                <img src="images/whatsapp.png" alt="WhatsApp">
+            </span>
+
+            <span>
+                <img src="images/facebook.png" alt="Facebook">
+            </span>
+
+            <span>
+                <img src="images/instagram.png" alt="Instagram">
+            </span>
+
+            <span>
+                <img src="images/twitter.png" alt="Twitter">
+            </span>
         </div>
+
     </div>
 
+
     <div class="footer-column">
+
         <h3>Quick Links</h3>
+
         <span class="footer-line"></span>
 
         <ul>
@@ -2764,10 +2805,14 @@
             <li>Mentors</li>
             <li>Pricing</li>
         </ul>
+
     </div>
 
+
     <div class="footer-column">
+
         <h3>Resources</h3>
+
         <span class="footer-line"></span>
 
         <ul>
@@ -2777,10 +2822,14 @@
             <li>FAQs</li>
             <li>Contact</li>
         </ul>
+
     </div>
 
+
     <div class="footer-column">
+
         <h3>Company</h3>
+
         <span class="footer-line"></span>
 
         <ul>
@@ -2790,18 +2839,35 @@
             <li>Privacy Policy</li>
             <li>Terms & Conditions</li>
         </ul>
+
     </div>
 
 </footer>
 
+
 <div class="footer-bottom">
-    <p>© 2026 ANAS Technologies. All Rights Reserved.</p>
-    <p>Policy | Terms & Conditions | Cookies</p>
+
+    <p>
+        © 2026 ANAS Technologies. All Rights Reserved.
+    </p>
+
+    <p>
+        Policy | Terms & Conditions | Cookies
+    </p>
+
 </div>
 
-    </main>
-    
-    <script src="script.js"></script>
+</div>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script
+    src="script.js"
+    defer
+></script>
 
 </body>
 
