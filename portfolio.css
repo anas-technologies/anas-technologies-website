@@ -461,9 +461,11 @@ body {
 }
 
 /* Case Study */
-/* Case Study */
 
 .project-content a.case-study-btn {
+
+     position: static;
+
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -472,13 +474,13 @@ body {
     color: #ffffff;
 
     border-radius: 8px;
-    padding: 10px 18px;
+    padding: 8px 14px;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     text-decoration: none;
 
-    margin-top: 18px;
+    margin-top: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
 
@@ -1320,4 +1322,303 @@ gap: 8px;
     margin-bottom: 8px; /* Reduces the gap between the phone and email */
     color: #7f8693; 
     font-size: 13px;
+}
+/* =========================================================
+   PORTFOLIO RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-stats {
+        max-width: 90%;
+    }
+
+    .subscribe-section {
+        gap: 35px;
+    }
+
+    .subscribe-left,
+    .subscribe-right {
+        width: 48%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* HERO */
+
+    .portfolio-hero {
+        padding: 50px 20px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 40px;
+    }
+
+    .portfolio-description br {
+        display: none;
+    }
+
+
+    /* STATS */
+
+    .portfolio-stats {
+        max-width: 700px;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        overflow: visible;
+
+        padding: 10px;
+        gap: 0;
+    }
+
+    .portfolio-stat {
+        width: 100%;
+        min-height: 95px;
+    }
+
+    .portfolio-stat:not(:last-child)::after {
+        display: none;
+    }
+
+    .portfolio-stat:nth-child(1),
+    .portfolio-stat:nth-child(2) {
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .portfolio-stat:nth-child(odd) {
+        border-right: 1px solid #eeeeee;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+
+    /* BRANDS */
+
+    .brand-names {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px 35px;
+    }
+
+
+    /* TESTIMONIALS */
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+
+    /* TECHNOLOGIES */
+
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* AWARDS */
+
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* CTA */
+
+    .portfolio-cta {
+        width: 90%;
+
+        border-radius: 20px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 22px;
+
+        padding: 24px;
+    }
+
+    .portfolio-cta-btn {
+        align-self: flex-start;
+    }
+
+
+    /* NEWSLETTER */
+
+    .subscribe-section {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 28px;
+    }
+
+    .subscribe-left,
+    .subscribe-right {
+        width: 100%;
+    }
+
+    .subscribe-right {
+        max-width: 650px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .portfolio-hero {
+        padding: 42px 18px 45px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 32px;
+    }
+
+    .portfolio-description {
+        font-size: 14px;
+    }
+
+
+    /* STATS */
+
+    .portfolio-stats {
+        width: 100%;
+        max-width: 100%;
+
+        grid-template-columns: 1fr;
+
+        padding: 5px 16px;
+    }
+
+    .portfolio-stat {
+        min-height: 82px;
+        justify-content: flex-start;
+
+        padding: 15px 20px;
+    }
+
+    .portfolio-stat:nth-child(odd) {
+        border-right: none;
+    }
+
+    .portfolio-stat {
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .portfolio-stat:last-child {
+        border-bottom: none;
+    }
+
+
+    /* FILTERS */
+
+    .project-filters {
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding-bottom: 10px;
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+
+    /* TECHNOLOGIES */
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* AWARDS */
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .portfolio-cta-left {
+        align-items: flex-start;
+    }
+
+
+    /* SUBSCRIBE */
+
+    .subscribe-left h2 {
+        font-size: 24px;
+    }
+
+    .subscribe-left p br {
+        display: none;
+    }
+
+    .subscribe-box {
+        height: auto;
+
+        padding: 8px 8px 8px 16px;
+    }
+
+    .email-icon {
+        margin-right: 8px;
+    }
+
+    .subscribe-box input {
+        font-size: 13px;
+    }
+
+    .subscribe-box button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
 }
