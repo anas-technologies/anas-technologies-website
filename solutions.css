@@ -729,3 +729,101 @@
         justify-self: stretch;
     }
 }
+
+/* =========================================================
+   SOLUTIONS RESPONSIVE IMPROVEMENTS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .solutions-container {
+        width: 90%;
+    }
+
+    .solutions-hero {
+        padding-top: 45px;
+    }
+
+    .solutions-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solutions-hero h1 {
+        font-size: 42px;
+    }
+
+    .solutions-intro {
+        max-width: 650px;
+    }
+
+    .solutions-visual {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .solutions-container {
+        width: calc(100% - 36px);
+    }
+
+    .solutions-hero {
+        padding-top: 35px;
+        padding-bottom: 45px;
+    }
+
+    .solutions-hero h1 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .solutions-intro {
+        font-size: 14px;
+    }
+
+    .solutions-actions {
+        width: 100%;
+    }
+
+    .solutions-primary,
+    .solutions-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .solutions-modules {
+        grid-template-columns: 1fr;
+    }
+
+    .solutions-hub {
+        padding: 25px 15px;
+    }
+
+    .solutions-heading h2 {
+        font-size: 29px;
+    }
+
+    #our-solutions .solutions-card {
+        padding: 22px 18px;
+    }
+
+    .solutions-process {
+        grid-template-columns: 1fr;
+    }
+
+    .solutions-faq details {
+        padding: 16px;
+    }
+
+    .solutions-page .bottom-cta {
+        align-items: stretch;
+    }
+
+    .solutions-page .cta-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
