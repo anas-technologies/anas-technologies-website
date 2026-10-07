@@ -568,3 +568,596 @@
         height: 180px;
     }
 }
+
+/* =========================================================
+   ABOUT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    /* HERO */
+
+    .about-hero {
+        padding: 55px 5% 60px;
+    }
+
+    .about-hero h1 {
+        font-size: 40px;
+    }
+
+    .about-description br {
+        display: none;
+    }
+
+
+    /* STORY */
+
+    .story-section {
+        padding: 65px 5%;
+    }
+
+    .story-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .story-left,
+    .story-right {
+        width: 100%;
+    }
+
+    .story-right {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+
+    /* STATS */
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* TEAM */
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        padding: 42px 18px 50px;
+    }
+
+    .about-hero h1 {
+        font-size: 31px;
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .about-hero h1 br {
+        display: none;
+    }
+
+
+    /* BUTTONS */
+
+    .center-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .center-buttons .consult-btn,
+    .center-buttons .work-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* STORY */
+
+    .story-section {
+        padding: 55px 18px;
+    }
+
+    .story-left h2 {
+        font-size: 29px;
+    }
+
+    .story-left h2 br {
+        display: none;
+    }
+
+
+    /* STATS */
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* VALUES / FEATURES */
+
+    .values-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* TEAM */
+
+    .team-section {
+        padding: 55px 18px;
+    }
+
+    .team-title {
+        font-size: 29px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        max-width: 420px;
+        width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* =========================================================
+   FINAL ABOUT PAGE RESPONSIVE FIX
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .about-hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .story-section,
+    .values-section,
+    .why-about-section,
+    .team-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .story-container {
+        gap: 38px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* HERO */
+
+    .about-hero {
+        padding: 45px 20px 50px;
+    }
+
+    .about-hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .about-hero h1 br,
+    .about-description br {
+        display: none;
+    }
+
+    .about-description {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+
+    .center-buttons {
+        flex-wrap: wrap;
+    }
+
+
+    /* STORY */
+
+    .story-section {
+        padding: 55px 20px;
+    }
+
+    .story-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .story-left,
+    .story-right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .story-left h2 {
+        font-size: 30px;
+    }
+
+    .story-left h2 br {
+        display: none;
+    }
+
+    .story-right {
+        margin: 0 auto;
+    }
+
+    .story-right img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /* STATS */
+
+    .about-stats-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+    }
+
+
+    /* VALUES */
+
+    .values-section {
+        padding: 55px 20px 65px;
+    }
+
+    .values-title {
+        font-size: 30px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* WHY ABOUT */
+
+    .why-about-section {
+        padding: 55px 20px 65px;
+    }
+
+    .why-about-container h2 {
+        font-size: 29px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* FOUNDER */
+
+    .founder-spotlight {
+        flex-direction: column;
+        text-align: center;
+
+        gap: 25px;
+
+        padding: 28px 22px;
+    }
+
+    .founder-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .founder-info h3 {
+        font-size: 26px;
+    }
+
+
+    /* TEAM */
+
+    .team-section {
+        padding: 55px 20px 65px;
+    }
+
+    .team-title {
+        font-size: 30px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .team-image {
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .about-hero {
+        padding: 38px 18px 45px;
+    }
+
+    .about-breadcrumb {
+        margin-bottom: 18px;
+        font-size: 12px;
+    }
+
+    .about-hero h1 {
+        font-size: 30px;
+    }
+
+    .about-description {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .center-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .center-buttons .consult-btn,
+    .center-buttons .work-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* STORY */
+
+    .story-section {
+        padding: 48px 18px;
+    }
+
+    .story-left h2 {
+        font-size: 27px;
+    }
+
+    .story-text {
+        font-size: 14px;
+    }
+
+    .highlight-item {
+        align-items: flex-start;
+    }
+
+    .highlight-check {
+        flex-shrink: 0;
+    }
+
+
+    /* STATS */
+
+    .about-stats-wrapper {
+        padding: 15px 18px 45px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* VALUES */
+
+    .values-section {
+        padding: 50px 18px 60px;
+    }
+
+    .values-title {
+        font-size: 28px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        width: 100%;
+    }
+
+
+    /* WHY ABOUT */
+
+    .why-about-section {
+        padding: 50px 18px 60px;
+    }
+
+    .why-about-container h2 {
+        font-size: 27px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOUNDER */
+
+    .founder-spotlight {
+        width: 100%;
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .founder-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .founder-info h3 {
+        font-size: 24px;
+    }
+
+    .founder-bio {
+        font-size: 14px;
+    }
+
+
+    /* TEAM */
+
+    .team-section {
+        padding: 50px 18px 60px;
+    }
+
+    .team-title {
+        font-size: 28px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 420px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team-image {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .about-hero h1 {
+        font-size: 27px;
+    }
+
+    .story-left h2,
+    .values-title,
+    .why-about-container h2,
+    .team-title {
+        font-size: 25px;
+    }
+
+    .story-section,
+    .values-section,
+    .why-about-section,
+    .team-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+/* ========================================
+   ABOUT STATS MOBILE FIX
+======================================== */
+
+@media (max-width: 768px) {
+
+    .about-stats-wrapper {
+        padding: 20px 18px 50px;
+    }
+
+    .about-stats-wrapper .stats {
+        width: 100%;
+        max-width: 600px;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+
+        min-height: auto;
+
+        margin-top: 20px;
+
+        padding: 22px 18px;
+    }
+
+    .about-stats-wrapper .stat-box {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        gap: 12px;
+    }
+
+    .about-stats-wrapper .stat-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .about-stats-wrapper .stat-text h2 {
+        font-size: 24px;
+    }
+
+    .about-stats-wrapper .stat-text p {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .about-stats-wrapper .stats {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        padding: 10px 18px;
+    }
+
+    .about-stats-wrapper .stat-box {
+        padding: 16px 0;
+
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .about-stats-wrapper .stat-box:last-child {
+        border-bottom: none;
+    }
+
+    .about-stats-wrapper .stat-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .about-stats-wrapper .stat-text h2 {
+        font-size: 25px;
+    }
+
+    .about-stats-wrapper .stat-text p {
+        font-size: 13px;
+    }
+}
+
