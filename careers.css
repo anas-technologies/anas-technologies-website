@@ -1106,3 +1106,274 @@
     object-fit: contain;
     display: block;
 }
+
+/* =========================================================
+   CAREERS RESPONSIVE IMPROVEMENTS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .careers-hero {
+        min-height: auto;
+
+        padding:
+            50px 5% 65px;
+    }
+
+    .careers-hero-left {
+        transform: none;
+    }
+
+    .careers-hero-right {
+        justify-content: center;
+    }
+
+    .careers-hero-right img {
+        max-width: 650px;
+        transform: none;
+    }
+
+
+    /* WHY SECTION */
+
+    .careers-why-section {
+        padding:
+            60px 5% 70px;
+    }
+
+
+    /* LIFE */
+
+    .life-section {
+        padding:
+            65px 5%;
+    }
+
+    .life-left {
+        min-width: 0;
+    }
+
+
+    /* OPEN POSITIONS */
+
+    .open-positions-section {
+        padding:
+            65px 5% 80px;
+    }
+
+
+    /* CTA */
+
+    .careers-cta-section {
+        padding:
+            20px 5% 70px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .careers-hero {
+        padding:
+            40px 18px 50px;
+    }
+
+    .careers-hero-left h1 {
+        font-size: 31px;
+    }
+
+    .careers-hero-left h1 br {
+        display: none;
+    }
+
+    .careers-hero-left p {
+        font-size: 14px;
+    }
+
+    .careers-hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .careers-hero-buttons .consult-btn,
+    .careers-hero-buttons .work-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* WHY */
+
+    .careers-why-section {
+        padding:
+            50px 18px 60px;
+    }
+
+    .header-left h2 {
+        font-size: 29px;
+    }
+
+
+    /* LIFE */
+
+    .life-section {
+        padding:
+            55px 18px;
+    }
+
+    .life-left h2 {
+        font-size: 29px;
+    }
+
+    .life-card {
+        min-width: 82%;
+    }
+
+
+    /* POSITIONS */
+
+    .open-positions-section {
+        padding:
+            55px 18px 70px;
+    }
+
+    .open-positions-left h2 {
+        font-size: 29px;
+    }
+
+    .job-item {
+        padding: 20px;
+    }
+
+    .job-item-left {
+        align-items: flex-start;
+    }
+
+    .job-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .view-position {
+        margin-left: 0;
+    }
+
+
+    /* CTA BANNERS */
+
+    .careers-cta-section {
+        padding:
+            10px 18px 55px;
+    }
+
+    .cta-banner {
+        padding: 24px 20px;
+    }
+
+    .cta-banner-left {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cta-banner-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* JOB APPLICATION */
+
+    .job-application-section {
+        padding:
+            45px 18px 65px;
+    }
+
+    .app-form-column,
+    .app-desc-column,
+    .app-sidebar-column {
+        width: 100%;
+    }
+
+    .app-sidebar-column {
+        flex-direction: column;
+    }
+}
+
+/* ========================================
+   LIFE AT ANAS MOBILE SWIPE CAROUSEL
+======================================== */
+
+@media (max-width: 600px) {
+
+    .life-right {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .life-cards-wrapper {
+        display: flex;
+        gap: 0;
+
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        scrollbar-width: none;
+
+        padding: 0;
+    }
+
+    .life-cards-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .life-card {
+        flex: 0 0 100%;
+
+        width: 100%;
+        min-width: 100%;
+
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+    .life-slider-dots {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+
+        margin-top: 18px;
+    }
+
+    .life-slider-dots .dot {
+        width: 16px;
+        height: 4px;
+
+        background: #e5e5e5;
+
+        border-radius: 20px;
+
+        transition:
+            width 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .life-slider-dots .dot.active {
+        width: 24px;
+
+        background: #FA6F04;
+    }
+}
