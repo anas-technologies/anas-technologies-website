@@ -587,3 +587,256 @@ body {
 
     cursor: pointer;
 }
+
+/* =========================================================
+   CONTACT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-form-container {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    /* HERO */
+
+    .contact-hero {
+        height: auto;
+        min-height: 390px;
+
+        background-position: center;
+    }
+
+    .contact-left {
+        width: 60%;
+        padding:
+            60px 5%;
+    }
+
+
+    /* FORM */
+
+    .contact-form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-side {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 18px;
+    }
+
+
+    /* CTA */
+
+    .contact-cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 30px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter-section {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+    .newsletter-left,
+    .newsletter-right {
+        width: 100%;
+    }
+
+    .newsletter-right {
+        max-width: 650px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /* HERO */
+
+    .contact-hero {
+        min-height: auto;
+
+        background-position: 62% center;
+
+        position: relative;
+    }
+
+    .contact-hero::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background:
+            rgba(255, 255, 255, 0.82);
+    }
+
+    .contact-left {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+
+        padding:
+            50px 18px;
+    }
+
+    .contact-left h1 {
+        font-size: 32px;
+    }
+
+    .contact-left h1 br {
+        display: none;
+    }
+
+    .contact-text {
+        font-size: 14px;
+    }
+
+
+    /* CONTACT INFORMATION */
+
+    .contact-info-section {
+        padding:
+            50px 18px;
+    }
+
+    .contact-info-header h2 {
+        font-size: 29px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .contact-card {
+        min-height: auto;
+    }
+
+
+    /* FORM */
+
+    .contact-form-section {
+        padding:
+            50px 18px;
+    }
+
+    .message-form-box {
+        padding:
+            24px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-side {
+        grid-template-columns: 1fr;
+    }
+
+    .direct-contact-card {
+        padding: 24px 20px;
+    }
+
+
+    /* FAQ */
+
+    .faq-section {
+        padding:
+            55px 18px;
+    }
+
+    .faq-header h2 {
+        font-size: 29px;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
+
+    /* CTA */
+
+    .contact-cta {
+        padding:
+            45px 18px;
+    }
+
+    .contact-cta-content {
+        padding:
+            25px 20px;
+
+        border-radius: 16px;
+    }
+
+    .contact-cta-text h2 {
+        font-size: 24px;
+    }
+
+    .contact-cta-btn {
+        width: 100%;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter-section {
+        padding:
+            50px 18px;
+    }
+
+    .newsletter-left h2 {
+        font-size: 25px;
+    }
+
+    .newsletter-left p {
+        font-size: 14px;
+    }
+
+    .newsletter-left p br {
+        display: none;
+    }
+
+    .newsletter-box {
+        gap: 8px;
+
+        padding:
+            7px 7px 7px 15px;
+    }
+
+    .newsletter-box input {
+        min-width: 0;
+        font-size: 13px;
+    }
+
+    .newsletter-icon {
+        font-size: 17px;
+    }
+
+    .newsletter-box button {
+        padding:
+            11px 15px;
+
+        font-size: 12px;
+    }
+}
