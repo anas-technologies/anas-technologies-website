@@ -14,14 +14,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init({
-                publicKey: "OJRssAK6ZVuchLnlk"
-            });
-        })();
-    </script>
 </head>
 
 <body>
@@ -30,9 +22,7 @@
     <nav class="navbar">
 
         <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.jpeg" alt="ANAS Technologies">
-            </a>
+            <img src="images/logo.jpeg" alt="Anas Technologies">
         </div>
 
         <div class="nav-links">
@@ -45,7 +35,9 @@
             <a href="contact.html" class="active">Contact</a>
         </div>
 
-        <a href="quote.html" class="quote-btn">Get a Quote →</a>
+        <button class="quote-btn">
+            Get a Quote →
+        </button>
 
     </nav>
 </header>
@@ -144,18 +136,18 @@
                 Tell us a bit about your project and we’ll get back to you with next steps.
             </p>
 
-            <form id="contactForm">
+            <form>
 
                 <div class="form-row">
 
                     <div class="form-group">
-                        <label for="contactName">Full name <span>*</span></label>
-                        <input id="contactName" name="name" type="text" placeholder="Jane Doe" required>
+                        <label>Full name <span>*</span></label>
+                        <input type="text" placeholder="Jane Doe">
                     </div>
 
                     <div class="form-group">
-                        <label for="contactEmail">Work Email <span>*</span></label>
-                        <input id="contactEmail" name="email" type="email" placeholder="jane@company.com" required>
+                        <label>Work Email <span>*</span></label>
+                        <input type="email" placeholder="jane@company.com">
                     </div>
 
                 </div>
@@ -163,42 +155,37 @@
                 <div class="form-row">
 
                     <div class="form-group">
-                        <label for="contactPhone">Phone number</label>
-                        <input id="contactPhone" name="phone" type="tel" placeholder="+92 300 0000000">
+                        <label>Phone number</label>
+                        <input type="text" placeholder="+1 555 000 0000">
                     </div>
 
                     <div class="form-group">
-                        <label for="contactTopic">What can we help with</label>
+                        <label>What can we help with</label>
 
-                        <select id="contactTopic" name="topic">
-                            <option value="">Select a topic...</option>
-                            <option value="Web Development">Web Development</option>
-                            <option value="Mobile App">Mobile App</option>
-                            <option value="UI/UX Design">UI/UX Design</option>
-                            <option value="E-Commerce">E-Commerce</option>
-                            <option value="Digital Marketing">Digital Marketing</option>
-                            <option value="Other">Other</option>
+                        <select>
+                            <option>Select a topic...</option>
+                            <option>Web Development</option>
+                            <option>Mobile App</option>
+                            <option>UI/UX Design</option>
+                            <option>E-Commerce</option>
                         </select>
                     </div>
 
                 </div>
 
                 <div class="form-group">
-                    <label for="contactMessage">Message <span>*</span></label>
+                    <label>Message <span>*</span></label>
 
                     <textarea
-                        id="contactMessage"
-                        name="message"
                         rows="6"
-                        placeholder="Share a few details about your project, goals, or question."
-                        required></textarea>
+                        placeholder="Share a few details about your project, goals, or question."></textarea>
                 </div>
 
-                <button type="submit" class="send-message-btn" id="sendMessageBtn">
+                <button type="submit" class="send-message-btn">
                     Send Message →
                 </button>
 
-                <p class="reply-note" id="contactFormStatus" role="status" aria-live="polite">
+                <p class="reply-note">
                     We typically reply within one business day.
                 </p>
 
@@ -431,47 +418,6 @@
     <p>© 2026 ANAS Technologies. All Rights Reserved.</p>
     <p>Policy | Terms & Conditions | Cookies</p>
 </div>
-
-    <script>
-        const contactForm = document.getElementById("contactForm");
-        const sendMessageBtn = document.getElementById("sendMessageBtn");
-        const contactFormStatus = document.getElementById("contactFormStatus");
-
-        contactForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            sendMessageBtn.disabled = true;
-            sendMessageBtn.textContent = "Sending...";
-            contactFormStatus.textContent = "Sending your message...";
-
-            emailjs.sendForm(
-                "service_l60119i",
-                "template_rd23p3e",
-                contactForm
-            )
-            .then(function (response) {
-                console.log("EmailJS success:", response.status, response.text);
-
-                contactForm.reset();
-                contactFormStatus.textContent =
-                    "Message sent successfully. Thank you! We will get back to you soon.";
-                sendMessageBtn.textContent = "Message Sent ✓";
-
-                setTimeout(function () {
-                    sendMessageBtn.disabled = false;
-                    sendMessageBtn.textContent = "Send Message →";
-                }, 3000);
-            })
-            .catch(function (error) {
-                console.error("EmailJS error:", error);
-
-                contactFormStatus.textContent =
-                    "Unable to send your message. Please try again.";
-                sendMessageBtn.textContent = "Send Message →";
-                sendMessageBtn.disabled = false;
-            });
-        });
-    </script>
 
     <script src="script.js"></script>
 
