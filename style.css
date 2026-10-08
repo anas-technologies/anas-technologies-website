@@ -4644,3 +4644,104 @@ margin-right: 35px;
         line-height: 1.65;
     }
 }
+
+/* ========================================
+   FLOATING WHATSAPP BUTTON
+======================================== */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+
+    border-radius: 50%;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+
+    z-index: 9999;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.floating-whatsapp img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.08);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .floating-whatsapp {
+        width: 56px;
+        height: 56px;
+
+        right: 16px;
+        bottom: 18px;
+    }
+
+    .floating-whatsapp img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ========================================
+   HOMEPAGE - MOBILE QUOTE BUTTON
+======================================== */
+
+/* Hide mobile Quote link on desktop */
+.anas-homepage .nav-links .home-mobile-quote {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+
+    /* Hide original Quote button */
+    .anas-homepage .navbar > .quote-btn {
+        display: none;
+    }
+
+    /* Show Quote button inside mobile menu */
+    .anas-homepage .nav-links .home-mobile-quote {
+        display: block;
+        width: 100%;
+        padding: 13px 20px;
+        margin-top: 12px;
+
+        background: #FA6F04;
+        color: #ffffff;
+
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .anas-homepage .nav-links .home-mobile-quote:hover {
+        background: #E56300;
+        color: #ffffff;
+    }
+}
