@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,1269 +6,749 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Services | ANAS Technologies</title>
+    <meta name="description"
+        content="Explore ANAS Technologies' web development, mobile apps, UI/UX design, custom software, e-commerce, and cloud solutions.">
 
-    <!-- Google Fonts: Poppins -->
+    <title>Our Services - ANAS Technologies</title>
+
+    <!-- Google Fonts: Same Poppins typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
-        rel="stylesheet">
-
-    <style>
-        /* =========================================================
-           ANAS TECHNOLOGIES
-           FULL RESPONSIVE STYLE
-           Mobile + Tablet + Laptop + Desktop
-        ========================================================= */
-
-        /* =========================
-           RESET
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-        body {
-            font-family: "Poppins", sans-serif;
-            width: 100%;
-            min-width: 320px;
-            overflow-x: hidden;
-            background: #ffffff;
-            color: #111111;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        button,
-        input {
-            font-family: inherit;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* =========================
-           COMMON CONTAINER
-        ========================= */
-
-        section,
-        header,
-        footer {
-            width: 100%;
-        }
-
-        .hero,
-        .work-section,
-        .services-section,
-        .our-process-section,
-        .why-choose-section,
-        .bottom-cta,
-        .subscribe-section,
-        .footer {
-            width: 100%;
-            max-width: 1440px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* =========================================================
-           NAVBAR
-        ========================================================= */
-
-        header {
-            width: 100%;
-            background: #ffffff;
-        }
-
-        .navbar {
-            width: 100%;
-            max-width: 1440px;
-            min-height: 90px;
-            margin: 0 auto;
-            padding: 15px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .logo {
-            flex-shrink: 0;
-        }
-
-        .logo a {
-            display: block;
-        }
-
-        .logo img {
-            width: 145px;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: clamp(18px, 2vw, 35px);
-            flex: 1;
-        }
-
-        .nav-links a {
-            position: relative;
-            font-size: 14px;
-            font-weight: 500;
-            color: #202020;
-            white-space: nowrap;
-            transition: 0.3s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #f47b20;
-        }
-
-        .nav-links a.active::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -7px;
-            width: 100%;
-            height: 2px;
-            background: #f47b20;
-            border-radius: 10px;
-        }
-
-        .quote-btn {
-            border: none;
-            background: #f47b20;
-            color: #ffffff;
-            padding: 13px 22px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            white-space: nowrap;
-            transition: 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        .quote-btn:hover {
-            background: #d9630c;
-            transform: translateY(-2px);
-        }
-
-        /* =========================================================
-           SERVICES
-        ========================================================= */
-
-        .services-section {
-            padding: 100px 6%;
-            background: #fafafa;
-        }
-
-        .services-label,
-        .process-badge,
-        .why-choose-badge {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            color: #f47b20;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.8px;
-        }
-
-        .services-label span,
-        .process-badge span,
-        .why-choose-badge span {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #f47b20;
-        }
-
-        .services-title {
-            max-width: 850px;
-            font-size: clamp(34px, 4vw, 58px);
-            line-height: 1.15;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .services-title span {
-            color: #f47b20;
-        }
-
-        .services-description {
-            color: #777777;
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
-        .services-btn {
-            border: none;
-            background: #f47b20;
-            color: #ffffff;
-            padding: 14px 22px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 55px;
-            transition: 0.3s ease;
-            display: inline-block;
-        }
-
-        .services-btn:hover {
-            background: #d9630c;
-            transform: translateY(-2px);
-        }
-
-        .services-btn span {
-            margin-right: 8px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .service-card {
-            min-width: 0;
-            position: relative;
-            padding: 30px;
-            min-height: 245px;
-            background: #ffffff;
-            border: 1px solid #eeeeee;
-            border-radius: 15px;
-            transition: 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #f47b20;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
-        }
-
-        .service-card-top {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .service-icon {
-            width: 52px;
-            height: 52px;
-            flex-shrink: 0;
-            background: #fff3e9;
-            border-radius: 11px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .service-icon img {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-        }
-
-        /* Updated h2 styling for service cards */
-        .service-card h2 {
-            font-size: 17px;
-            line-height: 1.35;
-            font-weight: 600;
-        }
-
-        .service-card > p {
-            color: #777777;
-            font-size: 13px;
-            line-height: 1.7;
-            padding-right: 10px;
-        }
-
-        .service-arrow {
-            position: absolute;
-            right: 25px;
-            bottom: 22px;
-            color: #f47b20;
-            font-size: 22px;
-        }
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-
-        .footer {
-            padding: 70px 6% 55px;
-            background: #111111;
-            color: #ffffff;
-            display: grid;
-            grid-template-columns: 1.8fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
-
-        .footer-about {
-            min-width: 0;
-        }
-
-        .footer-logo {
-            width: 150px;
-            max-width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .footer-about > p {
-            color: #aaaaaa;
-            font-size: 12px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .footer-contact {
-            margin-bottom: 20px;
-        }
-
-        .footer-contact p {
-            color: #cccccc;
-            font-size: 12px;
-            line-height: 2;
-            word-break: break-word;
-        }
-
-        .social-icons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .social-icons span {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #222222;
-        }
-
-        .social-icons img {
-            width: 17px;
-            height: 17px;
-            object-fit: contain;
-        }
-
-        .footer-column {
-            min-width: 0;
-        }
-
-        .footer-column h3 {
-            font-size: 15px;
-            margin-bottom: 9px;
-        }
-
-        .footer-line {
-            display: block;
-            width: 30px;
-            height: 2px;
-            background: #f47b20;
-            margin-bottom: 20px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            color: #aaaaaa;
-            font-size: 12px;
-            line-height: 2.4;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-
-        .footer-column li:hover {
-            color: #f47b20;
-        }
-
-        .footer-column li a {
-            color: inherit;
-            transition: 0.3s ease;
-        }
-
-        .footer-column li a:hover {
-            color: #f47b20;
-        }
-
-        .footer-bottom {
-            width: 100%;
-            padding: 18px 6%;
-            background: #0a0a0a;
-            color: #777777;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            font-size: 11px;
-        }
-
-        .footer-bottom p {
-            margin: 0;
-        }
-
-        /* =========================================================
-           LARGE DESKTOP
-           1440px+
-        ========================================================= */
-
-        @media (min-width: 1441px) {
-
-            .navbar,
-            .services-section,
-            .footer {
-                max-width: 1600px;
-            }
-
-            .navbar {
-                padding-left: 4%;
-                padding-right: 4%;
-            }
-        }
-
-        /* =========================================================
-           LAPTOP
-           1025px - 1199px
-        ========================================================= */
-
-        @media (min-width: 1025px) and (max-width: 1199px) {
-
-            .navbar {
-                padding-left: 4%;
-                padding-right: 4%;
-                gap: 15px;
-            }
-
-            .nav-links {
-                gap: 17px;
-            }
-
-            .nav-links a {
-                font-size: 12px;
-            }
-
-            .quote-btn {
-                padding: 11px 16px;
-                font-size: 12px;
-            }
-        }
-
-        /* =========================================================
-           TABLET
-           768px - 1024px
-        ========================================================= */
-
-        @media (min-width: 768px) and (max-width: 1024px) {
-
-            .navbar {
-                min-height: 80px;
-                padding: 12px 4%;
-                gap: 15px;
-            }
-
-            .logo img {
-                width: 120px;
-            }
-
-            .nav-links {
-                gap: 14px;
-            }
-
-            .nav-links a {
-                font-size: 11px;
-            }
-
-            .quote-btn {
-                padding: 10px 14px;
-                font-size: 11px;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer {
-                grid-template-columns: repeat(2, 1fr);
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .footer-about {
-                grid-column: span 2;
-            }
-
-            .footer-bottom {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-        }
-
-        /* =========================================================
-           MOBILE
-           767px AND BELOW
-        ========================================================= */
-
-        @media (max-width: 767px) {
-
-            /* =========================
-               NAVBAR
-            ========================= */
-
-            .navbar {
-                min-height: 70px;
-                padding: 12px 18px;
-                position: relative;
-                flex-wrap: wrap;
-            }
-
-            .logo img {
-                width: 115px;
-            }
-
-            .nav-links {
-                order: 3;
-                width: 100%;
-                flex: 0 0 100%;
-                justify-content: flex-start;
-                gap: 20px;
-                overflow-x: auto;
-                padding: 8px 0 4px;
-                scrollbar-width: none;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .nav-links::-webkit-scrollbar {
-                display: none;
-            }
-
-            .nav-links a {
-                font-size: 11px;
-                flex-shrink: 0;
-                white-space: nowrap;
-            }
-
-            .nav-links a.active::after {
-                bottom: -5px;
-            }
-
-            .quote-btn {
-                padding: 9px 13px;
-                font-size: 10px;
-                border-radius: 6px;
-            }
-
-            /* =========================
-               SERVICES
-            ========================= */
-
-            .services-section {
-                padding: 65px 20px;
-            }
-
-            .services-label {
-                font-size: 10px;
-            }
-
-            .services-title {
-                font-size: clamp(28px, 8vw, 38px);
-                line-height: 1.2;
-                margin-top: 18px;
-            }
-
-            .services-description {
-                font-size: 12px;
-            }
-
-            .services-description br {
-                display: none;
-            }
-
-            .services-btn {
-                width: 100%;
-                margin-bottom: 40px;
-                padding: 14px;
-                font-size: 12px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-
-            .service-card {
-                min-height: 210px;
-                padding: 22px;
-            }
-
-            .service-card-top {
-                gap: 12px;
-                margin-bottom: 15px;
-            }
-
-            .service-icon {
-                width: 45px;
-                height: 45px;
-            }
-
-            .service-icon img {
-                width: 24px;
-                height: 24px;
-            }
-
-            /* Updated h2 styling for mobile */
-            .service-card h2 {
-                font-size: 15px;
-                line-height: 1.3;
-            }
-
-            .service-card > p {
-                font-size: 11px;
-                line-height: 1.7;
-            }
-
-            .service-arrow {
-                right: 20px;
-                bottom: 17px;
-                font-size: 18px;
-            }
-
-            /* =========================
-               FOOTER
-            ========================= */
-
-            .footer {
-                padding: 55px 20px 35px;
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-            .footer-about {
-                grid-column: auto;
-            }
-
-            .footer-logo {
-                width: 130px;
-            }
-
-            .footer-about > p {
-                font-size: 11px;
-            }
-
-            .footer-about > p br {
-                display: none;
-            }
-
-            .footer-contact p {
-                font-size: 11px;
-            }
-
-            .footer-column h3 {
-                font-size: 14px;
-            }
-
-            .footer-column li {
-                font-size: 11px;
-                line-height: 2.2;
-            }
-
-            .footer-bottom {
-                padding: 16px 20px;
-                flex-direction: column;
-                text-align: center;
-                gap: 7px;
-                font-size: 9px;
-            }
-        }
-
-        /* =========================================================
-           EXTRA SMALL MOBILE
-           320px - 374px
-        ========================================================= */
-
-        @media (max-width: 374px) {
-
-            .navbar {
-                padding-left: 14px;
-                padding-right: 14px;
-            }
-
-            .logo img {
-                width: 100px;
-            }
-
-            .quote-btn {
-                padding: 8px 10px;
-                font-size: 9px;
-            }
-
-            .nav-links {
-                gap: 16px;
-            }
-
-            .nav-links a {
-                font-size: 10px;
-            }
-
-            .services-section,
-            .footer {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
-            /* Updated h2 styling for extra small mobile */
-            .service-card h2 {
-                font-size: 14px;
-            }
-        }
-
-        /* =========================================================
-           TOUCH DEVICES
-        ========================================================= */
-
-        @media (hover: none) {
-
-            .service-card:hover,
-            .quote-btn:hover,
-            .services-btn:hover {
-                transform: none;
-            }
-        }
-
-        /* =========================================================
-           ACCESSIBILITY
-        ========================================================= */
-
-        button:focus-visible,
-        a:focus-visible,
-        input:focus-visible {
-            outline: 2px solid #f47b20;
-            outline-offset: 3px;
-        }
-
-        /* =========================================================
-           PREVENT LONG TEXT BREAKING LAYOUT
-        ========================================================= */
-
-        h1,
-        h2,
-        h3,
-        h4,
-        p,
-        a,
-        span {
-            overflow-wrap: break-word;
-        }
-
-        /* =========================================================
-           FINAL OVERFLOW PROTECTION
-        ========================================================= */
-
-        section,
-        div,
-        header,
-        footer {
-            max-width: 100%;
-        }
-
-        table,
-        iframe,
-        video {
-            max-width: 100%;
-        }
-    </style>
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Global and Services styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
 </head>
 
-<body>
+<body class="services-page">
 
-<!-- =========================
-     HEADER
-========================= -->
+    <a class="services-skip" href="#main-content">Skip to content</a>
 
-<header>
-    <nav class="navbar">
+    <!-- ========================================
+         NAVBAR
+    ========================================= -->
 
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.jpeg" alt="ANAS Technologies">
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+
+            <div class="logo">
+                <a href="index.html" aria-label="ANAS Technologies homepage">
+                    <img src="images/logo.jpeg" alt="ANAS Technologies">
+                </a>
+            </div>
+
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active" aria-current="page">Services</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About Us</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact</a>
+
+    <!-- Get a Quote inside mobile menu -->
+    <a href="quote.html" class="sv-mobile-quote">
+        Get a Quote →
+    </a>
+</div>
+
+<!-- Desktop Quote Button -->
+<button class="quote-btn" type="button">
+    Get a Quote →
+</button>
+
+
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ========================================
+             HERO SECTION
+        ========================================= -->
+
+        <section class="sv-hero">
+            <div class="sv-container sv-hero-grid">
+
+                <div class="sv-hero-copy">
+
+                    <p class="sv-breadcrumb">
+                        <a href="index.html">Home</a> /
+                        <span>Services</span>
+                    </p>
+
+                    <span class="sv-eyebrow">WHAT WE DO BEST</span>
+
+                    <h1>
+                        Digital Services Built for
+                        <span>Real Business Growth.</span>
+                    </h1>
+
+                    <p class="sv-lead">
+                        From the first idea to the final launch, we design
+                        and develop digital experiences that solve problems,
+                        simplify work, and help your business move forward.
+                    </p>
+
+                    <div class="sv-actions">
+
+                        <a href="quote.html" class="sv-btn sv-btn-primary">
+                            Start Your Project <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a href="#services" class="sv-btn sv-btn-outline">
+                            Explore Our Services <span aria-hidden="true">↓</span>
+                        </a>
+
+                    </div>
+
+                    <div class="sv-hero-caption">
+                        <span class="sv-caption-dot"></span>
+                        Strategy-led. Design-focused. Built to scale.
+                    </div>
+
+                </div>
+
+                <!-- Hero Illustration -->
+                <div class="sv-visual">
+
+                    <div class="sv-visual-top">
+                        <span class="sv-window-dots">
+                            <i></i><i></i><i></i>
+                        </span>
+
+                        <span>YOUR DIGITAL ECOSYSTEM</span>
+                        <span class="sv-visual-status">● Connected</span>
+                    </div>
+
+                    <div class="sv-display-center">
+
+                        <div class="sv-center-icon">
+                            A<span>✦</span>
+                        </div>
+
+                        <strong>
+                            Everything your<br>
+                            business needs.
+                        </strong>
+
+                        <p>One connected digital partner</p>
+                    </div>
+
+                    <div class="sv-mini-grid">
+
+                        <div class="sv-mini">
+                            <span class="sv-mini-symbol">⌘</span>
+                            <div>
+                                <strong>Web Platforms</strong>
+                                <small>Fast & responsive</small>
+                            </div>
+                        </div>
+
+                        <div class="sv-mini">
+                            <span class="sv-mini-symbol">▣</span>
+                            <div>
+                                <strong>Mobile Apps</strong>
+                                <small>Built for people</small>
+                            </div>
+                        </div>
+
+                        <div class="sv-mini">
+                            <span class="sv-mini-symbol">◈</span>
+                            <div>
+                                <strong>Design Systems</strong>
+                                <small>Clear & intuitive</small>
+                            </div>
+                        </div>
+
+                        <div class="sv-mini">
+                            <span class="sv-mini-symbol">◇</span>
+                            <div>
+                                <strong>Custom Software</strong>
+                                <small>Built around you</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             OUR SERVICES
+        ========================================= -->
+
+        <section class="sv-section sv-offerings" id="services">
+
+            <div class="sv-container">
+
+                <div class="sv-section-heading">
+
+                    <span class="sv-eyebrow">OUR EXPERTISE</span>
+
+                    <h2>
+                        Services That Turn Ideas Into
+                        <span>Impact.</span>
+                    </h2>
+
+                    <p>
+                        Practical technology, thoughtful design, and
+                        purposeful development—tailored to your business goals.
+                    </p>
+
+                </div>
+
+                <div class="sv-services-grid">
+
+                    <!-- Service 01 -->
+                    <article class="sv-service-card">
+
+                        <div class="sv-service-icon">⌘</div>
+                        <span class="sv-service-no">01 / DEVELOPMENT</span>
+
+                        <h3>Web Development</h3>
+
+                        <p>
+                            Modern websites and robust web applications
+                            engineered for performance, accessibility, and growth.
+                        </p>
+
+                        <ul>
+                            <li>Business & corporate websites</li>
+                            <li>Custom web applications</li>
+                            <li>Responsive front-end experiences</li>
+                        </ul>
+
+                        <a href="quote.html">
+                            Discuss Your Project <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <!-- Service 02 -->
+                    <article class="sv-service-card">
+
+                        <div class="sv-service-icon">▣</div>
+                        <span class="sv-service-no">02 / MOBILE</span>
+
+                        <h3>Mobile App Development</h3>
+
+                        <p>
+                            Intuitive mobile experiences that connect your
+                            customers to your business wherever they are.
+                        </p>
+
+                        <ul>
+                            <li>Cross-platform Flutter apps</li>
+                            <li>Mobile-first product design</li>
+                            <li>App enhancements & support</li>
+                        </ul>
+
+                        <a href="quote.html">
+                            Discuss Your Project <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <!-- Service 03 -->
+                    <article class="sv-service-card">
+
+                        <div class="sv-service-icon">✧</div>
+                        <span class="sv-service-no">03 / DESIGN</span>
+
+                        <h3>UI/UX Design</h3>
+
+                        <p>
+                            Clean, user-centered interfaces that make every
+                            interaction feel simple, intentional, and memorable.
+                        </p>
+
+                        <ul>
+                            <li>Wireframes & prototypes</li>
+                            <li>Website & app interface design</li>
+                            <li>User journeys & design systems</li>
+                        </ul>
+
+                        <a href="quote.html">
+                            Discuss Your Project <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <!-- Service 04 -->
+                    <article class="sv-service-card">
+
+                        <div class="sv-service-icon">◇</div>
+                        <span class="sv-service-no">04 / SOFTWARE</span>
+
+                        <h3>Custom Software Solutions</h3>
+
+                        <p>
+                            Purpose-built systems that simplify operations,
+                            automate tasks, and fit your existing workflows.
+                        </p>
+
+                        <ul>
+                            <li>Business management systems</li>
+                            <li>Workflow automation</li>
+                            <li>Custom dashboards & integrations</li>
+                        </ul>
+
+                        <a href="quote.html">
+                            Discuss Your Project <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <!-- Service 05 -->
+                    <article class="sv-service-card">
+
+                        <div class="sv-service-icon">▤</div>
+                        <span class="sv-service-no">05 / COMMERCE</span>
+
+                        <h3>E-Commerce Development</h3>
+
+                        <p>
+                            Shopping experiences designed to make products
+                            easy to discover, understand, and purchase.
+                        </p>
+
+                        <ul>
+                            <li>Online storefronts</li>
+                            <li>Product catalogs & checkout flows</li>
+                            <li>Order & inventory experiences</li>
+                        </ul>
+
+                        <a href="quote.html">
+                            Discuss Your Project <span>↗</span>
+                        </a>
+
+                    </article>
+
+                    <!-- Service 06 -->
+                    <article class="sv-service-card">
+
+                        <div class="sv-service-icon">☁</div>
+                        <span class="sv-service-no">06 / INFRASTRUCTURE</span>
+
+                        <h3>Cloud & Backend Solutions</h3>
+
+                        <p>
+                            Dependable back-end foundations and integrations
+                            that support secure, connected digital products.
+                        </p>
+
+                        <ul>
+                            <li>API & backend development</li>
+                            <li>Cloud integration</li>
+                            <li>Database architecture</li>
+                        </ul>
+
+                        <a href="quote.html">
+                            Discuss Your Project <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             OUR DEVELOPMENT PROCESS
+        ========================================= -->
+
+        <section class="sv-section sv-approach">
+
+            <div class="sv-container">
+
+                <div class="sv-approach-heading">
+
+                    <div>
+                        <span class="sv-eyebrow">HOW WE WORK</span>
+
+                        <h2>
+                            A Clear Process.
+                            <span>Better Outcomes.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        We keep you involved from discovery to delivery,
+                        with a structured process that makes progress easy to follow.
+                    </p>
+
+                </div>
+
+                <div class="sv-steps">
+
+                    <div class="sv-step">
+                        <div class="sv-step-index">01</div>
+                        <h3>Discover</h3>
+                        <p>
+                            We listen, research, and define your business
+                            needs and project goals.
+                        </p>
+                    </div>
+
+                    <div class="sv-step">
+                        <div class="sv-step-index">02</div>
+                        <h3>Design</h3>
+                        <p>
+                            We map the experience and shape a clear,
+                            user-friendly solution.
+                        </p>
+                    </div>
+
+                    <div class="sv-step">
+                        <div class="sv-step-index">03</div>
+                        <h3>Develop</h3>
+                        <p>
+                            We turn approved designs into a reliable,
+                            responsive product.
+                        </p>
+                    </div>
+
+                    <div class="sv-step">
+                        <div class="sv-step-index">04</div>
+                        <h3>Launch & Improve</h3>
+                        <p>
+                            We test, launch, and refine the experience
+                            as your needs evolve.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             WHY CHOOSE US
+        ========================================= -->
+
+        <section class="sv-section sv-why">
+
+            <div class="sv-container sv-why-grid">
+
+                <div class="sv-why-intro">
+
+                    <span class="sv-eyebrow">WHY ANAS TECHNOLOGIES</span>
+
+                    <h2>
+                        More Than Code.
+                        <span>A Partner in Progress.</span>
+                    </h2>
+
+                    <p>
+                        We bring strategy, design, and engineering together
+                        so every decision supports a meaningful business outcome.
+                    </p>
+
+                    <a href="about.html" class="sv-btn sv-btn-outline">
+                        Learn About Us <span>↗</span>
+                    </a>
+
+                </div>
+
+                <div class="sv-benefits">
+
+                    <div class="sv-benefit">
+                        <span>✓</span>
+                        <div>
+                            <h3>Built Around Your Goals</h3>
+                            <p>
+                                Solutions shaped by your priorities—not a
+                                one-size-fits-all template.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="sv-benefit">
+                        <span>✓</span>
+                        <div>
+                            <h3>Design Meets Engineering</h3>
+                            <p>
+                                Thoughtful interfaces backed by practical
+                                technical decisions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="sv-benefit">
+                        <span>✓</span>
+                        <div>
+                            <h3>Clear Collaboration</h3>
+                            <p>
+                                Open communication and visible progress
+                                throughout the project.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="sv-benefit">
+                        <span>✓</span>
+                        <div>
+                            <h3>Ready to Evolve</h3>
+                            <p>
+                                Digital products developed with tomorrow's
+                                requirements in mind.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             TECHNOLOGIES
+        ========================================= -->
+
+        <section class="sv-section sv-tech">
+
+            <div class="sv-container">
+
+                <div class="sv-section-heading">
+
+                    <span class="sv-eyebrow">TOOLS OF OUR TRADE</span>
+
+                    <h2>
+                        Technology Chosen With
+                        <span>Purpose.</span>
+                    </h2>
+
+                    <p>
+                        We select the right tools for each product instead
+                        of forcing every project into the same stack.
+                    </p>
+
+                </div>
+
+                <div class="sv-tech-list">
+                    <span>React</span>
+                    <span>Flutter</span>
+                    <span>Node.js</span>
+                    <span>Laravel</span>
+                    <span>Python</span>
+                    <span>Firebase</span>
+                    <span>AWS</span>
+                    <span>Figma</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================
+             FINAL CTA
+        ========================================= -->
+
+    
+
+<!-- ========================================
+     COMPACT CTA SECTION
+========================================= -->
+
+<section
+    class="an-cta-strip"
+    id="start-project"
+    aria-labelledby="cta-strip-title"
+>
+    <div class="an-container">
+
+        <div class="an-cta-strip-box">
+
+            <!-- Left Content -->
+            <div class="an-cta-strip-left">
+
+                <div class="an-cta-strip-icon">
+                    ➜
+                </div>
+
+                <div class="an-cta-strip-copy">
+
+                    <h2 id="cta-strip-title">
+                        Have a project in mind?
+                    </h2>
+
+                    <p>
+                        Let’s work together to turn your ideas into powerful digital solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CTA Button -->
+            <a
+                href="quote.html"
+                class="an-cta-strip-button"
+            >
+                Get a Free Consultation
+                <span>→</span>
             </a>
+
         </div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="solutions.html">Solutions</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About Us</a>
-            <a href="careers.html">Careers</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <a href="quote.html" class="quote-btn">
-            Get a Quote →
-        </a>
-
-    </nav>
-</header>
+    </div>
+</section>
 
 
-<!-- =========================
-     MAIN
-========================= -->
+    </main>
 
-<main>
+    
+<!-- ========================================
+     SUBSCRIBE SECTION
+========================================= -->
 
-<section class="services-section" id="services">
+<section class="subscribe-section">
 
-    <!-- Section Label -->
-    <div class="services-label">
-        <span></span>
-        OUR SERVICES
+    <div class="subscribe-left">
+
+        <h2>
+            Stay Ahead with
+            <span>ANAS Technologies</span>
+        </h2>
+
+        <p>
+            Get the latest updates, digital insights, and<br>
+            technology solutions delivered to your inbox.
+        </p>
+
     </div>
 
+    <div class="subscribe-right">
 
-    <!-- Main Heading -->
-    <h1 class="services-title">
-        Digital Solutions That
-        <br>
-        Drive Real
-        <span>Business Growth</span>
-    </h1>
+        <div class="subscribe-box">
 
-
-    <!-- Description -->
-    <p class="services-description">
-        From custom web apps to intelligent automation —
-        <br>
-        we build scalable, secure, and future-ready digital
-        <br>
-        solutions.
-    </p>
-
-
-    <!-- CTA -->
-    <a href="quote.html" class="services-btn">
-        <span>➤</span>
-        Let's Work Together
-    </a>
-
-
-    <!-- =========================
-         SERVICES GRID
-    ========================= -->
-
-    <div class="services-grid">
-
-
-        <!-- WEB DEVELOPMENT -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    <img
-                        src="images/web-development.png"
-                        alt="Web Development">
-                </div>
-
-                <h2>Web Development</h2>
-
-            </div>
-
-            <p>
-                From custom web apps to intelligent automation —
-                we build scalable, secure, and future-ready
-                digital solutions.
-            </p>
-
-            <span class="service-arrow">
-                →
+            <span class="email-icon" aria-hidden="true">
+                ✉
             </span>
 
-        </div>
+            <input
+                type="email"
+                placeholder="Enter Your Email"
+                aria-label="Email address"
+            >
 
-
-        <!-- MOBILE APP -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    <img
-                        src="images/mobile-app.png"
-                        alt="Mobile App Development">
-                </div>
-
-                <h2>Mobile App Development</h2>
-
-            </div>
-
-            <p>
-                Native and cross-platform mobile apps that deliver
-                smooth performance and exceptional user
-                experience.
-            </p>
-
-            <span class="service-arrow">
-                →
-            </span>
+            <button type="button">
+                Subscribe
+            </button>
 
         </div>
-
-
-        <!-- CUSTOM SOFTWARE -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    <img
-                        src="images/custom-software.png"
-                        alt="Custom Software Development">
-                </div>
-
-                <h2>Custom Software Development</h2>
-
-            </div>
-
-            <p>
-                Powerful custom software solutions to automate
-                processes, improve efficiency and scale your
-                business.
-            </p>
-
-            <span class="service-arrow">
-                →
-            </span>
-
-        </div>
-
-
-        <!-- CLOUD -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    <img
-                        src="images/cloud.png"
-                        alt="Cloud Solutions">
-                </div>
-
-                <h2>Cloud Solutions</h2>
-
-            </div>
-
-            <p>
-                Secure, reliable and scalable cloud infrastructure
-                to support your business growth and digital
-                transformation.
-            </p>
-
-            <span class="service-arrow">
-                →
-            </span>
-
-        </div>
-
-
-        <!-- UI UX -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    <img
-                        src="images/uiux.png"
-                        alt="UI/UX Design">
-                </div>
-
-                <h2>UI/UX Design</h2>
-
-            </div>
-
-            <p>
-                Beautiful, intuitive and user-centered designs that
-                create meaningful digital experiences.
-            </p>
-
-            <span class="service-arrow">
-                →
-            </span>
-
-        </div>
-
-
-        <!-- IT CONSULTING -->
-
-        <div class="service-card">
-
-            <div class="service-card-top">
-
-                <div class="service-icon">
-                    <img
-                        src="images/it-consulting.png"
-                        alt="IT Consulting">
-                </div>
-
-                <h2>IT Consulting</h2>
-
-            </div>
-
-            <p>
-                Strategic IT consulting to help you make the right
-                technology decisions and stay ahead of the
-                competition.
-            </p>
-
-            <span class="service-arrow">
-                →
-            </span>
-
-        </div>
-
 
     </div>
 
 </section>
 
-</main>
 
+    <!-- ========================================
+         FOOTER - SAME WEBSITE FOOTER
+    ========================================= -->
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <footer class="footer">
 
-<footer class="footer">
+        <div class="footer-about">
 
+            <img
+                alt="ANAS Technologies"
+                class="footer-logo"
+                src="images/footer-logo.jpeg"
+            >
 
-    <!-- COMPANY -->
+            <p>
+                We build innovative digital solutions that help<br>
+                businesses grow, connect, and succeed in the<br>
+                digital world.
+            </p>
 
-    <div class="footer-about">
+            <div class="footer-contact">
+                <p>📞 03299406401</p>
+                <p>✉ anastecnologies32@gmail.com</p>
+            </div>
 
-        <img
-            src="images/footer-logo.jpeg"
-            alt="ANAS Technologies"
-            class="footer-logo">
+            <div class="social-icons">
+                <span><img alt="WhatsApp" src="images/whatsapp.png"></span>
+                <span><img alt="Facebook" src="images/facebook.png"></span>
+                <span><img alt="Instagram" src="images/instagram.png"></span>
+                <span><img alt="Twitter" src="images/twitter.png"></span>
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <span class="footer-line"></span>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="quote.html">Get a Quote</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Resources</h3>
+            <span class="footer-line"></span>
+
+            <ul>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <span class="footer-line"></span>
+
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <div class="footer-bottom">
+
+        <p>© 2026 ANAS Technologies. All Rights Reserved.</p>
 
         <p>
-            We build innovative digital solutions that help
-            businesses grow, connect, and succeed in the
-            digital world.
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms &amp; Conditions</a> |
+            <a href="cookies.html">Cookies</a>
         </p>
 
-
-        <!-- CONTACT -->
-
-        <div class="footer-contact">
-
-            <p>
-                📞 03299406401
-            </p>
-
-            <p>
-                ✉ anastecnologies32@gmail.com
-            </p>
-
-        </div>
-
-
-        <!-- SOCIAL -->
-
-        <div class="social-icons">
-
-            <span>
-                <img
-                    src="images/whatsapp.png"
-                    alt="WhatsApp">
-            </span>
-
-            <span>
-                <img
-                    src="images/facebook.png"
-                    alt="Facebook">
-            </span>
-
-            <span>
-                <img
-                    src="images/instagram.png"
-                    alt="Instagram">
-            </span>
-
-            <span>
-                <img
-                    src="images/twitter.png"
-                    alt="Twitter">
-            </span>
-
-        </div>
-
     </div>
 
+    <!-- EXISTING WEBSITE JAVASCRIPT -->
+    <script src="script.js" defer></script>
 
-    <!-- QUICK LINKS -->
-
-    <div class="footer-column">
-
-        <h3>Quick Links</h3>
-
-        <span class="footer-line"></span>
-
-        <ul>
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="services.html">Services</a>
-            </li>
-
-            <li>
-                <a href="portfolio.html">Portfolio</a>
-            </li>
-
-            <li>
-                <a href="careers.html">Careers</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </div>
-
-
-    <!-- RESOURCES -->
-
-    <div class="footer-column">
-
-        <h3>Resources</h3>
-
-        <span class="footer-line"></span>
-
-        <ul>
-
-            <li>
-                <a href="#">Blog</a>
-            </li>
-
-            <li>
-                <a href="#">Career Guide</a>
-            </li>
-
-            <li>
-                <a href="#">Help Center</a>
-            </li>
-
-            <li>
-                <a href="#">FAQs</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </div>
-
-
-    <!-- COMPANY LINKS -->
-
-    <div class="footer-column">
-
-        <h3>Company</h3>
-
-        <span class="footer-line"></span>
-
-        <ul>
-
-            <li>
-                <a href="about.html">About Us</a>
-            </li>
-
-            <li>
-                <a href="#">Our Team</a>
-            </li>
-
-            <li>
-                <a href="careers.html">Careers</a>
-            </li>
-
-            <li>
-                <a href="#">Privacy Policy</a>
-            </li>
-
-            <li>
-                <a href="#">Terms & Conditions</a>
-            </li>
-
-        </ul>
-
-    </div>
-
-
-</footer>
-
-
-<!-- =========================
-     FOOTER BOTTOM
-========================= -->
-
-<div class="footer-bottom">
-
-    <p>
-        © 2026 ANAS Technologies. All Rights Reserved.
-    </p>
-
-    <p>
-        Policy | Terms & Conditions | Cookies
-    </p>
-
-</div>
-
-
-<script src="script.js"></script>
+<!-- Floating WhatsApp Button -->
+<a
+    href="https://wa.me/923299406401"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp"
+>
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+</a>
 
 </body>
 </html>
