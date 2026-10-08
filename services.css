@@ -1,0 +1,944 @@
+
+/* ==========================================
+   01. SERVICES PAGE SETTINGS
+========================================== */
+
+.services-page {
+    --sv-orange: #FA6F04;
+    --sv-ink: #111827;
+    --sv-muted: #667085;
+    --sv-border: #EADFD5;
+    --sv-bg: #FFFAF6;
+
+    color: var(--sv-ink);
+    background: var(--sv-bg);
+}
+
+.services-page .sv-container {
+    width: 88%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.services-page .sv-section {
+    padding: 86px 0;
+}
+
+.services-page h1,
+.services-page h2,
+.services-page h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--sv-ink);
+}
+
+.services-page h1 span,
+.services-page h2 span {
+    color: var(--sv-orange);
+}
+
+.services-page h1 {
+    font-size: clamp(35px, 3.9vw, 52px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    margin-bottom: 21px;
+}
+
+.services-page h2 {
+    font-size: clamp(28px, 3vw, 37px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.services-page h3 {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.services-page p {
+    line-height: 1.8;
+}
+
+.services-page a:focus-visible,
+.services-page button:focus-visible {
+    outline: 3px solid #A74400;
+    outline-offset: 4px;
+}
+
+.services-skip {
+    position: absolute;
+    top: -120px;
+    left: 15px;
+    z-index: 200;
+    background: white;
+    color: #111827;
+    padding: 12px;
+}
+
+.services-skip:focus {
+    top: 10px;
+}
+
+/* ==========================================
+   02. BADGES & SECTION HEADINGS
+========================================== */
+
+.services-page .sv-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #AD4C06;
+    background: #FFF0E5;
+    border: 1px solid #F5DFCE;
+    padding: 8px 14px;
+    border-radius: 25px;
+    margin-bottom: 19px;
+}
+
+.sv-section-heading {
+    text-align: center;
+    max-width: 725px;
+    margin: 0 auto 41px;
+}
+
+.sv-section-heading > p {
+    color: var(--sv-muted);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   03. HERO SECTION
+========================================== */
+
+.sv-hero {
+    padding: 42px 0 78px;
+    background: #FAFAFA;
+    border-bottom: 1px solid #F0E8E0;
+}
+
+.sv-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.sv-breadcrumb {
+    font-size: 13px;
+    color: #777;
+    margin: 0 0 34px;
+}
+
+.sv-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sv-breadcrumb span {
+    color: #B64D00;
+}
+
+.sv-lead {
+    font-size: 15px;
+    color: var(--sv-muted);
+    max-width: 530px;
+}
+
+.sv-actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 29px;
+}
+
+/* Hero buttons */
+
+.sv-btn {
+    font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    padding: 13px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 9px;
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.sv-btn:hover {
+    transform: translateY(-2px);
+}
+
+.sv-btn-primary {
+    background: var(--sv-orange);
+    border: 1px solid var(--sv-orange);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(250, 111, 4, 0.23);
+}
+
+.sv-btn-primary:hover {
+    background: #DB6003;
+}
+
+.sv-btn-outline {
+    color: var(--sv-ink);
+    border: 1px solid #DEDBD8;
+    background: #fff;
+}
+
+.sv-btn-outline:hover {
+    border-color: var(--sv-orange);
+}
+
+.sv-hero-caption {
+    margin-top: 32px;
+    color: #777;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sv-caption-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--sv-orange);
+    border-radius: 50%;
+}
+
+/* ==========================================
+   04. HERO VISUAL
+========================================== */
+
+.sv-visual {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #F1E4D9;
+    border-radius: 21px;
+    padding: 23px;
+    box-shadow: 0 19px 52px rgba(34, 34, 34, 0.075);
+}
+
+.sv-visual-top {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    color: #777;
+    font-weight: 700;
+}
+
+.sv-window-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.sv-window-dots i {
+    width: 7px;
+    height: 7px;
+    background: #F0CFC0;
+    border-radius: 50%;
+}
+
+.sv-window-dots i:first-child {
+    background: #FA6F04;
+}
+
+.sv-visual-status {
+    margin-left: auto;
+    font-size: 10px;
+    color: #249A68;
+    letter-spacing: 0;
+}
+
+.sv-display-center {
+    text-align: center;
+    margin: 24px 0 26px;
+    padding: 24px 10px;
+    background: linear-gradient(145deg, #FFF7EF, #FFFAF6);
+    border-radius: 15px;
+    border: 1px solid #F7E4D5;
+}
+
+.sv-center-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    background: var(--sv-orange);
+    width: 54px;
+    height: 54px;
+    border-radius: 17px;
+    font-weight: 800;
+    color: white;
+    font-size: 25px;
+    position: relative;
+}
+
+.sv-center-icon span {
+    font-size: 11px;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    color: #fff;
+}
+
+.sv-display-center strong {
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.sv-display-center p {
+    font-size: 12px;
+    color: var(--sv-muted);
+    margin-top: 6px;
+}
+
+.sv-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+}
+
+.sv-mini {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 14px 12px;
+    background: #fff;
+    border: 1px solid #EEE5DE;
+    border-radius: 12px;
+}
+
+.sv-mini-symbol {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    background: #FFF0E5;
+    color: var(--sv-orange);
+    border-radius: 9px;
+    font-size: 23px;
+}
+
+.sv-mini strong {
+    display: block;
+    font-size: 11px;
+    color: var(--sv-ink);
+}
+
+.sv-mini small {
+    font-size: 10px;
+    color: var(--sv-muted);
+}
+
+/* ==========================================
+   05. SERVICES CARDS
+========================================== */
+
+.sv-offerings {
+    background: #FFFAF6;
+}
+
+.sv-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 21px;
+}
+
+.sv-service-card {
+    background: white;
+    border: 1px solid var(--sv-border);
+    border-radius: 15px;
+    padding: 29px 27px 25px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    transition:
+        box-shadow 0.25s,
+        transform 0.25s,
+        border-color 0.25s;
+}
+
+.sv-service-card:hover {
+    transform: translateY(-5px);
+    border-color: #F9BD93;
+    box-shadow: 0 15px 36px rgba(51, 38, 28, 0.07);
+}
+
+.sv-service-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 12px;
+    background: #FFF1E7;
+    color: var(--sv-orange);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.sv-service-no {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #B55A1B;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.sv-service-card h3 {
+    margin-bottom: 11px;
+}
+
+.sv-service-card > p {
+    font-size: 13px;
+    color: var(--sv-muted);
+    margin-bottom: 17px;
+}
+
+.sv-service-card ul {
+    padding-left: 19px;
+    color: #4B5563;
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 23px;
+}
+
+.sv-service-card li::marker {
+    color: var(--sv-orange);
+}
+
+.sv-service-card > a {
+    margin-top: auto;
+    color: #CC5900;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-flex;
+    gap: 12px;
+}
+
+.sv-service-card > a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   06. DEVELOPMENT PROCESS
+========================================== */
+
+.sv-approach {
+    background: #fff;
+}
+
+.sv-approach-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 43px;
+}
+
+.sv-approach-heading > div {
+    max-width: 590px;
+}
+
+.sv-approach-heading > p {
+    max-width: 375px;
+    color: var(--sv-muted);
+    font-size: 13px;
+}
+
+.sv-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.sv-step {
+    border-top: 2px solid #F6B788;
+    padding-top: 22px;
+}
+
+.sv-step-index {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #FFF1E7;
+    color: #C45B10;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.sv-step h3 {
+    margin-bottom: 9px;
+    font-size: 17px;
+}
+
+.sv-step p {
+    font-size: 12px;
+    color: var(--sv-muted);
+}
+
+/* ==========================================
+   07. WHY CHOOSE US
+========================================== */
+
+.sv-why {
+    background: #FFFAF6;
+}
+
+.sv-why-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.sv-why-intro p {
+    font-size: 14px;
+    color: var(--sv-muted);
+    margin: 18px 0 25px;
+}
+
+.sv-benefits {
+    display: grid;
+    gap: 14px;
+}
+
+.sv-benefit {
+    display: flex;
+    gap: 16px;
+    align-items: start;
+    padding: 18px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--sv-border);
+}
+
+.sv-benefit > span {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #FFF0E5;
+    color: var(--sv-orange);
+    font-weight: 700;
+}
+
+.sv-benefit h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.sv-benefit p {
+    font-size: 12px;
+    color: var(--sv-muted);
+}
+
+/* ==========================================
+   08. TECHNOLOGIES
+========================================== */
+
+.sv-tech {
+    background: white;
+}
+
+.sv-tech-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.sv-tech-list span {
+    padding: 14px 25px;
+    background: #FFFAF6;
+    border: 1px solid #F0E2D7;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* ==========================================
+   09. FINAL CTA
+========================================== */
+
+.sv-final {
+    background: #FFFAF6;
+    padding-top: 55px !important;
+}
+
+.sv-cta-panel {
+    background: #1F2937;
+    padding: 45px 50px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.sv-cta-panel h2 {
+    color: white;
+    max-width: 620px;
+}
+
+.sv-cta-panel h2 span {
+    color: #FF9C52;
+}
+
+.sv-cta-panel p {
+    font-size: 13px;
+    color: #CCD4DE;
+    margin-top: 10px;
+}
+
+.sv-btn-white {
+    background: white;
+    color: #1F2937;
+    flex-shrink: 0;
+}
+
+.sv-btn-white:hover {
+    background: #FFF1E7;
+}
+
+/* ==========================================
+   10. TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .sv-hero-grid {
+        gap: 30px;
+    }
+
+    .sv-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sv-why-grid {
+        gap: 40px;
+    }
+
+    .sv-cta-panel {
+        padding: 36px;
+    }
+}
+
+/* ==========================================
+   11. MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 760px) {
+
+    .services-page .sv-section {
+        padding: 60px 0;
+    }
+
+    .sv-hero {
+        padding: 26px 0 55px;
+    }
+
+    .sv-hero-grid,
+    .sv-why-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sv-visual {
+        max-width: 550px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .sv-breadcrumb {
+        margin-bottom: 23px;
+    }
+
+    .sv-approach-heading {
+        display: block;
+    }
+
+    .sv-approach-heading > p {
+        max-width: 100%;
+        margin-top: 15px;
+    }
+
+    .sv-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sv-cta-panel {
+        display: block;
+        text-align: center;
+    }
+
+    .sv-cta-panel .sv-btn {
+        margin-top: 24px;
+    }
+
+    .sv-tech-list span {
+        padding: 12px 17px;
+    }
+}
+
+/* ==========================================
+   12. SMALL MOBILE SCREENS
+========================================== */
+
+@media (max-width: 560px) {
+
+    .services-page .sv-container {
+        width: 90%;
+    }
+
+    .services-page h1 {
+        font-size: 35px;
+        letter-spacing: -0.8px;
+    }
+
+    .services-page h2 {
+        font-size: 28px;
+    }
+
+    .sv-services-grid,
+    .sv-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .sv-service-card {
+        padding: 24px;
+    }
+
+    .sv-mini-grid {
+        gap: 8px;
+    }
+
+    .sv-mini {
+        padding: 11px 9px;
+        gap: 7px;
+    }
+
+    .sv-mini-symbol {
+        width: 29px;
+        height: 29px;
+        font-size: 18px;
+    }
+
+    .sv-mini strong {
+        font-size: 10px;
+    }
+
+    .sv-mini small {
+        font-size: 9px;
+    }
+
+    .sv-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .sv-actions .sv-btn {
+        width: 100%;
+    }
+
+    .sv-visual {
+        padding: 14px;
+    }
+
+    .sv-visual-top {
+        font-size: 8px;
+    }
+
+    .sv-visual-status {
+        font-size: 9px;
+    }
+
+    .sv-cta-panel {
+        padding: 29px 21px;
+    }
+
+    .sv-cta-panel .sv-btn {
+        white-space: normal;
+    }
+
+    .sv-tech-list {
+        gap: 9px;
+    }
+}
+
+/* ==========================================
+   13. ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sv-service-card,
+    .sv-btn {
+        transition: none;
+    }
+}
+
+/* Match homepage CTA typography exactly */
+
+.services-page .an-cta-strip-copy h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 4px;
+}
+
+.services-page .an-cta-strip-copy p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e4e4e4;
+    margin: 0;
+}
+
+.services-page .an-cta-strip {
+    padding: 34px 0 50px;
+}
+
+@media (max-width: 640px) {
+    .services-page .an-cta-strip {
+        padding: 28px 0 40px;
+    }
+
+    .services-page .an-cta-strip-copy h2 {
+        font-size: 16px;
+    }
+
+    .services-page .an-cta-strip-copy p {
+        font-size: 13px;
+    }
+}
+
+
+/* Hide mobile Quote button on desktop */
+.services-page .sv-mobile-quote-item {
+    display: none;
+}
+
+/* Mobile navigation */
+@media (max-width: 1023px) {
+
+    /* Hide original desktop Quote button */
+    .services-page .navbar > .quote-btn {
+        display: none;
+    }
+
+    /* Show Quote item in mobile dropdown */
+    .services-page .nav-links .sv-mobile-quote-item {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Orange Quote button */
+    .services-page .nav-links .sv-mobile-quote {
+        display: block;
+        width: 100%;
+        padding: 13px 20px;
+        margin: 0;
+
+        background: #FA6F04;
+        color: #ffffff;
+
+        border: none;
+        border-radius: 8px;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .services-page .nav-links .sv-mobile-quote:hover {
+        background: #E56300;
+        color: #ffffff;
+    }
+}
+
+.services-page .nav-links .sv-mobile-quote {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .services-page .navbar > .quote-btn {
+        display: none;
+    }
+
+    .services-page .nav-links .sv-mobile-quote {
+        display: block;
+        width: 100%;
+        padding: 13px 20px;
+        margin-top: 12px;
+        background: #FA6F04;
+        color: white;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+
+/* ========================================
+   SERVICES NEWSLETTER - MATCH HOMEPAGE
+======================================== */
+
+.services-page .subscribe-left h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 0 0 12px;
+}
+
+.services-page .subscribe-left h2 span {
+    color: #FA6F04;
+}
+
+.services-page .subscribe-left p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #9ca3af;
+    margin: 0;
+}
+
+/* Mobile - Same as Homepage */
+@media (max-width: 600px) {
+
+    .services-page .subscribe-left h2 {
+        font-size: 24px;
+    }
+
+    .services-page .subscribe-left p {
+        font-size: 14px;
+    }
+}
