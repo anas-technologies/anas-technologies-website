@@ -827,3 +827,77 @@
         text-align: center;
     }
 }
+
+
+/* ========================================
+   SOLUTIONS - MOBILE QUOTE BUTTON
+======================================== */
+
+/* Hide mobile Quote link on desktop */
+.solutions-page .nav-links .solutions-mobile-quote {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+
+    /* Hide desktop Quote button */
+    .solutions-page .navbar > .quote-btn {
+        display: none;
+    }
+
+    /* Show Quote inside hamburger menu */
+    .solutions-page .nav-links .solutions-mobile-quote {
+        display: block;
+        width: 100%;
+        padding: 13px 20px;
+        margin-top: 12px;
+
+        background: #FA6F04;
+        color: #ffffff;
+
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .solutions-page .nav-links .solutions-mobile-quote:hover {
+        background: #E56300;
+        color: #ffffff;
+    }
+}
+
+
+/* ========================================
+   CAREERS - PROJECT CTA TYPOGRAPHY
+======================================== */
+
+.an-cta-strip-copy h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+    margin: 0 0 5px;
+}
+
+.an-cta-strip-copy p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0;
+}
+
+@media (max-width: 650px) {
+    .an-cta-strip-copy h2 {
+        font-size: 16px;
+    }
+
+    .an-cta-strip-copy p {
+        font-size: 13px;
+    }
+}
