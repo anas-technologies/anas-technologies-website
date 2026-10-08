@@ -1758,3 +1758,47 @@ gap: 8px;
         transform: translateY(-8px);
     }
 }
+
+
+/* ========================================
+   PORTFOLIO PAGE - MOBILE QUOTE BUTTON
+======================================== */
+
+/* Hide mobile Quote button on desktop */
+.nav-links .portfolio-mobile-quote {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+
+    /* Hide desktop Quote button */
+    .navbar > .quote-btn {
+        display: none;
+    }
+
+    /* Show Quote inside hamburger menu */
+    .nav-links .portfolio-mobile-quote {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        padding: 13px 20px;
+        margin-top: 12px;
+
+        background: #FA6F04;
+        color: #ffffff !important;
+
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .nav-links .portfolio-mobile-quote:hover {
+        background: #E56300;
+        color: #ffffff !important;
+    }
+}
