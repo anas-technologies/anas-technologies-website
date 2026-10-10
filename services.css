@@ -942,3 +942,8 @@
         font-size: 14px;
     }
 }
+
+/* Footer Headings - White Color */
+.footer-column h3 {
+    color: #ffffff !important;
+}
