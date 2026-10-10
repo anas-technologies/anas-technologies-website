@@ -1687,6 +1687,12 @@ margin-right: 35px;
     display: block;
 }
 
+/* Reduce WhatsApp logo only */
+.social-icons span img[alt="WhatsApp"] {
+    width: 20px;
+    height: 20px;
+}
+
 .footer-column {
     width: 18%;
 }
@@ -4744,4 +4750,20 @@ margin-right: 35px;
         background: #E56300;
         color: #ffffff;
     }
+}
+
+/* Fix LinkedIn icon size */
+.social-icons img[alt="LinkedIn"] {
+    width: 18px !important;
+    height: 18px !important;
+    object-fit: contain;
+}
+
+/* Increase footer Facebook, Instagram and LinkedIn icons */
+.social-icons span img[alt="Facebook"],
+.social-icons span img[alt="Instagram"],
+.social-icons span img[alt="LinkedIn"] {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
 }
