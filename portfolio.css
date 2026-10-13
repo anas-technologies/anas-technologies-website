@@ -330,17 +330,16 @@ body {
     justify-content: center;
     overflow: hidden;
 }
+
 .project-main-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position:center;
+    object-position: center;
     display: block;
-    
-    /* Forces browsers to use high-quality interpolation when scaling */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    image-rendering: auto;
 }
+
 
 .project-image {
     height: 175px;
@@ -1800,5 +1799,24 @@ gap: 8px;
     .nav-links .portfolio-mobile-quote:hover {
         background: #E56300;
         color: #ffffff !important;
+    }
+}
+
+
+/* Fix Flagship Case Study Button Position - Desktop */
+@media (min-width: 769px) {
+
+    .flagship-left .case-study-btn {
+        position: relative;
+        display: inline-block;
+        margin-top: 28px;
+        transform: none;
+        z-index: 1;
+    }
+
+    .flagship-stats {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0;
     }
 }
