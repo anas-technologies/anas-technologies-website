@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | ANAS Technologies</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Separate Login Stylesheet -->
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+    <main class="login-layout">
+
+        <!-- ========================================
+             LEFT BRANDING PANEL
+        ========================================= -->
+
+        <section class="brand-panel">
+
+            <!-- Decorative Background Elements -->
+            <div class="brand-decoration brand-decoration-one"></div>
+            <div class="brand-decoration brand-decoration-two"></div>
+
+            <div class="brand-content">
+
+                <!-- Company Logo -->
+                <div class="brand-logo">
+    <img
+        src="../images/logo-dark.png"
+        alt="ANAS Technologies"
+    >
+</div>
+
+                <!-- Welcome Content -->
+                <div class="welcome-content">
+
+                    <span class="brand-line"></span>
+
+                    <p class="eyebrow">
+                        ADMIN PORTAL
+                    </p>
+
+                    <h1>
+                        Welcome
+                        <span>back.</span>
+                    </h1>
+
+                    <p class="brand-description">
+                        Your dedicated workspace for managing
+                        inquiries, quote requests, job applications,
+                        and newsletter subscribers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             RIGHT LOGIN PANEL
+        ========================================= -->
+
+        <section class="login-panel">
+
+            <div class="login-card">
+
+                <!-- Company Logo -->
+                <div class="login-logo">
+                    <img
+                        src="../images/logo.jpeg"
+                        alt="ANAS Technologies"
+                    >
+                </div>
+
+                <!-- Login Heading -->
+                <div class="login-heading">
+
+                    <span class="login-eyebrow">
+                        SECURE ADMIN ACCESS
+                    </span>
+
+                    <h2>Admin Login</h2>
+
+                    <p>
+                        Sign in to your ANAS Technologies dashboard.
+                    </p>
+
+                </div>
+
+
+                <!-- ========================================
+                     ADMIN LOGIN FORM
+                ========================================= -->
+
+                <form id="adminLoginForm">
+
+                    <div class="form-group">
+
+                        <label for="adminPassword">
+                            Admin Password
+                        </label>
+
+                        <div class="password-field">
+
+                            <!-- Lock Icon -->
+                            <svg
+                                class="lock-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <rect
+                                    x="4"
+                                    y="10"
+                                    width="16"
+                                    height="11"
+                                    rx="2"
+                                ></rect>
+
+                                <path
+                                    d="M8 10V7a4 4 0 0 1 8 0v3"
+                                ></path>
+                            </svg>
+
+                            <!-- Password Input -->
+                            <input
+                                type="password"
+                                id="adminPassword"
+                                placeholder="Enter your admin password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <!-- Show / Hide Password -->
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="togglePassword"
+                                aria-label="Show password"
+                                aria-pressed="false"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"
+                                    ></path>
+
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="3"
+                                    ></circle>
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Sign In Button -->
+                    <button
+                        type="submit"
+                        class="login-submit-btn"
+                        id="loginBtn"
+                    >
+                        Sign In
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                    <!-- Login Error Message -->
+                    <p
+                        id="loginMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+
+                <!-- ========================================
+                     SECURITY INDICATOR
+                ========================================= -->
+
+                <div class="login-security">
+
+                    <span class="security-divider"></span>
+
+                    <div class="security-icon">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M12 2 20 5v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3Z"
+                            ></path>
+                        </svg>
+
+                    </div>
+
+                    <span class="security-divider"></span>
+
+                </div>
+
+                <p class="security-note">
+                    Authorized ANAS Technologies personnel only.
+                </p>
+
+            </div>
+
+            <!-- Copyright -->
+            <p class="copyright">
+                © 2026 ANAS Technologies. All Rights Reserved.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <!-- Shared API Configuration -->
+    <script src="../api-config.js"></script>
+
+    <!-- Existing Backend Login Functionality -->
+    <script src="login.js"></script>
+
+    <!-- Password Visibility Functionality -->
+    <script>
+        const togglePassword = document.getElementById("togglePassword");
+        const passwordInput = document.getElementById("adminPassword");
+
+        togglePassword.addEventListener("click", function () {
+
+            const isHidden = passwordInput.type === "password";
+
+            passwordInput.type = isHidden ? "text" : "password";
+
+            togglePassword.setAttribute(
+                "aria-label",
+                isHidden ? "Hide password" : "Show password"
+            );
+
+            togglePassword.setAttribute(
+                "aria-pressed",
+                String(isHidden)
+            );
+
+        });
+    </script>
+
+</body>
+</html>
