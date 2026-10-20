@@ -142,18 +142,18 @@
                 Tell us a bit about your project and we’ll get back to you with next steps.
             </p>
 
-            <form>
+            <form id="contactForm">
 
                 <div class="form-row">
 
                     <div class="form-group">
                         <label>Full name <span>*</span></label>
-                        <input type="text" placeholder="Jane Doe">
+                       <input type="text" name="name" placeholder="Jane Doe" required>
                     </div>
 
                     <div class="form-group">
                         <label>Work Email <span>*</span></label>
-                        <input type="email" placeholder="jane@company.com">
+                       <input type="email" name="email" placeholder="jane@company.com" required>
                     </div>
 
                 </div>
@@ -162,13 +162,13 @@
 
                     <div class="form-group">
                         <label>Phone number</label>
-                        <input type="text" placeholder="+1 555 000 0000">
+                        <input type="tel" name="phone" placeholder="+1 555 000 0000">
                     </div>
 
                     <div class="form-group">
                         <label>What can we help with</label>
 
-                        <select>
+                       <select name="service">
                             <option>Select a topic...</option>
                             <option>Web Development</option>
                             <option>Mobile App</option>
@@ -182,9 +182,11 @@
                 <div class="form-group">
                     <label>Message <span>*</span></label>
 
-                    <textarea
-                        rows="6"
-                        placeholder="Share a few details about your project, goals, or question."></textarea>
+                  <textarea
+    name="message"
+    rows="6"
+    placeholder="Share a few details about your project, goals, or question."
+    required></textarea>
                 </div>
 
                 <button type="submit" class="send-message-btn">
@@ -467,8 +469,9 @@
 
 </div>
 
-    <script src="script.js"></script>
-
+  <script src="api-config.js"></script>
+<script src="script.js"></script>
+<script src="contact.js"></script>
     <!-- Floating WhatsApp Button -->
 <a
     href="https://wa.me/923299406401"
