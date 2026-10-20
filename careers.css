@@ -1421,3 +1421,54 @@
         color: #ffffff !important;
     }
 }
+
+
+/* ========================================
+   CV UPLOAD VISUAL CONFIRMATION
+======================================== */
+
+.cv-upload-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    width: 45px;
+    height: 45px;
+    color: #FA6F04;
+}
+
+.cv-upload-icon svg {
+    width: 34px;
+    height: 34px;
+}
+
+/* When a CV is selected */
+
+.upload-box.cv-selected {
+    background: #F0FDF4;
+    border: 2px dashed #22C55E;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.upload-box.cv-selected .cv-upload-icon {
+    color: #16A34A;
+}
+
+.upload-box.cv-selected h4 {
+    color: #166534;
+    font-size: 14px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.upload-box.cv-selected p {
+    color: #16A34A;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.upload-box.cv-selected #cvUploadInfo {
+    color: #64748B;
+    font-size: 12px;
+}
