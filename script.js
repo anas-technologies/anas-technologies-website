@@ -51,62 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        // Form Submit Handler
-        quoteForm.addEventListener("submit", function (e) {
-
-            e.preventDefault();
-
-
-            const name =
-                document.getElementById("fullname").value.trim();
-
-            const email =
-                document.getElementById("email").value.trim();
-
-            const details =
-                document.getElementById("details").value.trim();
-
-
-            if (!name || !email || !details) {
-
-                alert(
-                    "Please fill in all mandatory fields."
-                );
-
-                return;
-            }
-
-
-            const submitBtn =
-                document.getElementById("submitBtn");
-
-
-            submitBtn.innerText =
-                "Submitting Request...";
-
-            submitBtn.disabled = true;
-
-
-            setTimeout(() => {
-
-                alert(
-                    `Thank you, ${name}! Your quote request has been submitted successfully. An ANAS Technologies specialist will review your request and get back to you within 1 business day.`
-                );
-
-
-                quoteForm.reset();
-
-                progressBar.style.width = "20%";
-
-                submitBtn.innerText =
-                    "Submit Quote Request →";
-
-                submitBtn.disabled = false;
-
-            }, 1200);
-
-        });
-
     }
 
 });
@@ -596,5 +540,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     updateDots();
+
+});
+
+// ==========================================
+// NEWSLETTER SUBSCRIPTION
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const newsletterBoxes = document.querySelectorAll(
+        ".subscribe-box, .newsletter-box"
+    );
+
+    newsletterBoxes.forEach(function (box) {
+
+        const emailInput = box.querySelector('input[type="email"]');
+        const subscribeButton = box.querySelector("button");
+
+        if (!emailInput || !subscribeButton) return;
+
+        async function subscribe() {
+
+            const email = emailInput.value.trim();
+
+            if (!email || !emailInput.checkValidity()) {
+                alert("Please enter a valid email address.");
+                emailInput.focus();
+                return;
+            }
+
+            subscribeButton.disabled = true;
+            subscribeButton.textContent = "Subscribing...";
+
+            try {
+
+                const response = await fetch(
+                `${window.ANAS_API_BASE_URL}/api/newsletter`,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ email })
+                    }
+                );
+
+                const data = await response.json();
+
+                alert(data.message);
+
+                if (response.ok && data.success) {
+                    emailInput.value = "";
+                }
+
+            } catch (error) {
+
+                console.error("Newsletter Error:", error);
+                alert("Unable to subscribe. Please try again.");
+
+            } finally {
+
+                subscribeButton.disabled = false;
+                subscribeButton.textContent = "Subscribe";
+
+            }
+        }
+
+        subscribeButton.addEventListener("click", subscribe);
+
+        emailInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                subscribe();
+            }
+        });
+
+    });
 
 });
