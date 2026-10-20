@@ -399,13 +399,41 @@
 
                         <div class="input-group">
                             <label>Upload CV</label>
-                            <div class="upload-box">
-                                <span class="upload-icon">↑</span>
-                                <h4>Drag & drop your file here</h4>
-                                <p>or click to browse</p>
-                                <span>(PDF, DOC, DOCX - Max. 5MB)</span>
-                                <input type="file" id="cvUpload" accept=".pdf,.doc,.docx" required>
-                            </div>
+                           
+<div class="upload-box" id="cvUploadBox">
+
+    <!-- Upload icon / selected file icon -->
+    <div class="cv-upload-icon" id="cvUploadIcon">
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+            <path d="M12 16V4"></path>
+            <path d="m7 9 5-5 5 5"></path>
+            <path d="M4 17v3h16v-3"></path>
+        </svg>
+    </div>
+
+    <!-- Default upload instructions -->
+    <h4 id="cvUploadTitle">Drag & drop your file here</h4>
+    <p id="cvUploadDescription">or click to browse</p>
+
+    <!-- File type and size information -->
+    <span id="cvUploadInfo">
+        PDF, DOC, DOCX - Max. 5MB
+    </span>
+
+    <!-- Existing file input -->
+    <input
+        type="file"
+        id="cvUpload"
+        accept=".pdf,.doc,.docx"
+        aria-label="Upload your CV"
+        required
+    >
+
+</div>
+
                         </div>
 
                         <div class="input-group">
@@ -678,7 +706,9 @@
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="api-config.js"></script>
+<script src="script.js"></script>
+<script src="careers.js"></script>
 
     <!-- Floating WhatsApp Button -->
 <a
