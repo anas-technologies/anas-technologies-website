@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ANAS Technologies</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+   <script src="../api-config.js" defer></script>
+<script src="dashboard.js" defer></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="../images/logo.jpeg" alt="ANAS Technologies">
+                <h2>Admin Panel</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="overview">Overview</button>
+                <button class="nav-item" data-section="contacts">Contact Messages</button>
+                <button class="nav-item" data-section="quotes">Quote Requests</button>
+                <button class="nav-item" data-section="careers">Job Applications</button>
+                <button class="nav-item" data-section="newsletter">Newsletter Subscribers</button>
+            </nav>
+
+            <button id="logoutBtn" class="logout-btn">Log Out</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Manage your ANAS Technologies website submissions.</p>
+                </div>
+                <span class="admin-label">Administrator</span>
+            </header>
+
+            <p id="dashboardMessage" role="status" aria-live="polite"></p>
+
+            <section id="overview" class="dashboard-section">
+                <h2>Overview</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Contact Messages</h3>
+                        <strong id="contactCount">—</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Quote Requests</h3>
+                        <strong id="quoteCount">—</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Job Applications</h3>
+                        <strong id="careerCount">—</strong>
+                    </div>
+
+                    <div class="stat-card">
+    <h3>Newsletter Subscribers</h3>
+    <strong id="newsletterCount">—</strong>
+</div>
+                </div>
+            </section>
+
+            <section id="contacts" class="dashboard-section" hidden>
+                <h2>Contact Messages</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Service</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contactsTable"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="quotes" class="dashboard-section" hidden>
+                <h2>Quote Requests</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Services</th>
+                                <th>Budget</th>
+                                <th>Timeline</th>
+                                <th>Project Details</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="quotesTable"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="careers" class="dashboard-section" hidden>
+                <h2>Job Applications</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Applicant</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Position</th>
+                                <th>Cover Letter</th>
+                                <th>CV</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="careersTable"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Newsletter Subscribers -->
+<section id="newsletter" class="dashboard-section" hidden>
+    <h2>Newsletter Subscribers</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email Address</th>
+                    <th>Subscription Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="newsletterTable"></tbody>
+        </table>
+    </div>
+</section>
+            
+            
+        </main>
+    </div>
+</body>
+</html>
