@@ -1,0 +1,19 @@
+# Environment variables and passwords
+.env
+.env.*
+!.env.example
+
+# Node.js dependencies
+node_modules/
+
+# Uploaded CVs and private files
+backend/uploads/
+
+# Log files
+*.log
+npm-debug.log*
+
+
+# Operating system files
+.DS_Store
+Thumbs.db
